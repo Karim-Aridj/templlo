@@ -1,3 +1,12 @@
+document.addEventListener('DOMContentLoaded', () => {
+  const aptFromHash = window.location.hash.slice(1);
+  if (aptFromHash && apartmentData[aptFromHash]) {
+    showRoomPage(aptFromHash);
+  } else {
+    showHomePage();
+  }
+});
+
 // Load room details JSON
 let roomDetails = {};
 fetch('rooms.json')
@@ -297,6 +306,7 @@ function renderRooms(rooms) {
 
 // Show apartment detail page
 function showRoomPage(id) {
+  history.replaceState(null, '', `#${id}`);
   const apt = apartmentData[id];
   if (!apt) return;
 
@@ -341,6 +351,7 @@ function showRoomPage(id) {
 
 // Return to home view
 function showHomePage() {
+  history.replaceState(null, '', window.location.pathname);
   document.getElementById('home-page').classList.remove('hidden');
   document.getElementById('room-details-page').classList.add('hidden');
   document.getElementById('home-navbar').classList.remove('hidden');
