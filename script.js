@@ -365,27 +365,33 @@ backBtn.addEventListener('click', () => {
 });
 
 function openRoomModal(room) {
-  // Lookup by key
-  const key = room.name.toLowerCase().replace(/ /g,'_');
-  const details = roomDetails[key] || {};
+  const details = roomDetails[room.key] || {};
+  const title   = details.room_name || room.name;
+  const imgSrc  = details.image || 'placeholder.jpg'; // add image URLs in JSON
 
-  // Title and price
-  document.getElementById('modal-room-title').textContent = room.name;
-  document.getElementById('modal-room-price').textContent = room.price;
+  // Static includes
+  const includes = details.includes || [];
+  const shared   = details.shared_desk_office ? ['SHARED DESK OFFICE'] : [];
 
-  // Features list
-  const list = [
-    `Category: ${details.category ?? '–'}`,
-    `Bed: ${details.bed  ?? '–'}`,
-    `View: ${details.view ?? '–'}`,
-    details.plus ? `Plus: ${details.plus}` : null
-  ].filter(Boolean);
+  // Build feature list with icons
+  const features = [
+    ...includes.map(i => ({ icon: 'fa-solid fa-check', text: i })),
+    ...shared .map(i => ({ icon: 'fa-solid fa-table', text: i })),
+    { icon: 'fa-solid fa-layer-group', text: `Category: ${details.category ?? '–'}` },
+    { icon: 'fa-solid fa-bed',          text: `Bed: ${details.bed ?? '–'}` },
+    { icon: 'fa-solid fa-eye',          text: `View: ${details.view ?? '–'}` },
+    ...(details.plus ? [{ icon: 'fa-solid fa-gift', text: `Plus: ${details.plus}` }] : [])
+  ];
 
+  // Populate modal
+  document.getElementById('modal-room-title').textContent  = title;
+  document.getElementById('modal-room-price').textContent  = room.price;
+  document.getElementById('modal-room-image').src          = imgSrc;
+  document.getElementById('modal-room-link').href         = room.link;
+
+  // Render features
   document.getElementById('modal-room-features').innerHTML =
-    list.map(item => `<li>${item}</li>`).join('');
-
-  // Book link
-  document.getElementById('modal-room-link').href = room.link;
+    features.map(f => `<li><i class="${f.icon}"></i>${f.text}</li>`).join('');
 
   // Show modal
   const modal = document.getElementById('room-modal');
