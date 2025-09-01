@@ -1,0 +1,299 @@
+{
+  "arriaga_a": {
+    "room_name": "ARRIAGA A",
+    "category": 2,
+    "bed": "QUEEN",
+    "view": "STREET VIEW",
+    "plus": null,
+    "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
+    "shared_desk_office": false
+  },
+  "arriaga_b": {
+    "room_name": "ARRIAGA B",
+    "category": 2,
+    "bed": "QUEEN",
+    "view": "STREET VIEW",
+    "plus": null,
+    "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
+    "shared_desk_office": false
+  },
+  "arriaga_c": {
+    "room_name": "ARRIAGA C",
+    "category": 2,
+    "bed": "QUEEN",
+    "view": "INTERIOR",
+    "plus": null,
+    "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
+    "shared_desk_office": false
+  },
+  "arriaga_d": {
+    "room_name": "ARRIAGA D",
+    "category": 2,
+    "bed": "QUEEN",
+    "view": "OCEAN PORT VIEW",
+    "plus": "HAMMOCK",
+    "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
+    "shared_desk_office": false
+  },
+  "arriaga_e": {
+    "room_name": "ARRIAGA E",
+    "category": 2,
+    "bed": "QUEEN",
+    "view": "INTERIOR",
+    "plus": null,
+    "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
+    "shared_desk_office": false
+  },
+  "arriaga_f": {
+    "room_name": "ARRIAGA F",
+    "category": 1,
+    "bed": "SINGLE",
+    "view": "INTERIOR",
+    "plus": null,
+    "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
+    "shared_desk_office": false
+  },
+  "arriaga_g": {
+    "room_name": "ARRIAGA G",
+    "category": 1,
+    "bed": "SINGLE",
+    "view": "INTERIOR",
+    "plus": null,
+    "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
+    "shared_desk_office": false
+  },
+  "patio_a": {
+    "room_name": "PATIO A",
+    "category": 2,
+    "bed": "DOUBLE",
+    "view": "STREET VIEW",
+    "plus": "PRIVATE SMALL BALCONY",
+    "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
+    "shared_desk_office": false
+  },
+  "patio_b": {
+    "room_name": "PATIO B",
+    "category": 2,
+    "bed": "DOUBLE",
+    "view": "STREET VIEW",
+    "plus": "PRIVATE SMALL BALCONY",
+    "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
+    "shared_desk_office": false
+  },
+  "patio_c": {
+    "room_name": "PATIO C",
+    "category": 1,
+    "bed": "SINGLE",
+    "view": "INTERIOR",
+    "plus": null,
+    "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
+    "shared_desk_office": false
+  },
+  "patio_d": {
+    "room_name": "PATIO D",
+    "category": 1,
+    "bed": "SINGLE",
+    "view": "INTERIOR",
+    "plus": null,
+    "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
+    "shared_desk_office": false
+  },
+  "santos_a": {
+    "room_name": "SANTOS A",
+    "category": 2,
+    "bed": "QUEEN",
+    "view": "OCEAN PORT VIEW",
+    "plus": null,
+    "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
+    "shared_desk_office": false
+  },
+  "santos_b": {
+    "room_name": "SANTOS B",
+    "category": 2,
+    "bed": "DOUBLE",
+    "view": "OCEAN PORT VIEW",
+    "plus": null,
+    "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
+    "shared_desk_office": false
+  },
+  "santos_c": {
+    "room_name": "SANTOS C",
+    "category": 2,
+    "bed": "DOUBLE",
+    "view": "OCEAN PORT VIEW",
+    "plus": null,
+    "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
+    "shared_desk_office": false
+  },
+  "santos_d": {
+    "room_name": "SANTOS D",
+    "category": 2,
+    "bed": "DOUBLE",
+    "view": "OCEAN PORT VIEW",
+    "plus": null,
+    "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
+    "shared_desk_office": false
+  },
+  "santos_e": {
+    "room_name": "SANTOS E",
+    "category": 2,
+    "bed": "DOUBLE",
+    "view": "STREET VIEW",
+    "plus": null,
+    "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
+    "shared_desk_office": false
+  },
+  "santos_f": {
+    "room_name": "SANTOS F",
+    "category": 2,
+    "bed": "DOUBLE",
+    "view": "STREET VIEW",
+    "plus": null,
+    "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
+    "shared_desk_office": false
+  },
+  "santos_h1": {
+    "room_name": "SANTOS H1",
+    "category": 1,
+    "bed": "SINGLE",
+    "view": "STREET VIEW",
+    "plus": null,
+    "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
+    "shared_desk_office": false
+  },
+  "santos_h2": {
+    "room_name": "SANTOS H2",
+    "category": 1,
+    "bed": "SINGLE",
+    "view": "STREET VIEW",
+    "plus": null,
+    "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
+    "shared_desk_office": false
+  },
+  "olympo_a": {
+    "room_name": "OLYMPO A",
+    "category": 2,
+    "bed": "DOUBLE",
+    "view": "OCEAN PORT VIEW",
+    "plus": null,
+    "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
+    "shared_desk_office": true
+  },
+  "olympo_b": {
+    "room_name": "OLYMPO B",
+    "category": 2,
+    "bed": "DOUBLE",
+    "view": "OCEAN PORT VIEW",
+    "plus": null,
+    "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
+    "shared_desk_office": true
+  },
+  "olympo_c": {
+    "room_name": "OLYMPO C",
+    "category": 1,
+    "bed": "ELEVATED DOUBLE BED",
+    "view": "STREET VIEW",
+    "plus": null,
+    "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
+    "shared_desk_office": true
+  },
+  "olympo_d": {
+    "room_name": "OLYMPO D",
+    "category": 1,
+    "bed": "ELEVATED DOUBLE BED",
+    "view": "STREET VIEW",
+    "plus": "PRIVATE SMALL BALCONY",
+    "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
+    "shared_desk_office": true
+  },
+  "palmira_a": {
+    "room_name": "PALMIRA A",
+    "category": 2,
+    "bed": "DOUBLE",
+    "view": "STREET VIEW",
+    "plus": null,
+    "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
+    "shared_desk_office": false
+  },
+  "palmira_b": {
+    "room_name": "PALMIRA B",
+    "category": 2,
+    "bed": "DOUBLE",
+    "view": "STREET VIEW",
+    "plus": "PRIVATE SMALL BALCONY",
+    "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
+    "shared_desk_office": false
+  },
+  "palmira_c": {
+    "room_name": "PALMIRA C",
+    "category": 2,
+    "bed": "DOUBLE",
+    "view": "STREET VIEW",
+    "plus": null,
+    "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
+    "shared_desk_office": false
+  },
+  "palmira_d": {
+    "room_name": "PALMIRA D",
+    "category": 2,
+    "bed": "DOUBLE",
+    "view": "STREET VIEW",
+    "plus": null,
+    "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
+    "shared_desk_office": false
+  },
+  "palmira_e": {
+    "room_name": "PALMIRA E",
+    "category": 1,
+    "bed": "SINGLE",
+    "view": "STREET VIEW",
+    "plus": "PRIVATE SMALL BALCONY",
+    "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
+    "shared_desk_office": false
+  },
+  "maria_a": {
+    "room_name": "MARIA A",
+    "category": 2,
+    "bed": "DOUBLE",
+    "view": "STREET VIEW",
+    "plus": "HAMMOCK",
+    "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
+    "shared_desk_office": true
+  },
+  "maria_b": {
+    "room_name": "MARIA B",
+    "category": 2,
+    "bed": "DOUBLE",
+    "view": "STREET VIEW",
+    "plus": "HAMMOCK",
+    "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
+    "shared_desk_office": true
+  },
+  "maria_c": {
+    "room_name": "MARIA C",
+    "category": 2,
+    "bed": "DOUBLE",
+    "view": "ATTIC ROOM CEILING WINDOWS",
+    "plus": "TV",
+    "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
+    "shared_desk_office": true
+  },
+  "loft": {
+    "room_name": "LOFT",
+    "category": 2,
+    "bed": "QUEEN",
+    "view": "INTERIOR",
+    "plus": "TV, PRIVATE STUDIO",
+    "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
+    "shared_desk_office": false
+  },
+  "torrao": {
+    "room_name": "TORRÃO",
+    "category": 2,
+    "bed": "KING",
+    "view": "LAKE VIEW",
+    "plus": "TV, HEATING, PRIVATE MORADIA",
+    "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
+    "shared_desk_office": false
+  }
+}

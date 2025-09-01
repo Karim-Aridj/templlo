@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Templlo Landing Page</title>
+    <!-- Use Tailwind CSS for a responsive, modern design -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Link to Leaflet CSS for the map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="text-gray-800">
+
+    <!-- Main Container for the entire page -->
+    <div class="relative w-full">
+
+        <!-- Section: Hero Header -->
+      <!-- Home Navbar -->
+<header id="home-navbar" class="bg-[#e4d6cc] bg-opacity-90 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 shadow-sm">
+  <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between space-x-8">
+    <!-- Left: smaller logo -->
+    <a href="#" onclick="showHomePage()" class="flex items-center">
+      <svg width="150" height="42" viewBox="0 0 200 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <text x="0" y="33" font-family="Inter, sans-serif" font-weight="700" font-size="28" fill="#332D29">templlo</text>
+        <line x1="0" y1="40" x2="133" y2="40" stroke="#332D29" stroke-width="2.5"/>
+      </svg>
+    </a>
+
+    <!-- Center: section links -->
+    <div class="hidden md:flex space-x-6 text-sm font-medium">
+      <button onclick="document.querySelector('#testimonials').scrollIntoView({ behavior: 'smooth' })"
+              class="text-gray-800 hover:text-gray-600">Testimonials</button>
+      <button onclick="document.querySelector('#map').scrollIntoView({ behavior: 'smooth' })"
+              class="text-gray-800 hover:text-gray-600">Locations</button>
+      <button onclick="document.querySelector('#faq').scrollIntoView({ behavior: 'smooth' })"
+              class="text-gray-800 hover:text-gray-600">FAQ</button>
+    </div>
+
+    <!-- Right: hero-style button with inverted colors -->
+    <button onclick="document.querySelector('#winter-rooms').scrollIntoView({ behavior: 'smooth' })"
+            class="btn-custom bg-[#2b1102] text-[#e4d6cc] hover:bg-[#1f0f02] hover:text-white py-2 px-4 rounded-full">
+      Explore our Accommodations
+    </button>
+  </nav>
+</header>
+
+
+
+<!-- Detail Navbar (hidden by default) -->
+<header id="detail-navbar" class="hidden bg-white fixed top-0 left-0 right-0 z-50 shadow-sm">
+  <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
+    <div class="flex items-center space-x-2">
+      <button onclick="showHomePage()" class="text-gray-600 hover:text-gray-900 flex items-center">
+        <i class="fa-solid fa-chevron-left mr-2"></i>
+        Home
+      </button>
+      <span id="breadcrumb-room-name" class="font-medium text-gray-800"></span>
+    </div>
+    <!-- Optionally place site logo or title here for the detail view -->
+  </nav>
+</header>
+
+<div id="home-page">
+    <!-- Section: Hero Banner -->
+        <section class="relative h-[400px] sm:h-[500px] w-full flex items-center justify-center text-center px-4" style="background-image: url('https://surfgasm.world/wp-content/uploads/2025/08/IMG_7971-scaled.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+            <div class="absolute inset-0 bg-gray-900 opacity-70"></div>
+            <div class="relative z-10 text-white max-w-2xl mx-auto flex flex-col items-center">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight">Lisbon Rooms &amp; Apartments for winter short stays</h1>
+                <p class="mt-4 text-lg sm:text-xl font-medium hidden sm:block">Furnished private rooms with fast Wi-Fi, flexible stays, and vibrant community vibes in Lisbon's most central neighborhoods.</p>
+                <a href="#winter-rooms" class="mt-8 btn-custom text-[#2b1102] font-bold py-3 px-6 rounded-full transition-colors text-base">Explore our Accommodations</a>
+            </div>
+        </section>
+
+        <!-- Section: Meet Your Host -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-2xl sm:text-3xl font-bold">Meet Your Host</h2>
+                </div>
+                <div class="flex flex-col md:flex-row items-center md:items-start md:space-x-8">
+                    <!-- Left Column: Compact Horizontal Host Card -->
+                    <div class="md:w-1/2 mb-8 md:mb-0 flex justify-center md:justify-start">
+                        <div class="host-card">
+                            <div class="profile-img">
+                                <img src="https://surfgasm.world/wp-content/uploads/2023/07/avatars-s8vyfaVMEv3iPHuj-JQtCJg-t500x500.jpg" alt="Tin Barbo">
+                                <div class="absolute verified-badge bg-white rounded-full flex items-center justify-center shadow-md">
+                                    <i class="fa-solid fa-circle-check text-pink-500 text-sm"></i>
+                                </div>
+                            </div>
+                            <div class="ml-6 stats-container">
+                                <h3 class="text-xl font-bold">Tin</h3>
+                                <p class="text-gray-500 text-sm font-medium mb-4">Host</p>
+                                <div class="flex justify-between space-x-4">
+                                    <div class="stat-item">
+                                        <p class="text-lg font-bold">9893</p>
+                                        <p class="text-xs text-gray-500">Reviews</p>
+                                    </div>
+                                    <div class="stat-item">
+                                        <p class="text-lg font-bold">4.33 <span class="text-yellow-400"><i class="fa-solid fa-star text-sm"></i></span></p>
+                                        <p class="text-xs text-gray-500">Rating</p>
+                                    </div>
+                                    <div class="stat-item">
+                                        <p class="text-lg font-bold">11</p>
+                                        <p class="text-xs text-gray-500">Years</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right Column: Host Description -->
+                    <div class="md:w-1/2">
+                        <div class="text-gray-600 leading-relaxed text-lg">
+                            <div id="host-description" class="truncate-text">
+                                <p>My name is Tin Barbo. I'm a DJ, surf instructor, and a culturally passionate individual. Through Templlo, I am building a tribe of adventurers who want to blend travel with culture, sustainability, and spirituality. Step by step, we are creating a path that allows like-minded travelers to experience each place with depth, purpose, and a commitment to making a positive impact on local communities and fostering global cultural integration.</p>
+                                <p class="mt-4">Check out my mixes: <a href="https://soundcloud.com/barbo_official" target="_blank" class="text-blue-500 hover:text-blue-600 underline">soundcloud.com/barbo_official</a></p>
+                            </div>
+                            <button id="toggle-description" class="text-blue-500 hover:underline mt-2 text-sm font-semibold">Show more</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Winter Apartments in Lisbon -->
+        <section class="py-16 bg-white" id="winter-rooms">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-2xl sm:text-3xl font-bold mb-8">Winter Apartments in Lisbon just for you</h2>
+                <!-- Apartment Cards Container in a Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Apartment Card 1: Loft -->
+                    <div class="bg-white rounded-lg shadow-lg flex flex-col">
+                        <img src="https://surfgasm.world/wp-content/uploads/2023/11/loft-cover.jpg" alt="Loft Cover" class="card-image">
+                        <div class="p-4 flex flex-col flex-grow">
+                            <h3 class="font-semibold text-xl">Tiny Central &amp; Cosy Loft in Multi-Cultural Area</h3>
+                            <p class="text-sm text-gray-500 mt-1">Experience ultimate comfort in our private double bed and extra bed studio.</p>
+                            <div class="flex items-center text-sm mt-4">
+                                <i class="fa-solid fa-location-dot text-gray-400 mr-2"></i>
+                                <span class="text-gray-600">Martim Moniz, Lisbon</span>
+                            </div>
+                            <div class="flex items-center text-sm mt-2">
+                                <i class="fa-solid fa-bed text-gray-400 mr-2"></i>
+                                <span class="text-gray-600">1 bedroom 2 beds 1 bathroom</span>
+                            </div>
+                            <div class="flex-grow"></div>
+                        </div>
+                        <div class="px-4 pb-4 pt-4 border-t border-gray-200">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-gray-600 text-sm">1 stay type</span>
+                                <p class="font-semibold text-lg text-gray-800">from €52 <span class="text-sm font-normal text-gray-500">/ night</span></p>
+                            </div>
+                            <a href="https://surfgasm.bookeddirectly.com/g/lisboa/tiny-central-%2526-cosy-loft-in-multi-cultural-area/41139b" class="btn-custom text-center py-2 rounded-full w-full block text-sm font-medium" target="_blank">Explore apartment</a>
+                        </div>
+                    </div>
+
+                    <!-- Apartment Card 2: Torrão -->
+                    <div class="bg-white rounded-lg shadow-lg flex flex-col">
+                        <img src="http://surfgasm.world/wp-content/uploads/2025/08/Torrao-carrousel-1.jpeg" alt="Torrão Image 1" class="card-image">
+                        <div class="p-4 flex flex-col flex-grow">
+                            <h3 class="font-semibold text-xl">Vista do Alentejo Rooftop at House Near The Lake</h3>
+                            <p class="text-sm text-gray-500 mt-1">Experience the tranquility of Torrão with this full apartment booking. Perfect for a peaceful getaway.</p>
+                            <div class="flex items-center text-sm mt-4">
+                                <i class="fa-solid fa-location-dot text-gray-400 mr-2"></i>
+                                <span class="text-gray-600">Torrão, Setubal</span>
+                            </div>
+                            <div class="flex items-center text-sm mt-2">
+                                <i class="fa-solid fa-bed text-gray-400 mr-2"></i>
+                                <span class="text-gray-600">1 bedroom 1 bed 2 baths</span>
+                            </div>
+                            <div class="flex-grow"></div>
+                        </div>
+                        <div class="px-4 pb-4 pt-4 border-t border-gray-200">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-gray-600 text-sm">1 stay type</span>
+                                <p class="font-semibold text-lg text-gray-800">from €52<span class="text-sm font-normal text-gray-500">/ night</span></p>
+                            </div>
+                            <a href="https://surfgasm.bookeddirectly.com/g/torr%25C3%25A3o/vista-do-alentejo-rooftop-at-house-near-the-lake/0a7130" class="btn-custom text-center py-2 rounded-full w-full block text-sm font-medium" target="_blank">Explore apartment</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Apartment Card 3: ARRIAGA -->
+                    <div class="bg-white rounded-lg shadow-lg flex flex-col">
+                        <img src="http://surfgasm.world/wp-content/uploads/2023/11/Arriaga-carrousel-1.jpg" alt="ARRIAGA Image 1" class="card-image">
+                        <div class="p-4 flex flex-col flex-grow">
+                            <h3 class="font-semibold text-xl">ARRIAGA</h3>
+                            <p class="text-sm text-gray-500 mt-1">Get ready to be charmed by the elegance, style, and incredible view of the iconic Port of Lisbon.</p>
+                            <div class="flex items-center text-sm mt-4">
+                                <i class="fa-solid fa-location-dot text-gray-400 mr-2"></i>
+                                <span class="text-gray-600">Alcântara, Lisbon</span>
+                            </div>
+                            <div class="flex items-center text-sm mt-2">
+                                <i class="fa-solid fa-shower text-gray-400 mr-2"></i>
+                                <span class="text-gray-600">2 full bathrooms and one bathroom with toilet</span>
+                            </div>
+                            <div class="flex-grow"></div>
+                        </div>
+                        <div class="px-4 pb-4 pt-4 border-t border-gray-200">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-gray-600 text-sm">7 rooms</span>
+                                <p class="font-semibold text-lg text-gray-800">from €29 <span class="text-sm font-normal text-gray-500">/ night</span></p>
+                            </div>
+                            <button onclick="showRoomPage('arriaga')" class="btn-custom text-center py-2 rounded-full w-full block text-sm font-medium">Explore Rooms</button>
+                        </div>
+                    </div>
+
+                    <!-- Apartment Card 4: MARIA -->
+                    <div class="bg-white rounded-lg shadow-lg flex flex-col">
+                        <img src="https://surfgasm.world/wp-content/uploads/2023/11/maria-carrousel-4.jpg" alt="MARIA Image 1" class="card-image">
+                        <div class="p-4 flex flex-col flex-grow">
+                            <h3 class="font-semibold text-xl">MARIA</h3>
+                            <p class="text-sm text-gray-500 mt-1">Bohemian Lisbon vibe. Nestled in the heart of Lisbon, this charming apartment offers the perfect blend of comfort.</p>
+                            <div class="flex items-center text-sm mt-4">
+                                <i class="fa-solid fa-location-dot text-gray-400 mr-2"></i>
+                                <span class="text-gray-600">Rua Maria da Fonte 58, ESQ, Lisboa</span>
+                            </div>
+                            <div class="flex items-center text-sm mt-2">
+                                <i class="fa-solid fa-bed text-gray-400 mr-2"></i>
+                                <span class="text-gray-600">3 private double bedrooms</span>
+                            </div>
+                            <div class="flex-grow"></div>
+                        </div>
+                        <div class="px-4 pb-4 pt-4 border-t border-gray-200">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-gray-600 text-sm">3 rooms</span>
+                                <p class="font-semibold text-lg text-gray-800">from €31 <span class="text-sm font-normal text-gray-500">/ night</span></p>
+                            </div>
+                            <button onclick="showRoomPage('maria')" class="btn-custom text-center py-2 rounded-full w-full block text-sm font-medium">Explore Rooms</button>                        </div>
+                    </div>
+
+                    <!-- Apartment Card 5: OLYMPO -->
+                    <div class="bg-white rounded-lg shadow-lg flex flex-col">
+                        <img src="https://surfgasm.world/wp-content/uploads/2023/11/olympo-carrousel-2.jpg" alt="OLYMPO Image 1" class="card-image">
+                        <div class="p-4 flex flex-col flex-grow">
+                            <h3 class="font-semibold text-xl">OLYMPO</h3>
+                            <p class="text-sm text-gray-500 mt-1">Where sun meets skyline: Private Lisbon rooftop paradise.</p>
+                            <div class="flex items-center text-sm mt-4">
+                                <i class="fa-solid fa-location-dot text-gray-400 mr-2"></i>
+                                <span class="text-gray-600">Rua da Lapa 14, Lisboa</span>
+                            </div>
+                            <div class="flex items-center text-sm mt-2">
+                                <i class="fa-solid fa-bed text-gray-400 mr-2"></i>
+                                <span class="text-gray-600">4 private double bedrooms</span>
+                            </div>
+                            <div class="flex-grow"></div>
+                        </div>
+                        <div class="px-4 pb-4 pt-4 border-t border-gray-200">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-gray-600 text-sm">4 rooms</span>
+                                <p class="font-semibold text-lg text-gray-800">from €36 <span class="text-sm font-normal text-gray-500">/ night</span></p>
+                            </div>
+                            <button onclick="showRoomPage('olympo')" class="btn-custom text-center py-2 rounded-full w-full block text-sm font-medium">Explore Rooms</button>                        </div>
+                    </div>
+
+                    <!-- Apartment Card 6: PALMIRA -->
+                    <div class="bg-white rounded-lg shadow-lg flex flex-col">
+                        <img src="http://surfgasm.world/wp-content/uploads/2023/11/Palmira-apartment-cover.jpg" alt="PALMIRA Image 1" class="card-image">
+                        <div class="p-4 flex flex-col flex-grow">
+                            <h3 class="font-semibold text-xl">PALMIRA</h3>
+                            <p class="text-sm text-gray-500 mt-1">In the heart of Lisbon, be close to the main venues of the historical center and public transportation.</p>
+                            <div class="flex items-center text-sm mt-4">
+                                <i class="fa-solid fa-location-dot text-gray-400 mr-2"></i>
+                                <span class="text-gray-600">Rua Palmira 17, Lisboa</span>
+                            </div>
+                            <div class="flex items-center text-sm mt-2">
+                                <i class="fa-solid fa-bed text-gray-400 mr-2"></i>
+                                <span class="text-gray-600">4 private double bedrooms</span>
+                            </div>
+                            <div class="flex-grow"></div>
+                        </div>
+                        <div class="px-4 pb-4 pt-4 border-t border-gray-200">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-gray-600 text-sm">4 rooms</span>
+                                <p class="font-semibold text-lg text-gray-800">from €31 <span class="text-sm font-normal text-gray-500">/ night</span></p>
+                            </div>
+                            <button onclick="showRoomPage('palmira')" class="btn-custom text-center py-2 rounded-full w-full block text-sm font-medium">Explore Rooms</button>                        </div>
+                    </div>
+
+                    <!-- Apartment Card 7: PATIO -->
+                    <div class="bg-white rounded-lg shadow-lg flex flex-col">
+                        <img src="http://surfgasm.world/wp-content/uploads/2023/11/patio-carrousel-3.jpg" alt="PATIO Image 1" class="card-image">
+                        <div class="p-4 flex flex-col flex-grow">
+                            <h3 class="font-semibold text-xl">PATIO</h3>
+                            <p class="text-sm text-gray-500 mt-1">Cozy apartment with private bright patio.</p>
+                            <div class="flex items-center text-sm mt-4">
+                                <i class="fa-solid fa-location-dot text-gray-400 mr-2"></i>
+                                <span class="text-gray-600">Rua Presidente Arriaga 142, Lisboa</span>
+                            </div>
+                            <div class="flex items-center text-sm mt-2">
+                                <i class="fa-solid fa-bed text-gray-400 mr-2"></i>
+                                <span class="text-gray-600">4 private bedrooms, 2 double with balcony and 2 internal single</span>
+                            </div>
+                            <div class="flex-grow"></div>
+                        </div>
+                        <div class="px-4 pb-4 pt-4 border-t border-gray-200">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-gray-600 text-sm">4 rooms</span>
+                                <p class="font-semibold text-lg text-gray-800">from €40 <span class="text-sm font-normal text-gray-500">/ night</span></p>
+                            </div>
+                            <button onclick="showRoomPage('patio')" class="btn-custom text-center py-2 rounded-full w-full block text-sm font-medium">Explore Rooms</button>                        </div>
+                    </div>
+                    
+                    <!-- Apartment Card 8: SANTOS -->
+                    <div class="bg-white rounded-lg shadow-lg flex flex-col">
+                        <img src="http://surfgasm.world/wp-content/uploads/2023/11/santos-cover.jpg" alt="SANTOS Image 1" class="card-image">
+                        <div class="p-4 flex flex-col flex-grow">
+                            <h3 class="font-semibold text-xl">SANTOS</h3>
+                            <p class="text-sm text-gray-500 mt-1">Where curious souls unite! A backpacker's oasis for connecting and exploring.</p>
+                            <div class="flex items-center text-sm mt-4">
+                                <i class="fa-solid fa-location-dot text-gray-400 mr-2"></i>
+                                <span class="text-gray-600">Rua Garcia de Orta 59, Lisboa</span>
+                            </div>
+                            <div class="flex items-center text-sm mt-2">
+                                <i class="fa-solid fa-bed text-gray-400 mr-2"></i>
+                                <span class="text-gray-600">8 private rooms-two bathrooms, - fully equipped kitchen, a cozy living room</span>
+                            </div>
+                            <div class="flex-grow"></div>
+                        </div>
+                        <div class="px-4 pb-4 pt-4 border-t border-gray-200">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-gray-600 text-sm">8 rooms</span>
+                                <p class="font-semibold text-lg text-gray-800">from €31 <span class="text-sm font-normal text-gray-500">/ night</span></p>
+                            </div>
+                            <button onclick="showRoomPage('santos')" class="btn-custom text-center py-2 rounded-full w-full block text-sm font-medium">Explore Rooms</button>                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Testimonials -->
+        <section class="py-16 bg-white overflow-hidden">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 id="testimonials" class="text-2xl sm:text-3xl font-bold text-center mb-12">What do they say about Templlo?</h2>
+                <div class="carousel-container relative">
+                    <!-- Carousel Track -->
+                    <div id="testimonial-track" class="carousel-track">
+                        <!-- Testimonial Card 1 (Joaquina) -->
+                        <div class="carousel-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 p-4">
+                            <div class="bg-gray-50 p-6 rounded-xl shadow-md h-full flex flex-col justify-between">
+                                <p class="italic text-gray-600 leading-relaxed mb-4">
+                                    "I had a good time at the apartment. Everything was super clean, the communication was easy and check in was flexible. The location is good to walk to the old town and drive by train to the beach. I would go there again!"
+                                </p>
+                                <div class="flex items-center">
+                                    <img src="https://a0.muscache.com/im/pictures/user/d85578ee-f6f7-4a6d-915d-71f156a24de5.jpg?im_w=240" alt="Joaquina" class="w-12 h-12 rounded-full mr-4 object-cover">
+                                    <div>
+                                        <h4 class="font-semibold text-sm">Joaquina</h4>
+                                        <p class="text-xs text-gray-500">Hamburg, Germany</p>
+                                        <div class="star-rating text-xs mt-1">
+                                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial Card 2 (Mercedesz) -->
+                        <div class="carousel-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 p-4">
+                            <div class="bg-gray-50 p-6 rounded-xl shadow-md h-full flex flex-col justify-between">
+                                <p class="italic text-gray-600 leading-relaxed mb-4">
+                                    "The apartment was just as described in the details. The room was clean and big enough for 2 people with 2 small baggage. There is no air conditioning but it wasn't uncomfortable even in mid Aug. Restrooms were clean just as the kitchen. We could even leave our baggage in the apt before the flight. The location is great, easy public transportation possibilities to all places. The place is surrounded by many restaurants, shops and close to all kind of activities (Cascais, Caparica, Belém or the centrum)."
+                                </p>
+                                <div class="flex items-center">
+                                    <img src="https://a0.muscache.com/im/pictures/user/User/original/bceb85b2-46e7-45ff-9670-774cac039844.jpeg?im_w=240" alt="Mercedesz" class="w-12 h-12 rounded-full mr-4 object-cover">
+                                    <div>
+                                        <h4 class="font-semibold text-sm">Mercedesz</h4>
+                                        <p class="text-xs text-gray-500">Budapest, Hungary</p>
+                                        <div class="star-rating text-xs mt-1">
+                                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial Card 3 (Kristýna) -->
+                        <div class="carousel-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 p-4">
+                            <div class="bg-gray-50 p-6 rounded-xl shadow-md h-full flex flex-col justify-between">
+                                <p class="italic text-gray-600 leading-relaxed mb-4">
+                                    "The apartment is pretty and feels very homy and nice. It's in nice hood with supermarkets and restaurants nearby. The street under bedroom windows is narrow but surprisingly noisy due to to traffic. It gets calm during night though."
+                                </p>
+                                <div class="flex items-center">
+                                    <img src="https://a0.muscache.com/im/pictures/user/a830420a-bec7-4a15-a399-e8073a391605.jpg?im_w=240" alt="Kristýna" class="w-12 h-12 rounded-full mr-4 object-cover">
+                                    <div>
+                                        <h4 class="font-semibold text-sm">Kristýna</h4>
+                                        <p class="text-xs text-gray-500">Tallinn, Estonia</p>
+                                        <div class="star-rating text-xs mt-1">
+                                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial Card 4 (Storm) -->
+                        <div class="carousel-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 p-4">
+                            <div class="bg-gray-50 p-6 rounded-xl shadow-md h-full flex flex-col justify-between">
+                                <p class="italic text-gray-600 leading-relaxed mb-4">
+                                    "Cheap accommodation, but I personally would be happy to pay a little more and actually get what is advertised. This is very misleading and wrong to use AI to enhance the photos. Accomodation does not look like it is shown."
+                                </p>
+                                <div class="flex items-center">
+                                    <img src="https://a0.muscache.com/im/pictures/user/a830420a-bec7-4a15-a399-e8073a391605.jpg?im_w=240" alt="Storm" class="w-12 h-12 rounded-full mr-4 object-cover">
+                                    <div>
+                                        <h4 class="font-semibold text-sm">Storm</h4>
+                                        <p class="text-xs text-gray-500">Canterbury, New Zealand</p>
+                                        <div class="star-rating text-xs mt-1">
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial Card 5 (Soufiane) -->
+                        <div class="carousel-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 p-4">
+                            <div class="bg-gray-50 p-6 rounded-xl shadow-md h-full flex flex-col justify-between">
+                                <p class="italic text-gray-600 leading-relaxed mb-4">
+                                    "my stay was pretty good, staff very helpful, thanks for all Tin!"
+                                </p>
+                                <div class="flex items-center">
+                                    <img src="https://a0.muscache.com/im/pictures/user/4a1ee05b-9f31-4401-8f7a-2285f0251ebe.jpg?im_w=240" alt="Soufiane" class="w-12 h-12 rounded-full mr-4 object-cover">
+                                    <div>
+                                        <h4 class="font-semibold text-sm">Soufiane</h4>
+                                        <p class="text-xs text-gray-500">Casablanca, Morocco</p>
+                                        <div class="star-rating text-xs mt-1">
+                                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Carousel Buttons -->
+                    <button id="carousel-prev" class="carousel-button-prev p-3 rounded-full hover:bg-gray-800 transition-colors">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button id="carousel-next" class="carousel-button-next p-3 rounded-full hover:bg-gray-800 transition-colors">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Our Locations Map -->
+        <section class="py-16 bg-gray-100">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-gray-800">Our Lisbon Locations</h2>
+                    <p class="text-lg text-gray-600 mt-2">Find your perfect stay on the map below.</p>
+                </div>
+                <div id="map"></div>
+            </div>
+        </section>
+
+        <!-- Section: FAQ -->
+        <section class="py-16 bg-white" id="faq">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-2xl sm:text-3xl font-bold">Frequently Asked Questions</h2>
+                </div>
+                <div class="max-w-2xl mx-auto space-y-4">
+                    <!-- FAQ Item: Check-in/Check-out -->
+                    <div class="bg-gray-100 rounded-lg p-6 shadow-sm">
+                        <button class="w-full text-left flex justify-between items-center faq-toggle">
+                            <span class="text-lg font-semibold text-gray-800">What is the check-in and check-out time?</span>
+                            <i class="fa-solid fa-chevron-down faq-chevron"></i>
+                        </button>
+                        <div class="faq-content hidden mt-4 text-gray-600">
+                            <p>Check-in is at 3:00 PM and check-out is at 11:00 AM. We can sometimes arrange for early check-in or late check-out for a small fee, subject to availability.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item: Wi-Fi -->
+                    <div class="bg-gray-100 rounded-lg p-6 shadow-sm">
+                        <button class="w-full text-left flex justify-between items-center faq-toggle">
+                            <span class="text-lg font-semibold text-gray-800">Is Wi-Fi included in the stay?</span>
+                            <i class="fa-solid fa-chevron-down faq-chevron"></i>
+                        </button>
+                        <div class="faq-content hidden mt-4 text-gray-600">
+                            <p>Yes, all our rooms and apartments are equipped with high-speed Wi-Fi, perfect for remote work or streaming.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item: Cancellation Policy -->
+                    <div class="bg-gray-100 rounded-lg p-6 shadow-sm">
+                        <button class="w-full text-left flex justify-between items-center faq-toggle">
+                            <span class="text-lg font-semibold text-gray-800">What is the cancellation policy?</span>
+                            <i class="fa-solid fa-chevron-down faq-chevron"></i>
+                        </button>
+                        <div class="faq-content hidden mt-4 text-gray-600">
+                            <p>Reservations can be cancelled 28 days before the arrival date with a 100% refund. Reservations cancelled 15 days before arrival will be refunded by 50%. Reservations cancelled after 15 days of arrival will not be refunded. Once you make your reservation, you are accepting all these conditions.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item: Property Visit -->
+                    <div class="bg-gray-100 rounded-lg p-6 shadow-sm">
+                        <button class="w-full text-left flex justify-between items-center faq-toggle">
+                            <span class="text-lg font-semibold text-gray-800">Can I visit the property before booking?</span>
+                            <i class="fa-solid fa-chevron-down faq-chevron"></i>
+                        </button>
+                        <div class="faq-content hidden mt-4 text-gray-600">
+                            <p>You cannot visit the property in person. However, you can request a video call for a virtual tour of the property you are interested in.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item: Who are my roommates? -->
+                    <div class="bg-gray-100 rounded-lg p-6 shadow-sm">
+                        <button class="w-full text-left flex justify-between items-center faq-toggle">
+                            <span class="text-lg font-semibold text-gray-800">Who will I share the place with?</span>
+                            <i class="fa-solid fa-chevron-down faq-chevron"></i>
+                        </button>
+                        <div class="faq-content hidden mt-4 text-gray-600">
+                            <p>Reservations can be made by anyone older than 18 years old. We have strict house rules to ensure clean and quiet stays.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item: Access to the apartment -->
+                    <div class="bg-gray-100 rounded-lg p-6 shadow-sm">
+                        <button class="w-full text-left flex justify-between items-center faq-toggle">
+                            <span class="text-lg font-semibold text-gray-800">How do I access the apartment?</span>
+                            <i class="fa-solid fa-chevron-down faq-chevron"></i>
+                        </button>
+                        <div class="faq-content hidden mt-4 text-gray-600">
+                            <p>To access our apartments, we use security boxes at both the building and apartment entrances. This means you will be provided with codes before your arrival. The keys for the building and apartment are shared among guests, while your room key is for your private use only.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item: Stay Duration -->
+                    <div class="bg-gray-100 rounded-lg p-6 shadow-sm">
+                        <button class="w-full text-left flex justify-between items-center faq-toggle">
+                            <span class="text-lg font-semibold text-gray-800">When can I stay?</span>
+                            <i class="fa-solid fa-chevron-down faq-chevron"></i>
+                        </button>
+                        <div class="faq-content hidden mt-4 text-gray-600">
+                            <p>Rooms are available from November 1st, 2025, until February 28th, 2026. We prefer monthly short-term rentals, but shorter stays may be available upon request.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Footer -->
+        <footer class="bg-[#e4d6cc] text-gray-800 py-12">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Footer Column 1: Logo & Tagline -->
+                <div class="md:col-span-1 space-y-4">
+                    <div class="flex items-center space-x-2">
+                        <a href="#" class="flex items-center space-x-2">
+                            <svg width="200" height="57" viewBox="0 0 200 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <text x="0" y="33" font-family="Inter, sans-serif" font-weight="700" font-size="33" fill="#332D29">templlo</text>
+                                <line x1="0" y1="40" x2="133" y2="40" stroke="#332D29" stroke-width="3.3"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <p class="text-sm">Templlo is your home base for every great trip. Find the perfect place to stay and make your trip unforgettable.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="https://www.linkedin.com/company/surfgasm/" target="_blank" class="hover:text-gray-600 transition-colors">
+                            <i class="fa-brands fa-linkedin-in text-2xl"></i>
+                        </a>
+                        <a href="https://www.facebook.com/surfgasm/" target="_blank" class="hover:text-gray-600 transition-colors">
+                            <i class="fa-brands fa-facebook-f text-2xl"></i>
+                        </a>
+                        <a href="https://www.instagram.com/surfgasm/" target="_blank" class="hover:text-gray-600 transition-colors">
+                            <i class="fa-brands fa-instagram text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Footer Column 2: Quick Links -->
+                <div class="md:col-span-1">
+                    <h3 class="font-semibold text-gray-800 mb-4">Explore</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-gray-600">About Us</a></li>
+                    </ul>
+                </div>
+                <!-- Footer Column 3: Help -->
+                <div class="md:col-span-1">
+                    <h3 class="font-semibold text-gray-800 mb-4">Help</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="https://surfgasm.world/privacy-policy/" class="hover:text-gray-600">Privacy Policy</a></li>
+                        <li><a href="https://surfgasm.world/cookie-policy-eu/" class="hover:text-gray-600">Cookie Policy</a></li>
+                        <li><a href="https://surfgasm.world/imprint/" class="hover:text-gray-600">Imprint</a></li>
+                        <li><a href="https://surfgasm.world/legal-notice/" class="hover:text-gray-600">Legal Notice</a></li>
+                        <li><a href="https://surfgasm.world/terms-conditions/" class="hover:text-gray-600">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <!-- Footer Column 4: Newsletter -->
+                <div class="md:col-span-1">
+                    <h3 class="font-semibold text-gray-800 mb-4">Join Our Newsletter</h3>
+                    <p class="text-sm mb-4">Subscribe to our newsletter for exclusive deals and travel tips!</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Enter your email" class="px-4 py-2 w-full rounded-l-full focus:outline-none text-gray-800">
+                        <button type="submit" class="btn-newsletter-go px-4 rounded-r-full font-semibold text-sm">Go</button>
+                    </form>
+                </div>
+            </div>
+            <div class="mt-12 text-center text-xs text-gray-500 border-t border-gray-400 pt-6">
+                &copy; 2025 Surfgasm. All Rights Reserved.
+            </div>
+        </footer>
+    </div>
+</div>
+                <!-- Room Details Page View (hidden by default) -->
+        <div id="room-details-page" class="hidden">
+           
+            <!-- Room Hero Section -->
+            <section class="container mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-8">
+                <div id="room-hero" class="room-hero">
+                    <div class="room-hero-overlay"></div>
+                    <div class="room-hero-content">
+                        <h1 id="room-details-title" class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-2"></h1>
+                        <p id="room-details-subtitle" class="text-lg sm:text-xl font-medium"></p>
+                    </div>
+                </div>
+            </section>
+                <!-- Room Details Section -->
+            <section class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                    <!-- Left Column: Details -->
+                    <div class="lg:col-span-2">
+                        <div class="bg-white p-8 rounded-xl shadow-lg mb-8">
+                            <h2 class="text-2xl font-bold mb-4">About the Neighborhood</h2>
+                            <p id="room-details-description" class="text-gray-700 leading-relaxed"></p>
+                        </div>
+
+                        <!-- Amenities -->
+                        <div class="bg-white p-8 rounded-xl shadow-lg mb-8">
+                            <h2 class="text-2xl font-bold mb-4">Amenities</h2>
+                            <ul id="amenities-list" class="grid grid-cols-2 md:grid-cols-3 gap-4 text-gray-700">
+                                <!-- Amenities will be dynamically inserted here -->
+                            </ul>
+                        </div>
+
+                        <!-- Room Listings -->
+                        <div class="bg-white p-8 rounded-xl shadow-lg">
+                            <h2 class="text-2xl font-bold mb-4">Available Rooms</h2>
+                            <div id="room-list-container">
+                                <!-- Individual room cards will be dynamically inserted here -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Map -->
+                    <div class="hidden lg:block lg:col-span-1">
+                        <div id="room-map" class="h-full w-full rounded-xl shadow-lg" style="min-height: 400px;"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- Floating “Back to Apartments” Arrow -->
+<button id="back-to-apts" class="hidden fixed bottom-8 right-8 bg-[#2b1102] text-white p-3 rounded-full shadow-lg hover:bg-[#1f0f02] transition-colors z-50">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+<!-- Room Details Modal (hidden by default) -->
+<div id="room-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 items-center justify-center z-50">
+  <div class="bg-white rounded-lg shadow-xl w-11/12 max-w-lg mx-auto overflow-hidden">
+    <div class="px-6 py-4 border-b flex justify-between items-center">
+      <h3 id="modal-room-title" class="text-xl font-bold"></h3>
+      <button id="modal-close" class="text-gray-500 hover:text-gray-800">&times;</button>
+    </div>
+    <!-- Image placeholder -->
+    <div class="p-6 border-b flex justify-center">
+      <img id="modal-room-image" src="placeholder.jpg" alt="" class="w-full h-40 object-cover rounded">
+    </div>
+    <div class="p-6 space-y-4">
+      <p id="modal-room-price" class="text-gray-700 font-medium"></p>
+      <ul id="modal-room-features" class="space-y-2 text-gray-700"></ul>
+      <a id="modal-room-link" href="#" target="_blank"
+         class="inline-block bg-[#2b1102] text-[#e4d6cc] py-2 px-4 rounded-full hover:bg-[#1f0f02]">
+        Book Now
+      </a>
+    </div>
+  </div>
+</div>
+
+
+    <!-- JavaScript for "Show More", FAQ, Carousel, and Map -->
+    <!-- Leaflet JS file for the map -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="script.js"></script>
+
+
+</body>
+</html>
