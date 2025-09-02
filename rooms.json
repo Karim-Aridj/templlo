@@ -6,7 +6,13 @@
     "view": "STREET VIEW",
     "plus": null,
     "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
-    "shared_desk_office": false
+    "shared_desk_office": false,
+    "amenities": ["Oven", "Microwave", "Toaster", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Pantry Items", "Refrigerator", "Stove", "Internet", "Linens Provided", "Towels Provided", "Hair Dryer", "Free wifi", "Fire extinguisher"],
+    "images": [
+      "https://surfgasm.world/wp-content/uploads/2023/11/arriaga-carrousel-2.jpg",
+      "https://surfgasm.world/wp-content/uploads/2023/11/arriaga-carrousel-3.jpg",
+      "https://surfgasm.world/wp-content/uploads/2023/11/arriaga-carrousel-4.jpg"
+    ]
   },
   "arriaga_b": {
     "room_name": "ARRIAGA B",
@@ -15,7 +21,13 @@
     "view": "STREET VIEW",
     "plus": null,
     "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
-    "shared_desk_office": false
+    "shared_desk_office": false,
+    "amenities": ["Oven", "Microwave", "Toaster", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Pantry Items", "Refrigerator", "Stove", "Internet", "Linens Provided", "Towels Provided", "Hair Dryer", "Free wifi", "Fire extinguisher"],
+    "images": [
+      "https://example.com/arriaga_b_1.jpg",
+      "https://example.com/arriaga_b_2.jpg",
+      "https://example.com/arriaga_b_3.jpg"
+    ]
   },
   "arriaga_c": {
     "room_name": "ARRIAGA C",
@@ -24,7 +36,13 @@
     "view": "INTERIOR",
     "plus": null,
     "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
-    "shared_desk_office": false
+    "shared_desk_office": false,
+    "amenities": ["Oven", "Microwave", "Toaster", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Pantry Items", "Refrigerator", "Stove", "Internet", "Linens Provided", "Towels Provided", "Hair Dryer", "Free wifi", "Fire extinguisher"],
+    "images": [
+      "https://example.com/arriaga_c_1.jpg",
+      "https://example.com/arriaga_c_2.jpg",
+      "https://example.com/arriaga_c_3.jpg"
+    ]
   },
   "arriaga_d": {
     "room_name": "ARRIAGA D",
@@ -33,7 +51,13 @@
     "view": "OCEAN PORT VIEW",
     "plus": "HAMMOCK",
     "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
-    "shared_desk_office": false
+    "shared_desk_office": false,
+    "amenities": ["Oven", "Microwave", "Toaster", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Pantry Items", "Refrigerator", "Stove", "Internet", "Linens Provided", "Towels Provided", "Hair Dryer", "Free wifi", "Fire extinguisher"],
+    "images": [
+      "https://example.com/arriaga_d_1.jpg",
+      "https://example.com/arriaga_d_2.jpg",
+      "https://example.com/arriaga_d_3.jpg"
+    ]
   },
   "arriaga_e": {
     "room_name": "ARRIAGA E",
@@ -42,7 +66,13 @@
     "view": "INTERIOR",
     "plus": null,
     "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
-    "shared_desk_office": false
+    "shared_desk_office": false,
+    "amenities": ["Oven", "Microwave", "Toaster", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Pantry Items", "Refrigerator", "Stove", "Internet", "Linens Provided", "Towels Provided", "Hair Dryer", "Free wifi", "Fire extinguisher"],
+    "images": [
+      "https://example.com/arriaga_e_1.jpg",
+      "https://example.com/arriaga_e_2.jpg",
+      "https://example.com/arriaga_e_3.jpg"
+    ]
   },
   "arriaga_f": {
     "room_name": "ARRIAGA F",
@@ -51,7 +81,12 @@
     "view": "INTERIOR",
     "plus": null,
     "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
-    "shared_desk_office": false
+    "shared_desk_office": false,
+    "amenities": ["Oven", "Microwave", "Toaster", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Pantry Items", "Refrigerator", "Stove", "Internet", "Linens Provided", "Towels Provided", "Hair Dryer", "Free wifi", "Fire extinguisher"],
+    "images": [
+      "https://example.com/arriaga_f_1.jpg",
+      "https://example.com/arriaga_f_2.jpg"
+    ]
   },
   "arriaga_g": {
     "room_name": "ARRIAGA G",
@@ -60,7 +95,12 @@
     "view": "INTERIOR",
     "plus": null,
     "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
-    "shared_desk_office": false
+    "shared_desk_office": false,
+    "amenities": ["Oven", "Microwave", "Toaster", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Pantry Items", "Refrigerator", "Stove", "Internet", "Linens Provided", "Towels Provided", "Hair Dryer", "Free wifi", "Fire extinguisher"],
+    "images": [
+      "https://example.com/arriaga_g_1.jpg",
+      "https://example.com/arriaga_g_2.jpg"
+    ]
   },
   "patio_a": {
     "room_name": "PATIO A",
@@ -69,7 +109,13 @@
     "view": "STREET VIEW",
     "plus": "PRIVATE SMALL BALCONY",
     "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
-    "shared_desk_office": false
+    "shared_desk_office": false,
+    "amenities": ["Oven", "Microwave", "Toaster", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Pantry Items", "Refrigerator", "Stove", "Internet", "Linens Provided", "Towels Provided", "Hair Dryer", "Free wifi", "Fire extinguisher"],
+    "images": [
+      "https://example.com/patio_a_1.jpg",
+      "https://example.com/patio_a_2.jpg",
+      "https://example.com/patio_a_3.jpg"
+    ]
   },
   "patio_b": {
     "room_name": "PATIO B",
@@ -78,7 +124,13 @@
     "view": "STREET VIEW",
     "plus": "PRIVATE SMALL BALCONY",
     "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
-    "shared_desk_office": false
+    "shared_desk_office": false,
+    "amenities": ["Oven", "Microwave", "Toaster", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Pantry Items", "Refrigerator", "Stove", "Internet", "Linens Provided", "Towels Provided", "Hair Dryer", "Free wifi", "Fire extinguisher"],
+    "images": [
+      "https://example.com/patio_b_1.jpg",
+      "https://example.com/patio_b_2.jpg",
+      "https://example.com/patio_b_3.jpg"
+    ]
   },
   "patio_c": {
     "room_name": "PATIO C",
@@ -87,7 +139,12 @@
     "view": "INTERIOR",
     "plus": null,
     "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
-    "shared_desk_office": false
+    "shared_desk_office": false,
+    "amenities": ["Oven", "Microwave", "Toaster", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Pantry Items", "Refrigerator", "Stove", "Internet", "Linens Provided", "Towels Provided", "Hair Dryer", "Free wifi", "Fire extinguisher"],
+    "images": [
+      "https://example.com/patio_c_1.jpg",
+      "https://example.com/patio_c_2.jpg"
+    ]
   },
   "patio_d": {
     "room_name": "PATIO D",
@@ -96,7 +153,12 @@
     "view": "INTERIOR",
     "plus": null,
     "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
-    "shared_desk_office": false
+    "shared_desk_office": false,
+    "amenities": ["Oven", "Microwave", "Toaster", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Pantry Items", "Refrigerator", "Stove", "Internet", "Linens Provided", "Towels Provided", "Hair Dryer", "Free wifi", "Fire extinguisher"],
+    "images": [
+      "https://example.com/patio_d_1.jpg",
+      "https://example.com/patio_d_2.jpg"
+    ]
   },
   "santos_a": {
     "room_name": "SANTOS A",
@@ -105,7 +167,13 @@
     "view": "OCEAN PORT VIEW",
     "plus": null,
     "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
-    "shared_desk_office": false
+    "shared_desk_office": false,
+    "amenities": ["Oven", "Microwave", "Toaster", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Pantry Items", "Refrigerator", "Stove", "Internet", "Linens Provided", "Towels Provided", "Hair Dryer", "Free wifi", "Fire extinguisher"],
+    "images": [
+      "https://example.com/santos_a_1.jpg",
+      "https://example.com/santos_a_2.jpg",
+      "https://example.com/santos_a_3.jpg"
+    ]
   },
   "santos_b": {
     "room_name": "SANTOS B",
@@ -114,7 +182,13 @@
     "view": "OCEAN PORT VIEW",
     "plus": null,
     "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
-    "shared_desk_office": false
+    "shared_desk_office": false,
+    "amenities": ["Oven", "Microwave", "Toaster", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Pantry Items", "Refrigerator", "Stove", "Internet", "Linens Provided", "Towels Provided", "Hair Dryer", "Free wifi", "Fire extinguisher"],
+    "images": [
+      "https://example.com/santos_b_1.jpg",
+      "https://example.com/santos_b_2.jpg",
+      "https://example.com/santos_b_3.jpg"
+    ]
   },
   "santos_c": {
     "room_name": "SANTOS C",
@@ -123,7 +197,13 @@
     "view": "OCEAN PORT VIEW",
     "plus": null,
     "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
-    "shared_desk_office": false
+    "shared_desk_office": false,
+    "amenities": ["Oven", "Microwave", "Toaster", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Pantry Items", "Refrigerator", "Stove", "Internet", "Linens Provided", "Towels Provided", "Hair Dryer", "Free wifi", "Fire extinguisher"],
+    "images": [
+      "https://example.com/santos_c_1.jpg",
+      "https://example.com/santos_c_2.jpg",
+      "https://example.com/santos_c_3.jpg"
+    ]
   },
   "santos_d": {
     "room_name": "SANTOS D",
@@ -132,7 +212,13 @@
     "view": "OCEAN PORT VIEW",
     "plus": null,
     "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
-    "shared_desk_office": false
+    "shared_desk_office": false,
+    "amenities": ["Oven", "Microwave", "Toaster", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Pantry Items", "Refrigerator", "Stove", "Internet", "Linens Provided", "Towels Provided", "Hair Dryer", "Free wifi", "Fire extinguisher"],
+    "images": [
+      "https://example.com/santos_d_1.jpg",
+      "https://example.com/santos_d_2.jpg",
+      "https://example.com/santos_d_3.jpg"
+    ]
   },
   "santos_e": {
     "room_name": "SANTOS E",
@@ -141,7 +227,13 @@
     "view": "STREET VIEW",
     "plus": null,
     "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
-    "shared_desk_office": false
+    "shared_desk_office": false,
+    "amenities": ["Oven", "Microwave", "Toaster", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Pantry Items", "Refrigerator", "Stove", "Internet", "Linens Provided", "Towels Provided", "Hair Dryer", "Free wifi", "Fire extinguisher"],
+    "images": [
+      "https://example.com/santos_e_1.jpg",
+      "https://example.com/santos_e_2.jpg",
+      "https://example.com/santos_e_3.jpg"
+    ]
   },
   "santos_f": {
     "room_name": "SANTOS F",
@@ -150,7 +242,13 @@
     "view": "STREET VIEW",
     "plus": null,
     "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
-    "shared_desk_office": false
+    "shared_desk_office": false,
+    "amenities": ["Oven", "Microwave", "Toaster", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Pantry Items", "Refrigerator", "Stove", "Internet", "Linens Provided", "Towels Provided", "Hair Dryer", "Free wifi", "Fire extinguisher"],
+    "images": [
+      "https://example.com/santos_f_1.jpg",
+      "https://example.com/santos_f_2.jpg",
+      "https://example.com/santos_f_3.jpg"
+    ]
   },
   "santos_h1": {
     "room_name": "SANTOS H1",
@@ -159,7 +257,12 @@
     "view": "STREET VIEW",
     "plus": null,
     "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
-    "shared_desk_office": false
+    "shared_desk_office": false,
+    "amenities": ["Oven", "Microwave", "Toaster", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Pantry Items", "Refrigerator", "Stove", "Internet", "Linens Provided", "Towels Provided", "Hair Dryer", "Free wifi", "Fire extinguisher"],
+    "images": [
+      "https://example.com/santos_h1_1.jpg",
+      "https://example.com/santos_h1_2.jpg"
+    ]
   },
   "santos_h2": {
     "room_name": "SANTOS H2",
@@ -168,7 +271,12 @@
     "view": "STREET VIEW",
     "plus": null,
     "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
-    "shared_desk_office": false
+    "shared_desk_office": false,
+    "amenities": ["Oven", "Microwave", "Toaster", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Pantry Items", "Refrigerator", "Stove", "Internet", "Linens Provided", "Towels Provided", "Hair Dryer", "Free wifi", "Fire extinguisher"],
+    "images": [
+      "https://example.com/santos_h2_1.jpg",
+      "https://example.com/santos_h2_2.jpg"
+    ]
   },
   "olympo_a": {
     "room_name": "OLYMPO A",
@@ -177,7 +285,13 @@
     "view": "OCEAN PORT VIEW",
     "plus": null,
     "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
-    "shared_desk_office": true
+    "shared_desk_office": true,
+    "amenities": ["Oven", "Microwave", "Toaster", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Pantry Items", "Refrigerator", "Stove", "Internet", "Linens Provided", "Towels Provided", "Hair Dryer", "Free wifi", "Fire extinguisher"],
+    "images": [
+      "https://example.com/olympo_a_1.jpg",
+      "https://example.com/olympo_a_2.jpg",
+      "https://example.com/olympo_a_3.jpg"
+    ]
   },
   "olympo_b": {
     "room_name": "OLYMPO B",
@@ -186,7 +300,13 @@
     "view": "OCEAN PORT VIEW",
     "plus": null,
     "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
-    "shared_desk_office": true
+    "shared_desk_office": true,
+    "amenities": ["Oven", "Microwave", "Toaster", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Pantry Items", "Refrigerator", "Stove", "Internet", "Linens Provided", "Towels Provided", "Hair Dryer", "Free wifi", "Fire extinguisher"],
+    "images": [
+      "https://example.com/olympo_b_1.jpg",
+      "https://example.com/olympo_b_2.jpg",
+      "https://example.com/olympo_b_3.jpg"
+    ]
   },
   "olympo_c": {
     "room_name": "OLYMPO C",
@@ -195,7 +315,12 @@
     "view": "STREET VIEW",
     "plus": null,
     "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
-    "shared_desk_office": true
+    "shared_desk_office": true,
+    "amenities": ["Oven", "Microwave", "Toaster", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Pantry Items", "Refrigerator", "Stove", "Internet", "Linens Provided", "Towels Provided", "Hair Dryer", "Free wifi", "Fire extinguisher"],
+    "images": [
+      "https://example.com/olympo_c_1.jpg",
+      "https://example.com/olympo_c_2.jpg"
+    ]
   },
   "olympo_d": {
     "room_name": "OLYMPO D",
@@ -204,7 +329,13 @@
     "view": "STREET VIEW",
     "plus": "PRIVATE SMALL BALCONY",
     "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
-    "shared_desk_office": true
+    "shared_desk_office": true,
+    "amenities": ["Oven", "Microwave", "Toaster", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Pantry Items", "Refrigerator", "Stove", "Internet", "Linens Provided", "Towels Provided", "Hair Dryer", "Free wifi", "Fire extinguisher"],
+    "images": [
+      "https://example.com/olympo_d_1.jpg",
+      "https://example.com/olympo_d_2.jpg",
+      "https://example.com/olympo_d_3.jpg"
+    ]
   },
   "palmira_a": {
     "room_name": "PALMIRA A",
@@ -213,7 +344,13 @@
     "view": "STREET VIEW",
     "plus": null,
     "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
-    "shared_desk_office": false
+    "shared_desk_office": false,
+    "amenities": ["Oven", "Microwave", "Toaster", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Pantry Items", "Refrigerator", "Stove", "Internet", "Linens Provided", "Towels Provided", "Hair Dryer", "Free wifi", "Fire extinguisher"],
+    "images": [
+      "https://example.com/palmira_a_1.jpg",
+      "https://example.com/palmira_a_2.jpg",
+      "https://example.com/palmira_a_3.jpg"
+    ]
   },
   "palmira_b": {
     "room_name": "PALMIRA B",
@@ -222,7 +359,13 @@
     "view": "STREET VIEW",
     "plus": "PRIVATE SMALL BALCONY",
     "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
-    "shared_desk_office": false
+    "shared_desk_office": false,
+    "amenities": ["Oven", "Microwave", "Toaster", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Pantry Items", "Refrigerator", "Stove", "Internet", "Linens Provided", "Towels Provided", "Hair Dryer", "Free wifi", "Fire extinguisher"],
+    "images": [
+      "https://example.com/palmira_b_1.jpg",
+      "https://example.com/palmira_b_2.jpg",
+      "https://example.com/palmira_b_3.jpg"
+    ]
   },
   "palmira_c": {
     "room_name": "PALMIRA C",
@@ -231,7 +374,13 @@
     "view": "STREET VIEW",
     "plus": null,
     "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
-    "shared_desk_office": false
+    "shared_desk_office": false,
+    "amenities": ["Oven", "Microwave", "Toaster", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Pantry Items", "Refrigerator", "Stove", "Internet", "Linens Provided", "Towels Provided", "Hair Dryer", "Free wifi", "Fire extinguisher"],
+    "images": [
+      "https://example.com/palmira_c_1.jpg",
+      "https://example.com/palmira_c_2.jpg",
+      "https://example.com/palmira_c_3.jpg"
+    ]
   },
   "palmira_d": {
     "room_name": "PALMIRA D",
@@ -240,7 +389,13 @@
     "view": "STREET VIEW",
     "plus": null,
     "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
-    "shared_desk_office": false
+    "shared_desk_office": false,
+    "amenities": ["Oven", "Microwave", "Toaster", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Pantry Items", "Refrigerator", "Stove", "Internet", "Linens Provided", "Towels Provided", "Hair Dryer", "Free wifi", "Fire extinguisher"],
+    "images": [
+      "https://example.com/palmira_d_1.jpg",
+      "https://example.com/palmira_d_2.jpg",
+      "https://example.com/palmira_d_3.jpg"
+    ]
   },
   "palmira_e": {
     "room_name": "PALMIRA E",
@@ -249,7 +404,12 @@
     "view": "STREET VIEW",
     "plus": "PRIVATE SMALL BALCONY",
     "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
-    "shared_desk_office": false
+    "shared_desk_office": false,
+    "amenities": ["Oven", "Microwave", "Toaster", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Pantry Items", "Refrigerator", "Stove", "Internet", "Linens Provided", "Towels Provided", "Hair Dryer", "Free wifi", "Fire extinguisher"],
+    "images": [
+      "https://example.com/palmira_e_1.jpg",
+      "https://example.com/palmira_e_2.jpg"
+    ]
   },
   "maria_a": {
     "room_name": "MARIA A",
@@ -258,7 +418,13 @@
     "view": "STREET VIEW",
     "plus": "HAMMOCK",
     "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
-    "shared_desk_office": true
+    "shared_desk_office": true,
+    "amenities": ["Oven", "Microwave", "Toaster", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Pantry Items", "Refrigerator", "Stove", "Internet", "Linens Provided", "Towels Provided", "Hair Dryer", "Free wifi", "Fire extinguisher"],
+    "images": [
+      "https://example.com/maria_a_1.jpg",
+      "https://example.com/maria_a_2.jpg",
+      "https://example.com/maria_a_3.jpg"
+    ]
   },
   "maria_b": {
     "room_name": "MARIA B",
@@ -267,17 +433,28 @@
     "view": "STREET VIEW",
     "plus": "HAMMOCK",
     "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
-    "shared_desk_office": true
+    "shared_desk_office": true,
+    "amenities": ["Oven", "Microwave", "Toaster", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Pantry Items", "Refrigerator", "Stove", "Internet", "Linens Provided", "Towels Provided", "Hair Dryer", "Free wifi", "Fire extinguisher"],
+    "images": [
+      "https://example.com/maria_b_1.jpg",
+      "https://example.com/maria_b_2.jpg",
+      "https://example.com/maria_b_3.jpg"
+    ]
   },
   "maria_c": {
     "room_name": "MARIA C",
-     "image": "http://surfgasm.world/wp-content/uploads/2025/08/Torrao-carrousel-1.jpeg",
     "category": 2,
     "bed": "DOUBLE",
     "view": "ATTIC ROOM CEILING WINDOWS",
     "plus": "TV",
     "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
-    "shared_desk_office": true
+    "shared_desk_office": true,
+    "amenities": ["Oven", "Microwave", "Toaster", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Pantry Items", "Refrigerator", "Stove", "Internet", "Linens Provided", "Towels Provided", "Hair Dryer", "Free wifi", "Fire extinguisher"],
+    "images": [
+      "http://surfgasm.world/wp-content/uploads/2025/08/Torrao-carrousel-1.jpeg",
+      "https://example.com/maria_c_2.jpg",
+      "https://example.com/maria_c_3.jpg"
+    ]
   },
   "loft": {
     "room_name": "LOFT",
@@ -286,7 +463,13 @@
     "view": "INTERIOR",
     "plus": "TV, PRIVATE STUDIO",
     "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
-    "shared_desk_office": false
+    "shared_desk_office": false,
+    "amenities": ["Oven", "Microwave", "Toaster", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Pantry Items", "Refrigerator", "Stove", "Internet", "Linens Provided", "Towels Provided", "Hair Dryer", "Free wifi", "Fire extinguisher"],
+    "images": [
+      "https://example.com/loft_1.jpg",
+      "https://example.com/loft_2.jpg",
+      "https://example.com/loft_3.jpg"
+    ]
   },
   "torrao": {
     "room_name": "TORRÃO",
@@ -295,6 +478,12 @@
     "view": "LAKE VIEW",
     "plus": "TV, HEATING, PRIVATE MORADIA",
     "includes": ["DUVE", "PORTABLE HEATER", "HANGERS", "DESK AND CHAIR"],
-    "shared_desk_office": false
+    "shared_desk_office": false,
+    "amenities": ["Oven", "Microwave", "Toaster", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Pantry Items", "Refrigerator", "Stove", "Internet", "Linens Provided", "Towels Provided", "Hair Dryer", "Free wifi", "Fire extinguisher"],
+    "images": [
+      "https://example.com/torrao_1.jpg",
+      "https://example.com/torrao_2.jpg",
+      "https://example.com/torrao_3.jpg"
+    ]
   }
 }

@@ -377,33 +377,52 @@ backBtn.addEventListener('click', () => {
 
 function openRoomModal(room) {
   const details = roomDetails[room.key] || {};
-  const title   = details.room_name || room.name;
-  const imgSrc  = details.image || 'placeholder.jpg'; // add image URLs in JSON
-
-  // Static includes
-  const includes = details.includes || [];
-  const shared   = details.shared_desk_office ? ['SHARED DESK OFFICE'] : [];
-
-  // Build feature list with icons
-  const features = [
-    ...includes.map(i => ({ icon: 'fa-solid fa-check', text: i })),
-    ...shared .map(i => ({ icon: 'fa-solid fa-table', text: i })),
-    { icon: 'fa-solid fa-layer-group', text: `Category: ${details.category ?? '–'}` },
-    { icon: 'fa-solid fa-bed',          text: `Bed: ${details.bed ?? '–'}` },
-    { icon: 'fa-solid fa-eye',          text: `View: ${details.view ?? '–'}` },
-    ...(details.plus ? [{ icon: 'fa-solid fa-gift', text: `Plus: ${details.plus}` }] : [])
-  ];
-
-  // Populate modal
-  document.getElementById('modal-room-title').textContent  = title;
-  document.getElementById('modal-room-price').textContent  = room.price;
-  document.getElementById('modal-room-image').src          = imgSrc;
-  document.getElementById('modal-room-link').href         = room.link;
-
-  // Render features
-  document.getElementById('modal-room-features').innerHTML =
-    features.map(f => `<li><i class="${f.icon}"></i>${f.text}</li>`).join('');
-
+  
+  // Title
+  document.getElementById('modal-room-title').textContent = details.room_name || room.name;
+  
+  // Bed and View info
+  document.getElementById('modal-bed-info').textContent = `Bed: ${details.bed || '–'}`;
+  document.getElementById('modal-view-info').textContent = `View: ${details.view || '–'}`;
+  
+  // Plus info (show/hide based on availability)
+  const plusInfo = document.getElementById('modal-plus-info');
+  if (details.plus) {
+    plusInfo.style.display = 'flex';
+    plusInfo.querySelector('span').textContent = `Plus: ${details.plus}`;
+  } else {
+    plusInfo.style.display = 'none';
+  }
+  
+  // Amenities with icons
+  const amenityIcons = {
+    'Oven': 'fa-solid fa-temperature-high',
+    'Microwave': 'fa-solid fa-microchip',
+    'Toaster': 'fa-solid fa-bread-slice',
+    'Coffee Maker': 'fa-solid fa-coffee',
+    'Dishes & Utensils': 'fa-solid fa-utensils',
+    'Kitchen': 'fa-solid fa-kitchen-set',
+    'Pantry Items': 'fa-solid fa-box-open',
+    'Refrigerator': 'fa-solid fa-snowflake',
+    'Stove': 'fa-solid fa-fire-burner',
+    'Internet': 'fa-solid fa-wifi',
+    'Linens Provided': 'fa-solid fa-bed',
+    'Towels Provided': 'fa-solid fa-hand-sparkles',
+    'Hair Dryer': 'fa-solid fa-wind',
+    'Free wifi': 'fa-solid fa-wifi',
+    'Fire extinguisher': 'fa-solid fa-fire-extinguisher'
+  };
+  
+  document.getElementById('modal-amenities').innerHTML = 
+    (details.amenities || []).map(amenity => {
+      const icon = amenityIcons[amenity] || 'fa-solid fa-check';
+      return `<div class="flex items-center"><i class="${icon} mr-2 text-[#2b1102]"></i><span>${amenity}</span></div>`;
+    }).join('');
+  
+  // Price and link
+  document.getElementById('modal-room-price').textContent = room.price;
+  document.getElementById('modal-room-link').href = room.link;
+  
   // Show modal
   const modal = document.getElementById('room-modal');
   modal.classList.remove('hidden');
