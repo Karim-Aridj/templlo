@@ -6,6 +6,7 @@ fetch('apartments.json')
   .then(res => res.json())
   .then(data => {
     apartmentData = data;
+    renderApartmentsList();
     const aptFromHash = window.location.hash.slice(1);
     if (aptFromHash && apartmentData[aptFromHash]) {
       showRoomPage(aptFromHash);
@@ -22,40 +23,22 @@ fetch('rooms.json')
   .then(data => roomDetails = data)
   .catch(err => console.error('Error loading rooms.json:', err));
 
-// Render list of rooms on detail page
-function renderRooms(rooms) {
-  const container = document.getElementById('room-list-container');
-  container.innerHTML = rooms.map(room => `
-    <div class="room-card flex flex-col sm:flex-row items-center justify-between p-4 mb-4">
-      <div class="text-center sm:text-left mb-2 sm:mb-0">
-        <p class="room-title font-semibold text-lg" data-key="${room.key}">${room.name}</p>
-        <p class="text-gray-600 text-sm">${room.price}</p>
-      </div>
-      <button class="btn-custom py-2 px-6 rounded-full w-full sm:w-auto text-sm font-medium" data-key="${room.key}">
-        Book Now
-      </button>
-    </div>
-  `).join('');
-
-  // Title click opens modal
-  document.querySelectorAll('.room-title').forEach(el => {
-    el.addEventListener('click', () => {
-      const key = el.dataset.key;
-      const room = rooms.find(r => r.key === key);
-      openRoomModal(room);
-    });
-  });
-  // Book button opens link
-  document.querySelectorAll('.btn-custom').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const key = btn.dataset.key;
-      const room = rooms.find(r => r.key === key);
-      window.open(room.link, '_blank');
-    });
+// Render list of apartments on the home page
+function renderApartmentsList() {
+  const list = document.getElementById('apartment-list');
+  list.innerHTML = Object.entries(apartmentData).map(
+    ([key, apt]) => `
+      <div class="p-4 bg-white rounded-lg shadow hover:shadow-lg transition cursor-pointer" data-key="${key}">
+        <h3 class="font-semibold text-lg mb-2">${apt.name}</h3>
+        <p class="text-gray-600">${apt.subtitle}</p>
+      </div>`
+  ).join('');
+  document.querySelectorAll('#apartment-list > div').forEach(el => {
+    el.addEventListener('click', () => showRoomPage(el.dataset.key));
   });
 }
 
-// Show apartment detail page
+// Show an apartment’s detail page
 function showRoomPage(id) {
   history.replaceState(null, '', `#${id}`);
   const apt = apartmentData[id];
@@ -77,25 +60,58 @@ function showRoomPage(id) {
     apt.amenities.map(a => `<li><i class="fa-solid fa-check"></i> ${a}</li>`).join('');
 
   renderRooms(apt.rooms);
+  initRoomMap(apt.coordinates);
+}
 
+// Render rooms list and attach click handlers
+function renderRooms(rooms) {
+  const container = document.getElementById('room-list-container');
+  container.innerHTML = rooms.map(room => `
+    <div class="room-card flex flex-col sm:flex-row items-center justify-between p-4 mb-4">
+      <div class="text-center sm:text-left mb-2 sm:mb-0">
+        <p class="room-title font-semibold text-lg" data-key="${room.key}">${room.name}</p>
+        <p class="text-gray-600 text-sm">${room.price}</p>
+      </div>
+      <button class="btn-custom py-2 px-6 rounded-full w-full sm:w-auto text-sm font-medium" data-key="${room.key}">
+        Book Now
+      </button>
+    </div>
+  `).join('');
+
+  document.querySelectorAll('.room-title').forEach(el => {
+    el.addEventListener('click', () => {
+      const room = rooms.find(r => r.key === el.dataset.key);
+      openRoomModal(room);
+    });
+  });
+  document.querySelectorAll('.btn-custom').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const room = rooms.find(r => r.key === btn.dataset.key);
+      window.open(room.link, '_blank');
+    });
+  });
+}
+
+// Initialize or update the detail page map
+function initRoomMap(coords) {
   setTimeout(() => {
     if (!window.roomMapInstance) {
-      window.roomMapInstance = L.map('room-map').setView(apt.coordinates, 15);
+      window.roomMapInstance = L.map('room-map').setView(coords, 15);
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '© OpenStreetMap contributors'
       }).addTo(window.roomMapInstance);
     } else {
-      window.roomMapInstance.setView(apt.coordinates, 15);
+      window.roomMapInstance.setView(coords, 15);
       window.roomMapInstance.eachLayer(l => {
         if (l instanceof L.Marker) window.roomMapInstance.removeLayer(l);
       });
     }
-    L.marker(apt.coordinates).addTo(window.roomMapInstance);
+    L.marker(coords).addTo(window.roomMapInstance);
     window.roomMapInstance.invalidateSize();
   }, 100);
 }
 
-// Show home page
+// Return to the home view
 function showHomePage() {
   history.replaceState(null, '', window.location.pathname);
   document.getElementById('home-page').classList.remove('hidden');
@@ -109,10 +125,9 @@ function showHomePage() {
   }
 }
 
-// Open room details modal
+// Open and populate the room details modal
 function openRoomModal(room) {
   const d = roomDetails[room.key] || {};
-
   document.getElementById('modal-room-title').textContent = d.room_name || room.name;
   document.getElementById('modal-bed-info').textContent = `Bed: ${d.bed || '–'}`;
   document.getElementById('modal-view-info').textContent = `View: ${d.view || '–'}`;
@@ -143,22 +158,16 @@ function openRoomModal(room) {
     'Fire extinguisher': 'fa-solid fa-fire-extinguisher'
   };
   document.getElementById('modal-amenities').innerHTML =
-    (d.amenities || []).map(a => {
-      const cls = icons[a] || 'fa-solid fa-check';
-      return `<div class="flex items-center"><i class="${cls} mr-2 text-[#2b1102]"></i>${a}</div>`;
-    }).join('');
+    (d.amenities || []).map(a => `<div class="flex items-center"><i class="${icons[a]||'fa-solid fa-check'} mr-2 text-[#2b1102]"></i>${a}</div>`).join('');
 
   const mainImg = document.getElementById('modal-main-img');
   const thumbs  = document.getElementById('gallery-thumbs');
   thumbs.innerHTML = '';
   if (d.images && d.images.length) {
-    d.images.forEach((src, i) => {
+    d.images.forEach((src,i) => {
       const img = document.createElement('img');
       img.src = src; img.alt = d.room_name;
-      if (i === 0) {
-        img.classList.add('selected');
-        mainImg.src = src;
-      }
+      if (i===0) { img.classList.add('selected'); mainImg.src = src; }
       img.addEventListener('click', () => {
         mainImg.src = src;
         thumbs.querySelectorAll('img').forEach(el => el.classList.remove('selected'));
@@ -178,9 +187,9 @@ function openRoomModal(room) {
   modal.classList.add('flex');
 }
 
-// Set up event listeners after DOM loads
+// Set up UI interactions after DOM loads
 document.addEventListener('DOMContentLoaded', () => {
-  // Close modal handlers
+  // Modal close handlers
   const modal = document.getElementById('room-modal');
   const closeBtn = document.getElementById('modal-close');
   if (modal && closeBtn) {
@@ -223,57 +232,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Testimonials carousel
   const track = document.getElementById('testimonial-track');
-  const prevButton = document.getElementById('carousel-prev');
-  const nextButton = document.getElementById('carousel-next');
-  if (track && prevButton && nextButton) {
-    const getSlidesPerView = () => {
-      if (window.innerWidth >= 1024) return 3;
-      if (window.innerWidth >= 768) return 2;
-      return 1;
-    };
-    let currentIndex = 0;
-    const slides = track.querySelectorAll('.carousel-slide');
-    const totalSlides = slides.length;
-    const updateCarousel = () => {
-      const spv = getSlidesPerView();
-      track.style.transform = `translateX(${-currentIndex * (track.clientWidth / spv)}px)`;
-    };
-    prevButton.addEventListener('click', () => {
-      const spv = getSlidesPerView();
-      currentIndex = currentIndex > 0 ? currentIndex - 1 : totalSlides - spv;
-      updateCarousel();
-    });
-    nextButton.addEventListener('click', () => {
-      const spv = getSlidesPerView();
-      currentIndex = currentIndex < totalSlides - spv ? currentIndex + 1 : 0;
-      updateCarousel();
-    });
-    window.addEventListener('resize', () => {
-      currentIndex = 0;
-      updateCarousel();
-    });
-    updateCarousel();
+  const prev = document.getElementById('carousel-prev');
+  const next = document.getElementById('carousel-next');
+  if (track && prev && next) {
+    const getSpv = () => window.innerWidth>=1024?3:window.innerWidth>=768?2:1;
+    let idx=0; const slides=track.querySelectorAll('.carousel-slide'), total=slides.length;
+    const update = () => { const spv=getSpv(); track.style.transform=`translateX(${-idx*(track.clientWidth/spv)}px)`; };
+    prev.addEventListener('click',()=>{ const spv=getSpv(); idx=idx>0?idx-1:total-spv; update(); });
+    next.addEventListener('click',()=>{ const spv=getSpv(); idx=idx<total-spv?idx+1:0; update(); });
+    window.addEventListener('resize',()=>{ idx=0; update(); });
+    update();
   }
 
-  // Initialize main map
-  const map = L.map('map').setView([38.715, -9.15], 14);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap contributors'
-  }).addTo(map);
-  const locations = [
-    { title: 'OLYMPO', coordinates: [38.71000190857739, -9.160553280061636], description: 'Our apartment is in a central location and has an amazing rooftop to enjoy Tagus River view' },
-    { title: 'SANTOS', coordinates: [38.70765573893287, -9.15951458006177], description: 'Our apartment is in a central location and has an amazing rooftop to enjoy Tagus River view' },
-    { title: 'PALMIRA', coordinates: [38.72396692533869, -9.133889984288666], description: 'For surfers who want to enjoy Lisbon waves' },
-    { title: 'MARIA', coordinates: [38.72336820407823, -9.133562425999576], description: 'Central apartment close to Historic Lisbon' },
-    { title: 'ARRIAGA', coordinates: [38.70431580212892, -9.165665021345829], description: 'Elegance and comfort' },
-    { title: 'PATIO', coordinates: [38.70432417473284, -9.165643563673596], description: 'Cozy space, bright patio' },
-    { title: 'LOFT', coordinates: [38.717922382466064, -9.133941759865937], description: 'Private studio' }
+  // Main map initialization
+  const map = L.map('map').setView([38.715,-9.15],14);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{ attribution:'© OpenStreetMap contributors' }).addTo(map);
+  const locations=[
+    {title:'OLYMPO',coordinates:[38.71000190857739,-9.160553280061636],desc:'Our apartment is in a central location and has an amazing rooftop to enjoy Tagus River view'},
+    {title:'SANTOS',coordinates:[38.70765573893287,-9.15951458006177],desc:'Our apartment is in a central location and has an amazing rooftop to enjoy Tagus River view'},
+    {title:'PALMIRA',coordinates:[38.72396692533869,-9.133889984288666],desc:'For surfers who want to enjoy Lisbon waves'},
+    {title:'MARIA',coordinates:[38.72336820407823,-9.133562425999576],desc:'Central apartment close to Historic Lisbon'},
+    {title:'ARRIAGA',coordinates:[38.70431580212892,-9.165665021345829],desc:'Elegance and comfort'},
+    {title:'PATIO',coordinates:[38.70432417473284,-9.165643563673596],desc:'Cozy space, bright patio'},
+    {title:'LOFT',coordinates:[38.717922382466064,-9.133941759865937],desc:'Private studio'}
   ];
   const markerGroup = L.featureGroup();
-  locations.forEach(loc => {
+  locations.forEach(loc=> {
     L.marker(loc.coordinates)
-      .bindPopup(`<div class="p-2"><h2 class="font-bold text-lg">${loc.title}</h2><p class="text-sm text-gray-700">${loc.description}</p></div>`)
-      .addTo(markerGroup);
+     .bindPopup(`<div class="p-2"><h2 class="font-bold text-lg">${loc.title}</h2><p class="text-sm text-gray-700">${loc.desc}</p></div>`)
+     .addTo(markerGroup);
   });
   markerGroup.addTo(map);
   map.fitBounds(markerGroup.getBounds());
@@ -284,7 +271,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   window.addEventListener('scroll', () => {
     const btn = document.getElementById('back-to-apts');
-    const footerTop = document.querySelector('footer').getBoundingClientRect().top;
-    btn.classList.toggle('hidden', footerTop >= window.innerHeight + 100);
+    btn.classList.toggle('hidden', document.querySelector('footer').getBoundingClientRect().top >= window.innerHeight + 100);
   });
 });
