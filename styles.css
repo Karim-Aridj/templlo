@@ -314,23 +314,66 @@ body {
 }
 
 /* Modal styling */
-#room-modal { display: none; }
-#room-modal.flex { display: flex; }
+#room-modal {
+  display: none;
+  z-index: 10000 !important;
+}
+#room-modal.flex {
+  display: flex;
+}
 
-#room-modal .shadow-xl {
+/* Modal container */
+#room-modal .bg-white {
+  position: relative;
+  z-index: 10002;
   max-height: 90vh;
 }
 
-#modal-room-features li {
-  display: flex;
-  align-items: center;
+/* Close button styling - fixed positioning */
+#modal-close {
+  position: absolute !important;
+  top: 16px !important;
+  right: 16px !important;
+  z-index: 10004 !important;
+  background: white !important;
+  border: 2px solid #e5e5e5 !important;
+  border-radius: 50% !important;
+  width: 44px !important;
+  height: 44px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 28px !important;
+  font-weight: bold !important;
+  color: #666 !important;
+  cursor: pointer !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+  transition: all 0.2s !important;
 }
-#modal-room-features li i {
-  margin-right: 0.5rem;
-  color: #2b1102;
-  width: 1.25rem;
-  text-align: center;
+
+#modal-close:hover {
+  background: #f8f8f8 !important;
+  color: #333 !important;
+  transform: scale(1.05) !important;
+  border-color: #ccc !important;
 }
+
+/* Rest of modal styles */
+#gallery-thumbs img {
+  width: 60px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity .2s;
+}
+
+#gallery-thumbs img.selected {
+  opacity: 1;
+  border: 2px solid #2b1102;
+}
+
 #modal-amenities div {
   padding: 0.25rem 0;
   font-size: 0.875rem;
@@ -340,4 +383,9 @@ body {
 #modal-amenities i {
   width: 1rem;
   color: #2b1102;
+}
+
+/* Ensure map stays below modals */
+#map, .leaflet-container {
+  z-index: 1 !important;
 }

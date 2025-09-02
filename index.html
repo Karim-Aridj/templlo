@@ -592,7 +592,7 @@
                 </div>
             </div>
             <div class="mt-12 text-center text-xs text-gray-500 border-t border-gray-400 pt-6">
-                &copy; 2025 Surfgasm. All Rights Reserved.
+                &copy; 2025 templlo. All Rights Reserved.
             </div>
         </footer>
     </div>
@@ -648,59 +648,65 @@
 <button id="back-to-apts" class="hidden fixed bottom-8 right-8 bg-[#2b1102] text-white p-3 rounded-full shadow-lg hover:bg-[#1f0f02] transition-colors z-50">
   <i class="fa-solid fa-arrow-up"></i>
 </button>
-<div id="room-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 items-center justify-center z-50">
-  <div class="bg-white rounded-lg shadow-xl w-11/12 max-w-4xl mx-auto overflow-hidden flex">
-    <!-- LEFT: Gallery -->
-    <div class="w-1/2 p-4">
-      <div id="gallery-main" class="mb-2">
-        <img id="modal-main-img" src="placeholder.jpg" class="w-full h-64 object-cover rounded" />
-      </div>
-      <div id="gallery-thumbs" class="flex space-x-2 overflow-x-auto">
-        <!-- thumbnails will be injected here -->
-      </div>
-    </div>
+
+<div id="room-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 items-center justify-center" style="z-index: 10000;">
+  <div class="bg-white rounded-lg shadow-xl w-11/12 max-w-4xl mx-auto overflow-hidden relative">
+    <!-- Close button - MUST be inside the white container -->
+    <button id="modal-close" class="absolute top-4 right-4 w-10 h-10 bg-white border border-gray-300 rounded-full flex items-center justify-center text-2xl font-bold text-gray-600 hover:text-gray-800 hover:bg-gray-100 shadow-lg" style="z-index: 10004;">&times;</button>
     
-    <!-- RIGHT: Details -->
-    <div class="w-1/2 p-6 flex flex-col">
-      <button id="modal-close" class="absolute top-3 right-3 text-gray-500 hover:text-gray-800 text-2xl">&times;</button>
-      
-      <h3 id="modal-room-title" class="text-2xl font-bold mb-4"></h3>
-      
-      <!-- Amenities Section -->
-      <div class="mb-6">
-        <h4 class="text-lg font-semibold mb-3">Amenities:</h4>
-        <div id="modal-amenities" class="grid grid-cols-2 gap-2 text-sm">
-          <!-- amenities will be injected here -->
+    <!-- Modal content wrapper -->
+    <div class="flex">
+      <!-- LEFT: Gallery -->
+      <div class="w-1/2 p-4">
+        <div id="gallery-main" class="mb-2">
+          <img id="modal-main-img" src="" class="w-full h-64 object-cover rounded" />
+        </div>
+        <div id="gallery-thumbs" class="flex space-x-2 overflow-x-auto">
+          <!-- thumbnails will be injected here -->
         </div>
       </div>
       
-      <!-- Other Details -->
-      <div class="mb-4">
-        <div class="flex items-center mb-2">
-          <i class="fa-solid fa-bed mr-2"></i>
-          <span id="modal-bed-info"></span>
+      <!-- RIGHT: Details -->
+      <div class="w-1/2 p-6 flex flex-col">      
+        <h3 id="modal-room-title" class="text-2xl font-bold mb-4 pr-14"></h3>
+        
+        <!-- Amenities Section -->
+        <div class="mb-6">
+          <h4 class="text-lg font-semibold mb-3">Amenities:</h4>
+          <div id="modal-amenities" class="grid grid-cols-2 gap-2 text-sm">
+            <!-- amenities will be injected here -->
+          </div>
         </div>
-        <div class="flex items-center mb-2">
-          <i class="fa-solid fa-eye mr-2"></i>
-          <span id="modal-view-info"></span>
+        
+        <!-- Other Details -->
+        <div class="mb-4">
+          <div class="flex items-center mb-2">
+            <i class="fa-solid fa-bed mr-2"></i>
+            <span id="modal-bed-info"></span>
+          </div>
+          <div class="flex items-center mb-2">
+            <i class="fa-solid fa-eye mr-2"></i>
+            <span id="modal-view-info"></span>
+          </div>
+          <div id="modal-plus-info" class="flex items-center mb-2" style="display: none;">
+            <i class="fa-solid fa-gift mr-2"></i>
+            <span></span>
+          </div>
         </div>
-        <div id="modal-plus-info" class="flex items-center mb-2" style="display: none;">
-          <i class="fa-solid fa-gift mr-2"></i>
-          <span></span>
+        
+        <!-- Price and Book Button -->
+        <div class="mt-auto">
+          <p id="modal-room-price" class="text-xl font-semibold text-[#2b1102] mb-4"></p>
+          <a id="modal-room-link" href="#" target="_blank"
+             class="block bg-[#2b1102] text-[#e4d6cc] py-3 text-center rounded-lg hover:bg-[#1f0f02]">
+            Book Now
+          </a>
         </div>
-      </div>
-      
-      <!-- Price and Book Button -->
-      <div class="mt-auto">
-        <p id="modal-room-price" class="text-xl font-semibold text-[#2b1102] mb-4"></p>
-        <a id="modal-room-link" href="#" target="_blank"
-           class="block bg-[#2b1102] text-[#e4d6cc] py-3 text-center rounded-lg hover:bg-[#1f0f02]">
-          Book Now
-        </a>
       </div>
     </div>
   </div>
 </div>
+
 
 
     <!-- JavaScript for "Show More", FAQ, Carousel, and Map -->
