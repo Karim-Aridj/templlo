@@ -27,18 +27,84 @@ fetch('rooms.json')
 function renderApartmentsList() {
   const list = document.getElementById('apartment-list');
   list.innerHTML = Object.entries(apartmentData).map(
-    ([key, apt]) => `
-      <div class="p-4 bg-white rounded-lg shadow hover:shadow-lg transition cursor-pointer" data-key="${key}">
-        <h3 class="font-semibold text-lg mb-2">${apt.name}</h3>
-        <p class="text-gray-600">${apt.subtitle}</p>
-      </div>`
+    ([key, apt]) => {
+      // Add carousel HTML if carouselImages exist
+      let carouselHTML = '';
+      if (apt.carouselImages && apt.carouselImages.length > 0) {
+        carouselHTML = `
+          <div class="apartment-carousel" data-key="${key}">
+            ${apt.carouselImages.map((img, i) => 
+              `<img src="${img}" class="carousel-image ${i === 0 ? 'active' : ''}" alt="${apt.name}">`
+            ).join('')}
+            ${apt.carouselImages.length > 1 ? `
+              <button class="carousel-btn carousel-prev" data-key="${key}">&#8249;</button>
+              <button class="carousel-btn carousel-next" data-key="${key}">&#8250;</button>
+              <div class="carousel-dots">
+                ${apt.carouselImages.map((_, i) => 
+                  `<span class="carousel-dot ${i === 0 ? 'active' : ''}" data-key="${key}" data-index="${i}"></span>`
+                ).join('')}
+              </div>
+            ` : ''}
+          </div>
+        `;
+      }
+
+      return `
+        <div class="p-4 bg-white rounded-lg shadow hover:shadow-lg transition cursor-pointer apartment-card" data-key="${key}">
+          ${carouselHTML}
+          <h3 class="font-semibold text-lg mb-2">${apt.name}</h3>
+          <p class="text-gray-600">${apt.subtitle}</p>
+        </div>
+      `;
+    }
   ).join('');
-  document.querySelectorAll('#apartment-list > div').forEach(el => {
+
+  //  click handlers
+  document.querySelectorAll('.apartment-card').forEach(el => {
     el.addEventListener('click', () => showRoomPage(el.dataset.key));
+  });
+
+  // Add carousel navigation handlers
+  document.querySelectorAll('.carousel-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation(); // Prevent apartment card click
+      const key = btn.dataset.key;
+      const carousel = document.querySelector(`.apartment-carousel[data-key="${key}"]`);
+      const images = carousel.querySelectorAll('.carousel-image');
+      
+      let currentIndex = Array.from(images).findIndex(img => img.classList.contains('active'));
+      let newIndex;
+      
+      if (btn.classList.contains('carousel-prev')) {
+        newIndex = (currentIndex - 1 + images.length) % images.length;
+      } else {
+        newIndex = (currentIndex + 1) % images.length;
+      }
+      
+      images[currentIndex].classList.remove('active');
+      images[newIndex].classList.add('active');
+    });
+  });
+
+  // Add dot navigation handlers
+  document.querySelectorAll('.carousel-dot').forEach(dot => {
+    dot.addEventListener('click', (e) => {
+      e.stopPropagation(); // Prevent apartment card click
+      const key = dot.dataset.key;
+      const index = parseInt(dot.dataset.index);
+      const carousel = document.querySelector(`.apartment-carousel[data-key="${key}"]`);
+      const images = carousel.querySelectorAll('.carousel-image');
+      const dots = carousel.querySelectorAll('.carousel-dot');
+      
+      images.forEach(img => img.classList.remove('active'));
+      dots.forEach(d => d.classList.remove('active'));
+      images[index].classList.add('active');
+      dots[index].classList.add('active');
+    });
   });
 }
 
-// Show an apartment’s detail page
+//  showRoomPage function exactly as is:
 function showRoomPage(id) {
   history.replaceState(null, '', `#${id}`);
   const apt = apartmentData[id];
@@ -62,6 +128,7 @@ function showRoomPage(id) {
   renderRooms(apt.rooms);
   initRoomMap(apt.coordinates);
 }
+
 
 // Render rooms list and attach click handlers
 function renderRooms(rooms) {
@@ -277,4 +344,55 @@ document.addEventListener('DOMContentLoaded', () => {
 document.getElementById('chat-toggle').addEventListener('click', () => {
   const icons = document.getElementById('chat-icons');
   icons.classList.toggle('hidden');
+});
+// Initialize carousels for hardcoded apartment cards
+function initializeHardcodedCarousels() {
+  // Carousel navigation
+  document.querySelectorAll('.carousel-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation(); // Prevent card click
+      
+      const carousel = btn.closest('.apartment-carousel');
+      const images = carousel.querySelectorAll('.carousel-image');
+      const dots = carousel.querySelectorAll('.carousel-dot');
+      
+      let currentIndex = Array.from(images).findIndex(img => img.classList.contains('active'));
+      let newIndex;
+      
+      if (btn.classList.contains('carousel-prev')) {
+        newIndex = (currentIndex - 1 + images.length) % images.length;
+      } else {
+        newIndex = (currentIndex + 1) % images.length;
+      }
+      
+      // Update active image and dot
+      images[currentIndex].classList.remove('active');
+      dots[currentIndex].classList.remove('active');
+      images[newIndex].classList.add('active');
+      dots[newIndex].classList.add('active');
+    });
+  });
+
+  // Dot navigation
+  document.querySelectorAll('.carousel-dot').forEach(dot => {
+    dot.addEventListener('click', (e) => {
+      e.stopPropagation(); // Prevent card click
+      
+      const carousel = dot.closest('.apartment-carousel');
+      const images = carousel.querySelectorAll('.carousel-image');
+      const dots = carousel.querySelectorAll('.carousel-dot');
+      const index = parseInt(dot.dataset.index);
+      
+      // Update active image and dot
+      images.forEach(img => img.classList.remove('active'));
+      dots.forEach(d => d.classList.remove('active'));
+      images[index].classList.add('active');
+      dots[index].classList.add('active');
+    });
+  });
+}
+
+// Call this function after DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+  initializeHardcodedCarousels();
 });
