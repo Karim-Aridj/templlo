@@ -274,3 +274,7 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.classList.toggle('hidden', document.querySelector('footer').getBoundingClientRect().top >= window.innerHeight + 100);
   });
 });
+document.getElementById('chat-toggle').addEventListener('click', () => {
+  const icons = document.getElementById('chat-icons');
+  icons.classList.toggle('hidden');
+});

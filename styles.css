@@ -389,3 +389,21 @@ body {
 #map, .leaflet-container {
   z-index: 1 !important;
 }
+
+#chat-icons > a {
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Chat widget sits at right:1rem; width:3.5rem */
+#chat-widget { right: 1rem; }
+
+/* Move back-to-apts button to the left of it */
+#back-to-apts {
+  right: calc(1rem + 3.5rem + 0.5rem); /* 0.5rem gap */
+  bottom: 1rem;
+  z-index: 100;
+}
+
