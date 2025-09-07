@@ -12,7 +12,7 @@
       "renamed_images/ARRIAGA/arriaga_a_bathroom_with_a_sink_and_mirror_in_it.webp"
     ],
     "description": "Get ready to be charmed by the elegance, style, and incredible view of the iconic Port of Lisbon. Located in the historic Alcântara neighborhood, our apartments are perfectly situated to offer both a peaceful retreat and easy access to the city's vibrant life. Known for its waterfront and converted warehouses, Alcântara is a hub for art, design, and nightlife.",
-    "amenities": ["River View", "Fast Wi-Fi", "Modern Kitchen", "Laundry Facilities", "Air Conditioning", "Work Desk", "Shared Bathrooms", "24/7 Access"],
+    "amenities": ["River View", "Fast Wi-Fi", "Modern Kitchen", " Weekly change of linens and towels", "Twice weekly cleaning of common areas ", "Work Desk", "Shared Bathrooms", "Central office support during work hours in Alcantara area"],
     "coordinates": [38.70431580212892, -9.165665021345829],
     "rooms": [
       { "key": "arriaga_a", "name": "ARRIAGA A", "price": "from €528 / 15 Days from €817 / Month", "link": "https://book.templlo.com/lisboa/room-a-arriaga-embassy-with-marina-view/94cb73" },
@@ -37,7 +37,7 @@
       "renamed_images/MARIA/maria_a_small_bedroom_with_a_bed_and_a_desk.webp"
     ],
     "description": "Nestled in the heart of Lisbon, this charming apartment offers the perfect blend of comfort and bohemian style. The area is renowned for its classic Portuguese architecture, quaint cafes, and local shops. It's a perfect spot for travelers who want to immerse themselves in the authentic Lisbon lifestyle.",
-    "amenities": ["Private Bedrooms", "Shared Kitchen", "Shared Living Room", "High-speed Wi-Fi", "Close to Public Transit", "Traditional Decor"],
+    "amenities": ["Private Bedrooms", "Shared Kitchen", "Shared Living Room", "High-speed Wi-Fi", "Close to Public Transit", " Weekly change of linens and towels", "Twice weekly cleaning of common areas ","Central office support during work hours in Alcantara area"],
     "coordinates": [38.72336820407823, -9.133562425999576],
     "rooms": [
       { "key": "maria_a", "name": "MARIA A", "price": "from €566 / 15 Days from €874 / Month", "link": "https://book.templlo.com/lisboa/room-a--culturally-rich-hotspot-apartment/cd0c7a" },
@@ -58,7 +58,7 @@
       "renamed_images/OLYMPO/olympo_a_bathroom_with_a_toilet_and_a_sink.webp"
     ],
     "description": "Where sun meets skyline: this private Lisbon rooftop paradise offers breathtaking views and an exclusive stay. Located in the Lapa district, known for its embassies and elegant homes, you will enjoy a tranquil and sophisticated environment while still being a short distance from the city's main attractions.",
-    "amenities": ["Rooftop Terrace", "Stunning Views", "Full Kitchen", "Private Bathrooms", "Luxurious Decor", "Air Conditioning"],
+    "amenities": ["Rooftop Terrace", "Stunning Views", "Full Kitchen", "Private Bathrooms", " Weekly change of linens and towels", "Twice weekly cleaning of common areas ","Central office support during work hours in Alcantara area"],
     "coordinates": [38.71000190857739, -9.160553280061636],
     "rooms": [
       { "key": "olympo_a", "name": "OLYMPO A", "price": "from €634 / 15 Days from €970 / Month", "link": "https://book.templlo.com/lisboa/olympoa, penthouse-views, private-roof, guesthouse/295211" },
@@ -80,7 +80,7 @@
       "renamed_images/PALMIRA/palmira_a_couch_with_pillows.webp"
     ],
     "description": "In the heart of Lisbon, be close to the main venues of the historical center and public transportation. This location is unbeatable for those who want to explore the city on foot and experience its authentic charm, from the lively streets to the hidden gems.",
-    "amenities": ["Central Location", "High-speed Wi-Fi", "Shared Kitchen", "Shared Living Space", "Balcony", "Historic Building"],
+    "amenities": ["Central Location", "High-speed Wi-Fi", "Shared Kitchen", "Shared Living Space", "Balcony", " Weekly change of linens and towels", "Twice weekly cleaning of common areas ","Central office support during work hours in Alcantara area"],
     "coordinates": [38.72396692533869, -9.133889984288666],
     "rooms": [
       { "key": "palmira_a", "name": "PALMIRA A", "price": "from €566 / 15 Days from €875 / Month", "link": "https://book.templlo.com/lisboa/room-a---bright-room-in-historical-lisbon/1e15c5" },
@@ -103,7 +103,7 @@
       "renamed_images/PATIO/patio_a_woman_sitting_at_a_table_with_a_cup_of_coffee.webp"
     ],
     "description": "Cozy space and bright patio in the center of Lisbon, close to all amenities and public transportation. This hidden gem offers a tranquil private patio where you can relax after a day of exploring the city's bustling streets. A perfect urban sanctuary.",
-    "amenities": ["Private Patio", "Fast Wi-Fi", "Shared Kitchen", "Shared Bathroom", "Close to Metro", "Outdoor Seating"],
+    "amenities": ["Private Patio", "Fast Wi-Fi", "Shared Kitchen", "Shared Bathroom", "Close to Metro", " Weekly change of linens and towels", "Twice weekly cleaning of common areas ","Central office support during work hours in Alcantara area"],
     "coordinates": [38.70432417473284, -9.165643563673596],
     "rooms": [
       { "key": "patio_a", "name": "PATIO A", "price": "from €553 / 15 Days from €855 / Month", "link": "https://book.templlo.com/lisboa/room-a-in-cozy-apartment-patio/748933" },
@@ -125,7 +125,7 @@
       "renamed_images/SANTOS/santos_a_wooden_table_with_a_bowl_of_wine_on_it.webp"
     ],
     "description": "Where curious souls unite! A backpacker's oasis for connecting and exploring. Located in the hip and historic Santos-o-Velho district, this apartment is a true urban retreat. Known for its art galleries, design shops, and riverside location, Santos offers a perfect blend of modern style and traditional charm.",
-    "amenities": ["Spacious Living Area", "Modern Kitchen", "High-speed Internet", "Secure Entry", "Backpacker Community", "Shared Workspace"],
+    "amenities": ["Spacious Living Area", "Modern Kitchen", "High-speed Internet", "Secure Entry", " Weekly change of linens and towels", "Twice weekly cleaning of common areas ","Central office support during work hours in Alcantara area"],
     "coordinates": [38.70765573893287, -9.15951458006177],
     "rooms": [
       { "key": "santos_a", "name": "SANTOS A", "price": "from €528 / 15 Days from €817 / Month", "link": "https://book.templlo.com/lisboa/room-a--river-view--sunny-central-lisbon/6f0284" },
@@ -151,7 +151,7 @@
       "renamed_images/LOFT/loft_a_room_with_a_table_and_chairs_and_a_laptop.webp"
     ],
     "description": "Experience ultimate comfort in our private double bed and extra bed studio.",
-    "amenities": ["Private Studio", "Fast Wi-Fi", "Desk and Chair"],
+    "amenities": ["Private Studio", "Fast Wi-Fi", "Desk and Chair"," Weekly change of linens and towels", "Twice weekly cleaning of common areas ","Central office support during work hours in Alcantara area"],
     "coordinates": [38.717922382466064, -9.133941759865937],
     "rooms": [
       { "key": "loft", "name": "LOFT", "price": "from €755 / 15 Days from €1152 / Month", "link": "https://book.templlo.com/lisboa/tiny-central-%26-cosy-loft-in-multi-cultural-area/41139b" }
