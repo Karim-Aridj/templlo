@@ -2,7 +2,7 @@
   "arriaga": {
     "name": "ARRIAGA",
     "subtitle": "Elegant Apartments in Alcântara",
-    "heroImage": "renamed_images/ARRIAGA/arriaga_a_hallway_with_a_black_and_white_rug.webp",
+    "heroImage": "renamed_images/ARRIAGA/arriaga_with_port_view.webp",
     "carouselImages": [
       "renamed_images/ARRIAGA/arriaga_a_hallway_with_a_black_and_white_rug.webp",
       "renamed_images/ARRIAGA/arriaga_a_long_hallway_with_a_wooden_floor_and_white_walls.webp",
@@ -27,7 +27,7 @@
   "maria": {
     "name": "MARIA",
     "subtitle": "Bohemian Lisbon Vibe",
-    "heroImage": "renamed_images/MARIA/maria_a_woman_sitting_on_a_chair_reading_a_book.webp",
+    "heroImage": "renamed_images/MARIA/maria_rooms.webp",
     "carouselImages": [
       "renamed_images/MARIA/maria_a_woman_sitting_on_a_chair_reading_a_book.webp",
       "renamed_images/MARIA/maria_a_kitchen_with_a_table_and_chairs_in_it.webp",
@@ -48,7 +48,7 @@
   "olympo": {
     "name": "OLYMPO",
     "subtitle": "Private Lisbon Rooftop Paradise",
-    "heroImage": "renamed_images/OLYMPO/olympo_a_view_of_a_city_from_a_rooftop.webp",
+    "heroImage": "renamed_images/OLYMPO/terrace_view_olympo.webp",
     "carouselImages": [
       "renamed_images/OLYMPO/olympo_a_view_of_a_city_from_a_rooftop.webp",
       "renamed_images/OLYMPO/olympo_a_balcony_with_a_table_and_chairs_on_it.webp",
@@ -70,7 +70,7 @@
   "palmira": {
     "name": "PALMIRA",
     "subtitle": "Heart of Lisbon",
-    "heroImage": "renamed_images/PALMIRA/palmira_a_living_room_with_a_couch_and_a_plant.webp",
+    "heroImage": "renamed_images/PALMIRA/palmira_common_area.webp",
     "carouselImages": [
       "renamed_images/PALMIRA/palmira_a_living_room_with_a_couch_and_a_plant.webp",
       "renamed_images/PALMIRA/palmira_a_kitchen_with_white_cabinets_and_a_stove.webp",
@@ -93,7 +93,7 @@
   "patio": {
     "name": "PATIO",
     "subtitle": "Cozy space, bright patio",
-    "heroImage": "renamed_images/PATIO/patio_a_kitchen_with_a_table_and_chairs_and_a_plant.webp",
+    "heroImage": "renamed_images/PATIO/patio_a_woman_sitting_at_a_table_with_a_cup_of_coffee.webp",
     "carouselImages": [
       "renamed_images/PATIO/patio_a_kitchen_with_a_table_and_chairs_and_a_plant.webp",
       "renamed_images/PATIO/patio_a_kitchen_with_a_table_and_chairs_in_it.webp",
@@ -115,7 +115,7 @@
   "santos": {
     "name": "SANTOS",
     "subtitle": "Where curious souls unite",
-    "heroImage": "renamed_images/SANTOS/santos_a_living_room_with_a_couch_and_a_table.webp",
+    "heroImage": "renamed_images/SANTOS/santos_view.webp",
     "carouselImages": [
       "renamed_images/SANTOS/santos_a_living_room_with_a_couch_and_a_table.webp",
       "renamed_images/SANTOS/santos_a_kitchen_with_blue_tile_and_white_cabinets.webp",
