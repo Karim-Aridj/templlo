@@ -1,203 +1,215 @@
 body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f5f5f5;
-        }
+    font-family: 'Inter', sans-serif;
+    background-color: #f5f5f5;
+}
 
-        /* Custom scrollbar for horizontal sections */
-        .scrollbar-hidden::-webkit-scrollbar {
-            display: none;
-        }
+/* Custom scrollbar for horizontal sections */
+.scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+}
 
-        .scrollbar-hidden {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
+.scrollbar-hidden {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
 
-        /* Custom hover effect for buttons/cards */
-        .hover-lift:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
+/* Custom hover effect for buttons/cards */
+.hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
 
-        /* Ensure images are responsive and have rounded corners */
-        .card-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 0.5rem;
-        }
+/* Ensure images are responsive and have rounded corners */
+.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
 
-        /* Generic styles for rounded corners and spacing */
-        .rounded-xl {
-            border-radius: 1rem;
-        }
+/* Generic styles for rounded corners and spacing */
+.rounded-xl {
+    border-radius: 1rem;
+}
 
-        /* Custom button styling */
-        .btn-custom {
-            background-color: #e4d6cc;
-            color: #2b1102;
-            transition-property: background-color, color;
-            transition-duration: 200ms;
-        }
-        .btn-custom:hover {
-            background-color: #d4c2b8;
-            color: white; /* Changed text color on hover */
-        }
-        
-        /* The button inside the new footer newsletter */
-        .btn-newsletter-go {
-            background-color: #e4d6cc;
-            color: #2b1102;
-            transition-property: background-color, color;
-            transition-duration: 200ms;
-        }
-        .btn-newsletter-go:hover {
-            background-color: #d4c2b8;
-            color: white;
-        }
+/* Custom button styling */
+.btn-custom {
+    background-color: #e4d6cc;
+    color: #2b1102;
+    transition-property: background-color, color;
+    transition-duration: 200ms;
+}
+.btn-custom:hover {
+    background-color: #d4c2b8;
+    color: white;
+}
 
-        /* Rotate the chevron icon for the FAQ toggle */
-        .faq-chevron {
-            transition: transform 0.3s ease;
-        }
-        .faq-chevron.rotate {
-            transform: rotate(180deg);
-        }
+/* The button inside the new footer newsletter */
+.btn-newsletter-go {
+    background-color: #e4d6cc;
+    color: #2b1102;
+    transition-property: background-color, color;
+    transition-duration: 200ms;
+}
+.btn-newsletter-go:hover {
+    background-color: #d4c2b8;
+    color: white;
+}
 
-        /* Styling for the "Show More" functionality */
-        .truncate-text {
-            max-height: 4.5rem; /* Adjust based on desired lines of text */
-            overflow: hidden;
-            transition: max-height 0.3s ease-in-out;
-        }
-        .truncate-text.expanded {
-            max-height: 1000px; /* A large value to show all content */
-        }
-        
-        /* Host card styling */
-        .host-card-shadow {
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
+/* Rotate the chevron icon for the FAQ toggle */
+.faq-chevron {
+    transition: transform 0.3s ease;
+}
+.faq-chevron.rotate {
+    transform: rotate(180deg);
+}
 
-        /* Specific styles for the compact horizontal host card */
-        .host-card {
-            background-color: white;
-            padding: 1.5rem;
-            border-radius: 1.5rem;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            max-width: 400px;
-            width: 100%;
-            display: flex;
-            align-items: center;
-        }
+/* Styling for the "Show More" functionality */
+.truncate-text {
+    max-height: 4.5rem;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+.truncate-text.expanded {
+    max-height: 1000px;
+}
 
-        .host-card .profile-img {
-            width: 80px;
-            height: 80px;
-            flex-shrink: 0;
-            position: relative;
-        }
+/* Host card styling */
+.host-card-shadow {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
 
-        .host-card .profile-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 9999px;
-        }
+/* Specific styles for the compact horizontal host card */
+.host-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
 
-        .host-card .verified-badge {
-            bottom: -5px;
-            right: -5px;
-            width: 28px;
-            height: 28px;
-        }
+.host-card .profile-img {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    position: relative;
+}
 
-        .host-card .stats-container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            flex-grow: 1;
-        }
+.host-card .profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 9999px;
+}
 
-        .host-card .stat-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
+.host-card .verified-badge {
+    bottom: -5px;
+    right: -5px;
+    width: 28px;
+    height: 28px;
+}
 
-        /* Custom carousel styling */
-        .carousel-container {
-            position: relative;
-        }
+.host-card .stats-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+}
 
-        .carousel-track {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-            width: 100%;
-        }
+.host-card .stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
 
-        .carousel-slide {
-            flex-shrink: 0;
-            width: 100%;
-            padding: 1rem;
-        }
+/* Custom carousel styling */
+.carousel-container {
+    position: relative;
+}
 
-        /* Responsive slide widths */
-        @media (min-width: 768px) {
-            .carousel-slide {
-                width: 50%;
-            }
-        }
-        @media (min-width: 1024px) {
-            .carousel-slide {
-                width: 33.3333%;
-            }
-        }
-        
-        .carousel-button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            padding: 1rem;
-            cursor: pointer;
-            z-index: 10;
-        }
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
 
-        .carousel-button-prev {
-            left: 0;
-            border-radius: 0 50% 50% 0;
-        }
+.carousel-slide {
+    flex-shrink: 0;
+    width: 100%;
+    padding: 1rem;
+}
 
-        .carousel-button-next {
-            right: 0;
-            border-radius: 50% 0 0 50%;
-        }
+/* Responsive slide widths */
+@media (min-width: 768px) {
+    .carousel-slide {
+        width: 50%;
+    }
+}
+@media (min-width: 1024px) {
+    .carousel-slide {
+        width: 33.3333%;
+    }
+}
 
-        /* Star rating styling */
-        .star-rating {
-            color: #ffc107;
-        }
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    z-index: 10;
+}
 
-        /* Custom styles for the map container */
-        #map {
-            height: 600px;
-            width: 100%;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-        }
-    /* Room detail page styles */
+.carousel-button-prev {
+    left: 0;
+    border-radius: 0 50% 50% 0;
+}
+
+.carousel-button-next {
+    right: 0;
+    border-radius: 50% 0 0 50%;
+}
+
+/* Star rating styling */
+.star-rating {
+    color: #ffc107;
+}
+
+/* Custom styles for the map container */
+#map {
+    height: 600px;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Room detail page styles */
 .room-hero {
     position: relative;
-    height: 400px;
+    height: 800px;
     width: 100%;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     border-radius: 12px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.room-hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
 }
 
 .room-hero-overlay {
@@ -245,272 +257,599 @@ body {
     margin-right: 0.5rem;
     color: #10b981;
 }
+
 /* Breadcrumb styling */
 #room-details-page nav {
-  border-bottom: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e5e7eb;
 }
 
 #room-details-page nav button {
-  background: none;
-  border: none;
-  font-weight: 500;
+    background: none;
+    border: none;
+    font-weight: 500;
 }
+
 #room-details-page > nav {
-  display: flex !important;
+    display: flex !important;
 }
 
 #room-details-page nav span.text-gray-400 {
-  margin: 0 0.25rem;
+    margin: 0 0.25rem;
 }
+
 #home-page, #room-details-page {
-  padding-top: 4.5rem; /* adjust to header height */
+    padding-top: 4.5rem;
 }
+
 /* Adjust homepage button padding */
 #home-navbar .btn-custom {
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
 }
+
 /* Invert navbar button colors */
 #home-navbar .btn-custom {
-  background-color: #2b1102;
-  color: #e4d6cc;
+    background-color: #2b1102;
+    color: #e4d6cc;
 }
+
 #home-navbar .btn-custom:hover {
-  background-color: #1f0f02;
-  color: #fff;
+    background-color: #1f0f02;
+    color: #fff;
 }
-@media (max-width: 768px) {
-  #home-navbar nav .md\\:flex {
-    display: none;
-  }
-}
+
 #back-to-apts {
-  font-size: 1.25rem;
+    font-size: 1.25rem;
 }
+
 /* Constrain the detail page two-column layout */
 #room-details-page .container > section:last-of-type .grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr; /* left content / right map */
-  gap: 1rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+    align-items: start;
 }
 
-/* Limit the map’s height and allow scrolling if content overflows */
+/* Limit the map's height and allow scrolling if content overflows */
 #room-map {
-  max-height: 600px;   /* adjust this value as needed */
-  width: 100%;
-  overflow: hidden;    /* hide any overflow */
-  border-radius: 0.75rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-height: 800px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 /* Underline & highlight room title on hover */
 #room-list-container .room-title {
-  text-decoration: underline;
-  cursor: pointer;
-  transition: color 0.2s;
-  color: #332D29;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color 0.2s;
+    color: #332D29;
 }
+
 #room-list-container .room-title:hover {
-  color: #2b1102;
+    color: #2b1102;
 }
 
-/* Modal styling */
+/* MODAL STYLING - RESPONSIVE CARD DESIGN */
 #room-modal {
-  display: none;
-  z-index: 10000 !important;
+    display: none;
+    z-index: 10000 !important;
 }
+
 #room-modal.flex {
-  display: flex;
+    display: flex;
 }
 
-/* Modal container */
-#room-modal .bg-white {
-  position: relative;
-  z-index: 10002;
-  max-height: 90vh;
+/* Close button - works for both layouts */
+.modal-close-btn {
+    position: absolute !important;
+    top: 12px !important;
+    right: 12px !important;
+    z-index: 10004 !important;
+    background: rgba(255, 255, 255, 0.9) !important;
+    border: 2px solid #e5e5e5 !important;
+    border-radius: 50% !important;
+    width: 40px !important;
+    height: 40px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 24px !important;
+    font-weight: bold !important;
+    color: #666 !important;
+    cursor: pointer !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    transition: all 0.2s !important;
+    backdrop-filter: blur(10px) !important;
 }
 
-/* Close button styling - fixed positioning */
-#modal-close {
-  position: absolute !important;
-  top: 16px !important;
-  right: 16px !important;
-  z-index: 10004 !important;
-  background: white !important;
-  border: 2px solid #e5e5e5 !important;
-  border-radius: 50% !important;
-  width: 44px !important;
-  height: 44px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  font-size: 28px !important;
-  font-weight: bold !important;
-  color: #666 !important;
-  cursor: pointer !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
-  transition: all 0.2s !important;
+.modal-close-btn:hover {
+    background: #f8f8f8 !important;
+    color: #333 !important;
+    transform: scale(1.05) !important;
 }
 
-#modal-close:hover {
-  background: #f8f8f8 !important;
-  color: #333 !important;
-  transform: scale(1.05) !important;
-  border-color: #ccc !important;
+/* Desktop Layout - Hide on Mobile/Tablet */
+.modal-desktop-layout {
+    display: block;
 }
 
-/* Rest of modal styles */
-#gallery-thumbs img {
-  width: 60px;
-  height: 40px;
-  object-fit: cover;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  opacity: 0.7;
-  transition: opacity .2s;
-}
-
-#gallery-thumbs img.selected {
-  opacity: 1;
-  border: 2px solid #2b1102;
-}
-
-#modal-amenities div {
-  padding: 0.25rem 0;
-  font-size: 0.875rem;
-  color: #374151;
-}
-
-#modal-amenities i {
-  width: 1rem;
-  color: #2b1102;
+/* Mobile Layout - Hide on Desktop */
+.modal-mobile-layout {
+    display: none;
 }
 
 /* Ensure map stays below modals */
 #map, .leaflet-container {
-  z-index: 1 !important;
+    z-index: 1 !important;
 }
 
 #chat-icons > a {
-  width: 3.5rem;
-  height: 3.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 /* Chat widget sits at right:1rem; width:3.5rem */
-#chat-widget { right: 1rem; }
+#chat-widget { 
+    right: 1rem; 
+}
 
 /* Move back-to-apts button to the left of it */
 #back-to-apts {
-  right: calc(1rem + 3.5rem + 0.5rem); /* 0.5rem gap */
-  bottom: 1rem;
-  z-index: 100;
+    right: calc(1rem + 3.5rem + 0.5rem);
+    bottom: 1rem;
+    z-index: 100;
 }
+
 /* Apartment Card Carousel */
 .apartment-carousel {
-  position: relative;
-  width: 100%;
-  height: 200px;
-  overflow: hidden;
-  border-radius: 0.5rem;
-  margin-bottom: 1rem;
-  background: #f5f5f5;
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    background: #f5f5f5;
 }
 
 .carousel-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity 0.4s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
 }
 
 .carousel-image.active {
-  opacity: 1;
+    opacity: 1;
 }
 
 .carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.6);
-  color: white;
-  border: none;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: all 0.3s ease;
-  z-index: 2;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 2;
 }
 
 .carousel-prev {
-  left: 8px;
+    left: 8px;
 }
 
 .carousel-next {
-  right: 8px;
+    right: 8px;
 }
 
 .apartment-carousel:hover .carousel-btn {
-  opacity: 1;
+    opacity: 1;
 }
 
 .carousel-btn:hover {
-  background: rgba(0, 0, 0, 0.8);
-  transform: translateY(-50%) scale(1.1);
+    background: rgba(0, 0, 0, 0.8);
+    transform: translateY(-50%) scale(1.1);
 }
 
 .carousel-dots {
-  position: absolute;
-  bottom: 8px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 6px;
-  z-index: 2;
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 6px;
+    z-index: 2;
 }
 
 .carousel-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.5);
-  cursor: pointer;
-  transition: all 0.2s ease;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
 
 .carousel-dot.active {
-  background: white;
-  transform: scale(1.3);
+    background: white;
+    transform: scale(1.3);
 }
 
 .carousel-dot:hover {
-  background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.8);
 }
 
-@media (max-width: 768px) {
-  .apartment-carousel {
-    height: 180px;
-  }
-  
-  .carousel-btn {
-    width: 28px;
-    height: 28px;
-    font-size: 16px;
-  }
-  
-  .carousel-dot {
-    width: 6px;
-    height: 6px;
-  }
+/* MOBILE & TABLET RESPONSIVE STYLES - CARD-LIKE MODAL */
+@media (max-width: 1024px) {
+    /* Hide navbar elements on mobile */
+    #home-navbar nav .md\\:flex {
+        display: none;
+    }
+    
+    /* Apartment carousel mobile */
+    .apartment-carousel {
+        height: 180px;
+    }
+    
+    .carousel-btn {
+        width: 28px;
+        height: 28px;
+        font-size: 16px;
+    }
+    
+    .carousel-dot {
+        width: 6px;
+        height: 6px;
+    }
+    
+    /* Room hero mobile */
+    .room-hero {
+        height: 300px !important;
+    }
+    
+    .room-hero-content {
+        padding: 1rem !important;
+    }
+    
+    .room-hero-content h1 {
+        font-size: 1.5rem !important;
+    }
+    
+    .room-hero-content p {
+        font-size: 0.9rem !important;
+    }
+    
+    /* Grid layout mobile - stack vertically */
+    #room-details-page .container > section:last-of-type .grid {
+        grid-template-columns: 1fr !important;
+        grid-template-rows: auto auto !important;
+        gap: 1.5rem !important;
+        display: grid !important;
+    }
+    
+    /* Enhanced Mobile Map Fixes */
+    #room-map {
+        display: block !important;
+        visibility: visible !important;
+        max-height: 300px !important;
+        height: 300px !important;
+        width: 100% !important;
+        min-height: 300px !important;
+        order: 2;
+        margin-top: 1rem;
+    }
+    
+    .leaflet-container {
+        height: 300px !important;
+        width: 100% !important;
+        min-height: 300px !important;
+        display: block !important;
+        visibility: visible !important;
+        z-index: 1 !important;
+    }
+    
+    /* Ensure map container is visible */
+    #room-details-page .container > section:last-of-type .grid > div:last-child {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    
+    /* Room cards mobile layout */
+    .room-card {
+        flex-direction: column !important;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .room-card .btn-custom {
+        width: 100% !important;
+        margin-top: 0.5rem;
+    }
+    
+    /* Amenities list mobile */
+    #amenities-list {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+    
+    #amenities-list li {
+        padding: 0.75rem 0;
+        font-size: 0.9rem;
+    }
+    
+    /* MODAL LAYOUT SWITCHING */
+    .modal-desktop-layout {
+        display: none !important;
+    }
+    
+    .modal-mobile-layout {
+        display: block !important;
+    }
+    
+    /* Modal Container - Card Style */
+    #room-modal .bg-white {
+        margin: 0.5rem;
+        max-width: calc(100vw - 1rem);
+        max-height: calc(100vh - 1rem);
+        overflow-y: auto;
+        border-radius: 1rem;
+        background: white;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+    
+    /* Image Section - Top of Card */
+    .modal-image-section {
+        width: 100%;
+        border-radius: 1rem 1rem 0 0;
+        overflow: hidden;
+        margin-bottom: 0;
+    }
+    
+    .modal-main-image {
+        width: 100% !important;
+        height: 280px !important;
+        object-fit: cover !important;
+        border-radius: 1rem 1rem 0 0 !important;
+        margin: 0 !important;
+        display: block !important;
+    }
+    
+    /* Thumbnails - Centered below main image */
+    .modal-thumbnails {
+        display: flex !important;
+        justify-content: center !important;
+        gap: 0.75rem !important;
+        flex-wrap: wrap !important;
+        padding: 1rem !important;
+        background: #f8f9fa !important;
+        margin: 0 !important;
+    }
+    
+    .modal-thumbnails img {
+        width: 70px !important;
+        height: 50px !important;
+        object-fit: cover !important;
+        border-radius: 0.5rem !important;
+        cursor: pointer !important;
+        opacity: 0.7 !important;
+        transition: all 0.2s !important;
+        border: 2px solid transparent !important;
+    }
+    
+    .modal-thumbnails img.selected {
+        opacity: 1 !important;
+        border: 2px solid #2b1102 !important;
+        transform: scale(1.05) !important;
+    }
+    
+    /* Content Section - All content stacked vertically */
+    .modal-content-body {
+        padding: 1.5rem !important;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    /* Room Title */
+    .modal-title {
+        font-size: 1.5rem !important;
+        font-weight: 700 !important;
+        color: #2b1102 !important;
+        margin: 0 !important;
+        text-align: left !important;
+        line-height: 1.3 !important;
+    }
+    
+    /* Room Details Grid */
+    .modal-room-details {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        padding: 1rem;
+        background: #f8f9fa;
+        border-radius: 0.75rem;
+        margin: 0;
+    }
+    
+    .modal-detail-item {
+        text-align: center;
+        padding: 0.5rem;
+    }
+    
+    .modal-detail-item .label {
+        font-size: 0.8rem;
+        color: #666;
+        font-weight: 500;
+        display: block;
+        margin-bottom: 0.25rem;
+    }
+    
+    .modal-detail-item .value {
+        font-size: 0.95rem;
+        color: #2b1102;
+        font-weight: 600;
+    }
+    
+    /* Plus Section */
+    .modal-plus-section {
+        background: #e8f4f8;
+        padding: 0.75rem;
+        border-radius: 0.5rem;
+        text-align: center;
+        margin: 0;
+    }
+    
+    .modal-plus-section span {
+        color: #2b1102;
+        font-weight: 600;
+        font-size: 0.9rem;
+    }
+    
+    /* Amenities Section */
+    .modal-amenities-section {
+        margin: 0;
+    }
+    
+    .amenities-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #2b1102;
+        margin-bottom: 1rem;
+        text-align: left;
+    }
+    
+    .modal-amenities-grid {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 0.75rem !important;
+    }
+    
+    .modal-amenities-grid div {
+        display: flex !important;
+        align-items: center !important;
+        padding: 0.75rem !important;
+        background: #f8f9fa !important;
+        border-radius: 0.5rem !important;
+        font-size: 0.85rem !important;
+        border: 1px solid #e9ecef !important;
+        transition: all 0.2s ease !important;
+    }
+    
+    .modal-amenities-grid div:hover {
+        background: #e9ecef !important;
+        transform: translateY(-1px) !important;
+    }
+    
+    .modal-amenities-grid i {
+        margin-right: 0.75rem !important;
+        color: #2b1102 !important;
+        width: 18px !important;
+        flex-shrink: 0 !important;
+        font-size: 1rem !important;
+    }
+    
+    .modal-amenities-grid span {
+        color: #444 !important;
+        font-weight: 500 !important;
+        line-height: 1.3 !important;
+    }
+    
+    /* Price Section */
+    /* Price Section - Vertical Stacking */
+.modal-price {
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+    color: #2b1102 !important;
+    text-align: center !important;
+    margin: 1.5rem 0 !important;
+    padding: 1.25rem !important;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%) !important;
+    border-radius: 0.75rem !important;
+    border: 2px solid #e9ecef !important;
+    
+    
+    /* Stack pricing lines vertically */
+    white-space: pre-line !important;
+    line-height: 1.4 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.25rem !important;
+}
+
+
+/* Desktop modal price styling */
+#modal-room-price-desktop {
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+    text-align: center !important;
+    margin-bottom: 1rem !important;
+    padding: 1rem !important;
+    background: #f8f9fa !important;
+    border-radius: 0.5rem !important;
+    
+    /* Stack pricing lines vertically */
+    white-space: pre-line !important;
+    line-height: 1.4 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.25rem !important;
+}
+
+    /* Book Button */
+    .modal-book-button {
+        display: block !important;
+        width: 100% !important;
+        text-align: center !important;
+        padding: 1.25rem !important;
+        background: #2b1102 !important;
+        color: white !important;
+        text-decoration: none !important;
+        border-radius: 0.75rem !important;
+        font-weight: 700 !important;
+        font-size: 1.1rem !important;
+        margin: 0 !important;
+        transition: all 0.3s ease !important;
+        box-shadow: 0 4px 12px rgba(43, 17, 2, 0.3) !important;
+    }
+    
+    .modal-book-button:hover {
+        background: #1f0f02 !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 6px 20px rgba(43, 17, 2, 0.4) !important;
+    }
+}
+
+/* Tablet specific adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .modal-main-image {
+        height: 320px !important;
+    }
+    
+    .modal-amenities-grid {
+        grid-template-columns: 1fr 1fr 1fr !important;
+    }
+    
+    .modal-room-details {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
 }

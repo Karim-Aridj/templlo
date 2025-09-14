@@ -3,8 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Templlo Landing Page</title>
+    <title>Templlo: Lisbon Rooms and Apartments</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LodgingBusiness",
+  "name": "Templlo",
+  "description": "Premium accommodation rentals in Lisbon offering comfortable apartments and rooms for travelers seeking authentic experiences.",
+  "url": "https://templlo.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "R. Pres. Arriaga 29",
+    "addressLocality": "Lisboa",
+    "postalCode": "1200-771",
+    "addressCountry": "PT"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 38.715,
+    "longitude": -9.15
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.33",
+    "reviewCount": "9893"
+  },
+  "amenityFeature": [
+    {"@type": "LocationFeatureSpecification", "name": "Free WiFi"},
+    {"@type": "LocationFeatureSpecification", "name": "Kitchen Access"},
+    {"@type": "LocationFeatureSpecification", "name": "Linens Provided"},
+    {"@type": "LocationFeatureSpecification", "name": "24/7 Support"}
+  ],
+  "priceRange": "€€",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Accommodation Offers",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": ["Accommodation","Product"],
+          "name": "ARRIAGA",
+          "description": "Elegant Apartments in Alcântara"
+        },
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "minPrice": 528,
+          "maxPrice": 970,
+          "priceCurrency": "EUR",
+          "unitCode": "MON"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": ["Accommodation","Product"],
+          "name": "MARIA",
+          "description": "Bohemian Lisbon Vibe"
+        },
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "minPrice": 566,
+          "maxPrice": 931,
+          "priceCurrency": "EUR",
+          "unitCode": "MON"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": ["Accommodation","Product"],
+          "name": "OLYMPO",
+          "description": "Private Lisbon Rooftop Paradise"
+        },
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "minPrice": 541,
+          "maxPrice": 970,
+          "priceCurrency": "EUR",
+          "unitCode": "MON"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": ["Accommodation","Product"],
+          "name": "PALMIRA",
+          "description": "Heart of Lisbon"
+        },
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "minPrice": 384,
+          "maxPrice": 875,
+          "priceCurrency": "EUR",
+          "unitCode": "MON"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": ["Accommodation","Product"],
+          "name": "PATIO",
+          "description": "Cozy space, bright patio"
+        },
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "minPrice": 465,
+          "maxPrice": 855,
+          "priceCurrency": "EUR",
+          "unitCode": "MON"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": ["Accommodation","Product"],
+          "name": "SANTOS",
+          "description": "Where curious souls unite"
+        },
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "minPrice": 464,
+          "maxPrice": 817,
+          "priceCurrency": "EUR",
+          "unitCode": "MON"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": ["Accommodation","Product"],
+          "name": "LOFT",
+          "description": "Tiny Central & Cosy Loft"
+        },
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "minPrice": 755,
+          "maxPrice": 1152,
+          "priceCurrency": "EUR",
+          "unitCode": "MON"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": ["Accommodation","Product"],
+          "name": "TORRÃO",
+          "description": "Rooftop Views Near the Lake"
+        },
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "minPrice": 661,
+          "maxPrice": 1009,
+          "priceCurrency": "EUR",
+          "unitCode": "MON"
+        }
+      }
+    ]
+  }
+}
+</script>
+
     <!-- Use Tailwind CSS for a responsive, modern design -->
+     <meta name="description" content="Discover unique cultural stays in Lisbon with Templlo. room & apartments, authentic experiences. Book your adventure today!">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,6 +176,205 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
     <!-- Link to external CSS file -->
     <link rel="stylesheet" href="styles.css">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GYP5BQP0LV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GYP5BQP0LV');
+</script>
+
+ <!-- BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://templlo.com" },
+      { "@type": "ListItem", "position": 2, "name": "Accommodations", "item": "https://templlo.com#accommodations" },
+      { "@type": "ListItem", "position": 3, "name": "Apartment Details", "item": "https://templlo.com#detail" }
+    ]
+  }
+  </script>
+
+  <!-- LodgingBusiness with OfferCatalog and Room-level schemas -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "LodgingBusiness",
+        "name": "Templlo",
+        "description": "Premium accommodation rentals in Lisbon offering comfortable apartments and rooms for travelers seeking authentic experiences.",
+        "url": "https://templlo.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "R. Pres. Arriaga 29",
+          "addressLocality": "Lisboa",
+          "postalCode": "1200-771",
+          "addressCountry": "PT"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 38.715,
+          "longitude": -9.15
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.33",
+          "reviewCount": "9893"
+        },
+        "amenityFeature": [
+          { "@type": "LocationFeatureSpecification", "name": "Free WiFi" },
+          { "@type": "LocationFeatureSpecification", "name": "Kitchen Access" },
+          { "@type": "LocationFeatureSpecification", "name": "Linens Provided" },
+          { "@type": "LocationFeatureSpecification", "name": "24/7 Support" }
+        ],
+        "priceRange": "€€",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Accommodation Offers",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": { "@type": ["Accommodation","Product"], "name": "ARRIAGA", "description": "Elegant Apartments in Alcântara" },
+              "priceSpecification": { "@type": "UnitPriceSpecification", "minPrice": 528, "maxPrice": 970, "priceCurrency": "EUR", "unitCode": "MON" }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": { "@type": ["Accommodation","Product"], "name": "MARIA", "description": "Bohemian Lisbon Vibe" },
+              "priceSpecification": { "@type": "UnitPriceSpecification", "minPrice": 566, "maxPrice": 931, "priceCurrency": "EUR", "unitCode": "MON" }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": { "@type": ["Accommodation","Product"], "name": "OLYMPO", "description": "Private Lisbon Rooftop Paradise" },
+              "priceSpecification": { "@type": "UnitPriceSpecification", "minPrice": 541, "maxPrice": 970, "priceCurrency": "EUR", "unitCode": "MON" }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": { "@type": ["Accommodation","Product"], "name": "PALMIRA", "description": "Heart of Lisbon" },
+              "priceSpecification": { "@type": "UnitPriceSpecification", "minPrice": 384, "maxPrice": 875, "priceCurrency": "EUR", "unitCode": "MON" }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": { "@type": ["Accommodation","Product"], "name": "PATIO", "description": "Cozy space, bright patio" },
+              "priceSpecification": { "@type": "UnitPriceSpecification", "minPrice": 465, "maxPrice": 855, "priceCurrency": "EUR", "unitCode": "MON" }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": { "@type": ["Accommodation","Product"], "name": "SANTOS", "description": "Where curious souls unite" },
+              "priceSpecification": { "@type": "UnitPriceSpecification", "minPrice": 464, "maxPrice": 817, "priceCurrency": "EUR", "unitCode": "MON" }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": { "@type": ["Accommodation","Product"], "name": "LOFT", "description": "Tiny Central & Cosy Loft" },
+              "priceSpecification": { "@type": "UnitPriceSpecification", "minPrice": 755, "maxPrice": 1152, "priceCurrency": "EUR", "unitCode": "MON" }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": { "@type": ["Accommodation","Product"], "name": "TORRÃO", "description": "Rooftop Views Near the Lake" },
+              "priceSpecification": { "@type": "UnitPriceSpecification", "minPrice": 661, "maxPrice": 1009, "priceCurrency": "EUR", "unitCode": "MON" }
+            }
+          ]
+        }
+      },
+      {
+        "@type": ["Accommodation","Product"],
+        "name": "ARRIAGA",
+        "description": "Get ready to be charmed by the elegance, style, and incredible view of the iconic Port of Lisbon. Located in the historic Alcântara neighborhood.",
+        "image": [
+          "https://templlo.com/renamed_images/ARRIAGA/arriaga_with_port_view.webp",
+          "https://templlo.com/renamed_images/ARRIAGA/arriaga_a_hallway_with_a_black_and_white_rug.webp"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "R. Pres. Arriaga 29",
+          "addressLocality": "Lisboa",
+          "postalCode": "1200-771",
+          "addressCountry": "PT"
+        },
+        "geo": { "@type": "GeoCoordinates", "latitude": 38.70431580212892, "longitude": -9.165665021345829 },
+        "amenityFeature": [
+          { "@type": "LocationFeatureSpecification", "name": "River View" },
+          { "@type": "LocationFeatureSpecification", "name": "Fast Wi-Fi" },
+          { "@type": "LocationFeatureSpecification", "name": "Modern Kitchen" },
+          { "@type": "LocationFeatureSpecification", "name": "Work Desk" },
+          { "@type": "LocationFeatureSpecification", "name": "Shared Bathrooms" }
+        ],
+        "numberOfRooms": 7,
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "ARRIAGA A",
+            "description": "Queen bed room with street view",
+            "priceSpecification": { "@type": "UnitPriceSpecification", "price": 817, "priceCurrency": "EUR", "unitCode": "MON" },
+            "availability": "http://schema.org/InStock",
+            "url": "https://book.templlo.com/lisboa/room-a-arriaga-embassy-with-marina-view/94cb73",
+            "businessFunction": "http://schema.org/LeaseOut"
+          },
+          {
+            "@type": "Offer",
+            "name": "ARRIAGA B",
+            "description": "Queen bed room with street view",
+            "priceSpecification": { "@type": "UnitPriceSpecification", "price": 970, "priceCurrency": "EUR", "unitCode": "MON" },
+            "availability": "http://schema.org/InStock",
+            "url": "https://book.templlo.com/lisboa/room-b-arriaga-embassy-tejo-marina-view/b41854",
+            "businessFunction": "http://schema.org/LeaseOut"
+          },
+          {
+            "@type": "Offer",
+            "name": "ARRIAGA C",
+            "description": "Queen bed room with interior view",
+            "priceSpecification": { "@type": "UnitPriceSpecification", "price": 817, "priceCurrency": "EUR", "unitCode": "MON" },
+            "availability": "http://schema.org/InStock",
+            "url": "https://book.templlo.com/lisboa/room-c-arriaga-embassy-tejo-marina-view/65ac5f",
+            "businessFunction": "http://schema.org/LeaseOut"
+          },
+          {
+            "@type": "Offer",
+            "name": "ARRIAGA D",
+            "description": "Queen bed room with ocean port view and hammock",
+            "priceSpecification": { "@type": "UnitPriceSpecification", "price": 970, "priceCurrency": "EUR", "unitCode": "MON" },
+            "availability": "http://schema.org/InStock",
+            "url": "https://book.templlo.com/lisboa/room-d-arriaga-embassy-tejo-marina-view/5f3d44",
+            "businessFunction": "http://schema.org/LeaseOut"
+          },
+          {
+            "@type": "Offer",
+            "name": "ARRIAGA E",
+            "description": "Queen bed room with interior view",
+            "priceSpecification": { "@type": "UnitPriceSpecification", "price": 817, "priceCurrency": "EUR", "unitCode": "MON" },
+            "availability": "http://schema.org/InStock",
+            "url": "https://book.templlo.com/lisboa/room-e-arriaga-embassy-tejo-marina-view/2b0cf8",
+            "businessFunction": "http://schema.org/LeaseOut"
+          },
+          {
+            "@type": "Offer",
+            "name": "ARRIAGA F",
+            "description": "Single bed room with interior view",
+            "priceSpecification": { "@type": "UnitPriceSpecification", "price": 662, "priceCurrency": "EUR", "unitCode": "MON" },
+            "availability": "http://schema.org/InStock",
+            "url": "https://book.templlo.com/lisboa/room-f-arriaga-embassy-tejo-marina-view/3a7ee5",
+            "businessFunction": "http://schema.org/LeaseOut"
+          },
+          {
+            "@type": "Offer",
+            "name": "ARRIAGA G",
+            "description": "Single bed room with interior view",
+            "priceSpecification": { "@type": "UnitPriceSpecification", "price": 662, "priceCurrency": "EUR", "unitCode": "MON" },
+            "availability": "http://schema.org/InStock",
+            "url": "https://book.templlo.com/lisboa/room-g-arriaga-embassy-tejo-marina-view/643044",
+            "businessFunction": "http://schema.org/LeaseOut"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
 </head>
 <body class="text-gray-800">
 
@@ -27,10 +387,7 @@
   <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between space-x-8">
     <!-- Left: smaller logo -->
     <a href="#" onclick="showHomePage()" class="flex items-center">
-      <svg width="150" height="42" viewBox="0 0 200 57" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <text x="0" y="33" font-family="Inter, sans-serif" font-weight="700" font-size="28" fill="#332D29">templlo</text>
-        <line x1="0" y1="40" x2="133" y2="40" stroke="#332D29" stroke-width="2.5"/>
-      </svg>
+      <img src="/renamed_images/Templlo_logo.svg" alt="Templlo logo" width="150" height="42" />
     </a>
 
     <!-- Center: section links -->
@@ -67,7 +424,7 @@
   </nav>
 </header>
 
-<div id="home-page">
+<div id="home-page" class="pt-20">
     <!-- Section: Hero Banner -->
         <section class="relative h-[400px] sm:h-[500px] w-full flex items-center justify-center text-center px-4" style="background-image: url('/renamed_images/Apartments_view.webp'); background-size: cover; background-position: center; background-repeat: no-repeat;">
             <div class="absolute inset-0 bg-gray-900 opacity-70"></div>
@@ -793,63 +1150,98 @@
   <i class="fa-solid fa-arrow-up"></i>
 </button>
 
-<div id="room-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 items-center justify-center" style="z-index: 10000;">
-  <div class="bg-white rounded-lg shadow-xl w-11/12 max-w-4xl mx-auto overflow-hidden relative">
-    <!-- Close button - MUST be inside the white container -->
-    <button id="modal-close" class="absolute top-4 right-4 w-10 h-10 bg-white border border-gray-300 rounded-full flex items-center justify-center text-2xl font-bold text-gray-600 hover:text-gray-800 hover:bg-gray-100 shadow-lg" style="z-index: 10004;">&times;</button>
-    
-    <!-- Modal content wrapper -->
-    <div class="flex">
-      <!-- LEFT: Gallery -->
-      <div class="w-1/2 p-4">
-        <div id="gallery-main" class="mb-2">
-          <img id="modal-main-img" src="" class="w-full h-64 object-cover rounded" />
-        </div>
-        <div id="gallery-thumbs" class="flex space-x-2 overflow-x-auto">
-          <!-- thumbnails will be injected here -->
-        </div>
-      </div>
-      
-      <!-- RIGHT: Details -->
-      <div class="w-1/2 p-6 flex flex-col">      
-        <h3 id="modal-room-title" class="text-2xl font-bold mb-4 pr-14"></h3>
+<!-- Room Details Modal -->
+<div id="room-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-50">
+    <div class="bg-white rounded-xl max-w-4xl w-full mx-4 max-h-full overflow-hidden">
+        <!-- Close Button -->
+        <button id="modal-close" class="modal-close-btn">&times;</button>
         
-        <!-- Amenities Section -->
-        <div class="mb-6">
-          <h4 class="text-lg font-semibold mb-3">Amenities:</h4>
-          <div id="modal-amenities" class="grid grid-cols-2 gap-2 text-sm">
-            <!-- amenities will be injected here -->
-          </div>
+        <!-- Mobile/Tablet Layout (Visible on screens ≤1024px) -->
+        <div class="modal-mobile-layout">
+            <!-- Image Section - Always at Top -->
+            <div class="modal-image-section">
+                <img id="modal-main-img" class="modal-main-image" src="" alt="Room Image">
+                <div id="gallery-thumbs" class="modal-thumbnails"></div>
+            </div>
+            
+            <!-- Content Section - Stacked Vertically Below Images -->
+            <div class="modal-content-body">
+                <!-- Room Title -->
+                <h2 id="modal-room-title" class="modal-title"></h2>
+                
+                <!-- Room Details Grid (Bed Type, View, etc.) -->
+                <div class="modal-room-details">
+                    <div id="modal-bed-info" class="modal-detail-item">
+                        <span class="label">Bed Type</span>
+                        <span class="value">—</span>
+                    </div>
+                    <div id="modal-view-info" class="modal-detail-item">
+                        <span class="label">View</span>
+                        <span class="value">—</span>
+                    </div>
+                </div>
+                
+                <!-- Plus/Special Features -->
+                <div id="modal-plus-info" class="modal-plus-section" style="display: none;">
+                    <span></span>
+                </div>
+                
+                <!-- Amenities Section -->
+                <div class="modal-amenities-section">
+                    <h3 class="amenities-title">Amenities</h3>
+                    <div id="modal-amenities" class="modal-amenities-grid"></div>
+                </div>
+                
+                <!-- Price Section -->
+                <div id="modal-room-price" class="modal-price"></div>
+                
+                <!-- Book Now Button -->
+                <a id="modal-room-link" href="#" class="modal-book-button">Book Now</a>
+            </div>
         </div>
         
-        <!-- Other Details -->
-        <div class="mb-4">
-          <div class="flex items-center mb-2">
-            <i class="fa-solid fa-bed mr-2"></i>
-            <span id="modal-bed-info"></span>
-          </div>
-          <div class="flex items-center mb-2">
-            <i class="fa-solid fa-eye mr-2"></i>
-            <span id="modal-view-info"></span>
-          </div>
-          <div id="modal-plus-info" class="flex items-center mb-2" style="display: none;">
-            <i class="fa-solid fa-gift mr-2"></i>
-            <span></span>
-          </div>
+        <!-- Desktop Layout (Visible on screens >1024px) -->
+        <div class="modal-desktop-layout">
+            <div class="flex">
+                <!-- Left Side - Images -->
+                <div class="w-1/2 p-6">
+                    <img id="modal-main-img-desktop" class="w-full h-64 object-cover rounded-lg mb-4" src="" alt="Room Image">
+                    <div id="gallery-thumbs-desktop" class="flex gap-2 flex-wrap justify-center"></div>
+                </div>
+                
+                <!-- Right Side - Content -->
+                <div class="w-1/2 p-6">
+                    <h2 id="modal-room-title-desktop" class="text-2xl font-bold text-gray-800 mb-4"></h2>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-4">
+                        <div id="modal-bed-info-desktop" class="text-sm">
+                            <span class="block text-gray-600">Bed Type</span>
+                            <span class="font-semibold">—</span>
+                        </div>
+                        <div id="modal-view-info-desktop" class="text-sm">
+                            <span class="block text-gray-600">View</span>
+                            <span class="font-semibold">—</span>
+                        </div>
+                    </div>
+                    
+                    <div id="modal-plus-info-desktop" class="mb-4 p-2 bg-blue-50 rounded-lg text-center" style="display: none;">
+                        <span class="text-blue-800 font-semibold"></span>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h3 class="text-lg font-semibold mb-3">Amenities</h3>
+                        <div id="modal-amenities-desktop" class="grid grid-cols-2 gap-2"></div>
+                    </div>
+                    
+                    <div id="modal-room-price-desktop" class="text-xl font-bold text-center mb-4 p-3 bg-gray-100 rounded-lg"></div>
+                    
+                    <a id="modal-room-link-desktop" href="#" class="block w-full text-center py-3 bg-amber-800 text-white font-bold rounded-lg hover:bg-amber-900 transition">Book Now</a>
+                </div>
+            </div>
         </div>
-        
-        <!-- Price and Book Button -->
-        <div class="mt-auto">
-          <p id="modal-room-price" class="text-xl font-semibold text-[#2b1102] mb-4"></p>
-          <a id="modal-room-link" href="#" target="_blank"
-             class="block bg-[#2b1102] text-[#e4d6cc] py-3 text-center rounded-lg hover:bg-[#1f0f02]">
-            Book Now
-          </a>
-        </div>
-      </div>
     </div>
-  </div>
 </div>
+
 <!-- Chat Widget -->
 <div id="chat-widget" class="fixed bottom-4 right-4 z-50">
   <button id="chat-toggle"
@@ -857,7 +1249,7 @@
     <i class="fa-solid fa-comment text-2xl text-[#2b1102]"></i>
   </button>
   <div id="chat-icons" class="hidden flex flex-col space-y-3 mt-2">
-    <a href="https://wa.me/YOUR_NUMBER" target="_blank"
+    <a href="https://web.whatsapp.com/send?phone=351939742155" target="_blank"
        class="bg-green-500 p-3 rounded-full shadow-lg hover:bg-green-600 transition">
       <i class="fab fa-whatsapp text-white text-xl"></i>
     </a>
@@ -867,7 +1259,66 @@
     </a>
   </div>
 </div>
-
+<!-- Review Schema -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "Review",
+      "itemReviewed": { "@type": "LodgingBusiness", "name": "Templlo" },
+      "reviewRating": { "@type": "Rating", "ratingValue": 5, "bestRating": 5 },
+      "name": "Great stay in Lisbon!",
+      "author": { "@type": "Person", "name": "Joaquina" },
+      "publisher": { "@type": "Organization", "name": "Airbnb" },
+      "datePublished": "2024-01-01",
+      "reviewBody": "I had a good time at the apartment. Everything was super clean, the communication was easy and check in was flexible. The location is good to walk to the old town and drive by train to the beach. I would go there again!"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Review",
+      "itemReviewed": { "@type": "LodgingBusiness", "name": "Templlo" },
+      "reviewRating": { "@type": "Rating", "ratingValue": 5, "bestRating": 5 },
+      "name": "Perfect location and amenities",
+      "author": { "@type": "Person", "name": "Mercedesz" },
+      "publisher": { "@type": "Organization", "name": "Airbnb" },
+      "datePublished": "2024-02-01",
+      "reviewBody": "The apartment was just as described in the details. The room was clean and big enough for 2 people with 2 small baggage. There is no air conditioning but it wasn't uncomfortable even in mid Aug. Restrooms were clean just as the kitchen. We could even leave our baggage in the apt before the flight. The location is great, easy public transportation possibilities to all places. The place is surrounded by many restaurants, shops and close to all kind of activities (Cascais, Caparica, Belém or the centrum)."
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Review",
+      "itemReviewed": { "@type": "LodgingBusiness", "name": "Templlo" },
+      "reviewRating": { "@type": "Rating", "ratingValue": 3, "bestRating": 5 },
+      "name": "Nice and cozy apartment",
+      "author": { "@type": "Person", "name": "Kristýna" },
+      "publisher": { "@type": "Organization", "name": "Airbnb" },
+      "datePublished": "2024-03-01",
+      "reviewBody": "The apartment is pretty and feels very homy and nice. It's in nice hood with supermarkets and restaurants nearby. The street under bedroom windows is narrow but surprisingly noisy due to to traffic. It gets calm during night though."
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Review",
+      "itemReviewed": { "@type": "LodgingBusiness", "name": "Templlo" },
+      "reviewRating": { "@type": "Rating", "ratingValue": 5, "bestRating": 5 },
+      "name": "Exceptional stay with amazing rooftop!",
+      "author": { "@type": "Person", "name": "Weronika" },
+      "publisher": { "@type": "Organization", "name": "Airbnb" },
+      "datePublished": "2024-04-01",
+      "reviewBody": "The stay in this place was really exceptional. First of all, the terrace and rooftop – a fairy tale! The very nice owners bombarded us with messages through the portal to ensure we got to the apartment as agreed, everything was explained in detail, and even the fact that it was on the 6th floor didn’t bother us :) The views were beautiful, the room was okay for how little time we spent in it, it was sufficient, a good amount of sockets, a comfortable bed, definitely a plus that there were 3 bathrooms, two of which had showers (the only thing was that in one the water ran cold from the rain shower and hot from the handheld shower at the same time xd), the kitchen was clean, the residents of the other rooms were also polite, but that can change. I wholeheartedly recommend it! If we return to Lisbon, it will be just there"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Review",
+      "itemReviewed": { "@type": "LodgingBusiness", "name": "Templlo" },
+      "reviewRating": { "@type": "Rating", "ratingValue": 4, "bestRating": 5 },
+      "name": "Good stay with helpful staff",
+      "author": { "@type": "Person", "name": "Soufiane" },
+      "publisher": { "@type": "Organization", "name": "Airbnb" },
+      "datePublished": "2024-05-01",
+      "reviewBody": "my stay was pretty good, staff very helpful, thanks for all Tin!"
+    }
+  ]
+  </script>
 
 
     <!-- JavaScript for "Show More", FAQ, Carousel, and Map -->

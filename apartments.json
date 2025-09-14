@@ -15,13 +15,13 @@
     "amenities": ["River View", "Fast Wi-Fi", "Modern Kitchen", " Weekly change of linens and towels", "Twice weekly cleaning of common areas ", "Work Desk", "Shared Bathrooms", "Central office support during work hours in Alcantara area"],
     "coordinates": [38.70431580212892, -9.165665021345829],
     "rooms": [
-      { "key": "arriaga_a", "name": "ARRIAGA A", "price": "from €528 / 15 Days from €817 / Month", "link": "https://book.templlo.com/lisboa/room-a-arriaga-embassy-with-marina-view/94cb73" },
-      { "key": "arriaga_b", "name": "ARRIAGA B", "price": "from €630 / 15 Days from €970 / Month", "link": "https://book.templlo.com/lisboa/room-b-arriaga-embassy-tejo-marina-view/b41854" },
-      { "key": "arriaga_c", "name": "ARRIAGA C", "price": "from €528 / 15 Days from €817 / Month", "link": "https://book.templlo.com/lisboa/room-c-arriaga-embassy-tejo-marina-view/65ac5f" },
-      { "key": "arriaga_d", "name": "ARRIAGA D", "price": "from €630 / 15 Days from €970 / Month", "link": "https://book.templlo.com/lisboa/room-d-arriaga-embassy-tejo-marina-view/5f3d44" },
-      { "key": "arriaga_e", "name": "ARRIAGA E", "price": "from €528 / 15 Days from €817 / Month", "link": "https://book.templlo.com/lisboa/room-e-arriaga-embassy-tejo-marina-view/2b0cf8" },
-      { "key": "arriaga_f", "name": "ARRIAGA F", "price": "from €435 / 15 Days from €662 / Month", "link": "https://book.templlo.com/lisboa/room-f-arriaga-embassy-tejo-marina-view/3a7ee5" },
-      { "key": "arriaga_g", "name": "ARRIAGA G", "price": "from €435 / 15 Days from €662 / Month", "link": "https://book.templlo.com/lisboa/room-g-arriaga-embassy-tejo-marina-view/643044" }
+      { "key": "arriaga_a", "name": "ARRIAGA A", "price": "from €528 / 15 Days\nfrom €817 / Month", "link": "https://book.templlo.com/lisboa/room-a-arriaga-embassy-with-marina-view/94cb73" },
+      { "key": "arriaga_b", "name": "ARRIAGA B", "price": "from €630 / 15 Days\nfrom €970 / Month", "link": "https://book.templlo.com/lisboa/room-b-arriaga-embassy-tejo-marina-view/b41854" },
+      { "key": "arriaga_c", "name": "ARRIAGA C", "price": "from €528 / 15 Days\nfrom €817 / Month", "link": "https://book.templlo.com/lisboa/room-c-arriaga-embassy-tejo-marina-view/65ac5f" },
+      { "key": "arriaga_d", "name": "ARRIAGA D", "price": "from €630 / 15 Days\nfrom €970 / Month", "link": "https://book.templlo.com/lisboa/room-d-arriaga-embassy-tejo-marina-view/5f3d44" },
+      { "key": "arriaga_e", "name": "ARRIAGA E", "price": "from €528 / 15 Days\nfrom €817 / Month", "link": "https://book.templlo.com/lisboa/room-e-arriaga-embassy-tejo-marina-view/2b0cf8" },
+      { "key": "arriaga_f", "name": "ARRIAGA F", "price": "from €435 / 15 Days\nfrom €662 / Month", "link": "https://book.templlo.com/lisboa/room-f-arriaga-embassy-tejo-marina-view/3a7ee5" },
+      { "key": "arriaga_g", "name": "ARRIAGA G", "price": "from €435 / 15 Days\nfrom €662 / Month", "link": "https://book.templlo.com/lisboa/room-g-arriaga-embassy-tejo-marina-view/643044" }
     ]
   },
   "maria": {
@@ -40,9 +40,9 @@
     "amenities": ["Private Bedrooms", "Shared Kitchen", "Shared Living Room", "High-speed Wi-Fi", "Close to Public Transit", " Weekly change of linens and towels", "Twice weekly cleaning of common areas ","Central office support during work hours in Alcantara area"],
     "coordinates": [38.72336820407823, -9.133562425999576],
     "rooms": [
-      { "key": "maria_a", "name": "MARIA A", "price": "from €566 / 15 Days from €874 / Month", "link": "https://book.templlo.com/lisboa/room-a--culturally-rich-hotspot-apartment/cd0c7a" },
-      { "key": "maria_b", "name": "MARIA B", "price": "from €566 / 15 Days from €874 / Month", "link": "https://book.templlo.com/lisboa/room-b--culturally-rich-hotspot-apartment/5dd2d1" },
-      { "key": "maria_c", "name": "MARIA C", "price": "from €604 / 15 Days from €931 / Month", "link": "https://book.templlo.com/lisbon/room-c-with-private-bathroom-central-lisbon/f51db8" }
+      { "key": "maria_a", "name": "MARIA A", "price": "from €566 / 15 Days\nfrom €874 / Month", "link": "https://book.templlo.com/lisboa/room-a--culturally-rich-hotspot-apartment/cd0c7a" },
+      { "key": "maria_b", "name": "MARIA B", "price": "from €566 / 15 Days\nfrom €874 / Month", "link": "https://book.templlo.com/lisboa/room-b--culturally-rich-hotspot-apartment/5dd2d1" },
+      { "key": "maria_c", "name": "MARIA C", "price": "from €604 / 15 Days\nfrom €931 / Month", "link": "https://book.templlo.com/lisbon/room-c-with-private-bathroom-central-lisbon/f51db8" }
     ]
   },
   "olympo": {
@@ -61,10 +61,10 @@
     "amenities": ["Rooftop Terrace", "Stunning Views", "Full Kitchen", "Private Bathrooms", " Weekly change of linens and towels", "Twice weekly cleaning of common areas ","Central office support during work hours in Alcantara area"],
     "coordinates": [38.71000190857739, -9.160553280061636],
     "rooms": [
-      { "key": "olympo_a", "name": "OLYMPO A", "price": "from €634 / 15 Days from €970 / Month", "link": "https://book.templlo.com/lisboa/olympoa, penthouse-views, private-roof, guesthouse/295211" },
-      { "key": "olympo_b", "name": "OLYMPO B", "price": "from €634 / 15 Days from €970 / Month", "link": "https://book.templlo.com/lisboa/room-b-stunning-penthouse-views-riverside/17bdb4" },
-      { "key": "olympo_c", "name": "OLYMPO C", "price": "from €541 / 15 Days from €817 / Month", "link": "https://book.templlo.com/lisboa/room-c-stunning-penthouse-views-riverside/cd12b0" },
-      { "key": "olympo_d", "name": "OLYMPO D", "price": "from €541 / 15 Days from €817 / Month", "link": "https://book.templlo.com/lisboa/room-d-stunning-penthouse-views-riverside/a3714b" }
+      { "key": "olympo_a", "name": "OLYMPO A", "price": "from €634 / 15 Days\nfrom €970 / Month", "link": "https://book.templlo.com/lisboa/olympoa, penthouse-views, private-roof, guesthouse/295211" },
+      { "key": "olympo_b", "name": "OLYMPO B", "price": "from €634 / 15 Days\nfrom €970 / Month", "link": "https://book.templlo.com/lisboa/room-b-stunning-penthouse-views-riverside/17bdb4" },
+      { "key": "olympo_c", "name": "OLYMPO C", "price": "from €541 / 15 Days\nfrom €817 / Month", "link": "https://book.templlo.com/lisboa/room-c-stunning-penthouse-views-riverside/cd12b0" },
+      { "key": "olympo_d", "name": "OLYMPO D", "price": "from €541 / 15 Days\nfrom €817 / Month", "link": "https://book.templlo.com/lisboa/room-d-stunning-penthouse-views-riverside/a3714b" }
     ]
   },
   "palmira": {
@@ -83,11 +83,11 @@
     "amenities": ["Central Location", "High-speed Wi-Fi", "Shared Kitchen", "Shared Living Space", "Balcony", " Weekly change of linens and towels", "Twice weekly cleaning of common areas ","Central office support during work hours in Alcantara area"],
     "coordinates": [38.72396692533869, -9.133889984288666],
     "rooms": [
-      { "key": "palmira_a", "name": "PALMIRA A", "price": "from €566 / 15 Days from €875 / Month", "link": "https://book.templlo.com/lisboa/room-a---bright-room-in-historical-lisbon/1e15c5" },
-      { "key": "palmira_b", "name": "PALMIRA B", "price": "from €566 / 15 Days from €875 / Month", "link": "https://book.templlo.com/lisboa/room-b-double-room-in-central-lisbon/c4f516" },
-      { "key": "palmira_c", "name": "PALMIRA C", "price": "from €566 / 15 Days from €875 / Month", "link": "https://book.templlo.com/lisboa/room-c--bright-room-historical-lisbon/bc666c" },
-      { "key": "palmira_d", "name": "PALMIRA D", "price": "from €566 / 15 Days from €875 / Month", "link": "https://book.templlo.com/lisbon/room-d-double-room/72e8f6" },
-      { "key": "palmira_e", "name": "PALMIRA E", "price": "from €384 / 15 Days from €585 / Month", "link": "https://book.templlo.com/lisboa/solo-traveler-cosy-room-e-historical-lisbon/72cbf8" }
+      { "key": "palmira_a", "name": "PALMIRA A", "price": "from €566 / 15 Days\nfrom €875 / Month", "link": "https://book.templlo.com/lisboa/room-a---bright-room-in-historical-lisbon/1e15c5" },
+      { "key": "palmira_b", "name": "PALMIRA B", "price": "from €566 / 15 Days\nfrom €875 / Month", "link": "https://book.templlo.com/lisboa/room-b-double-room-in-central-lisbon/c4f516" },
+      { "key": "palmira_c", "name": "PALMIRA C", "price": "from €566 / 15 Days\nfrom €875 / Month", "link": "https://book.templlo.com/lisboa/room-c--bright-room-historical-lisbon/bc666c" },
+      { "key": "palmira_d", "name": "PALMIRA D", "price": "from €566 / 15 Days\nfrom €875 / Month", "link": "https://book.templlo.com/lisbon/room-d-double-room/72e8f6" },
+      { "key": "palmira_e", "name": "PALMIRA E", "price": "from €384 / 15 Days\nfrom €585 / Month", "link": "https://book.templlo.com/lisboa/solo-traveler-cosy-room-e-historical-lisbon/72cbf8" }
     ]
   },
   "patio": {
@@ -106,10 +106,10 @@
     "amenities": ["Private Patio", "Fast Wi-Fi", "Shared Kitchen", "Shared Bathroom", "Close to Metro", " Weekly change of linens and towels", "Twice weekly cleaning of common areas ","Central office support during work hours in Alcantara area"],
     "coordinates": [38.70432417473284, -9.165643563673596],
     "rooms": [
-      { "key": "patio_a", "name": "PATIO A", "price": "from €553 / 15 Days from €855 / Month", "link": "https://book.templlo.com/lisboa/room-a-in-cozy-apartment-patio/748933" },
-      { "key": "patio_b", "name": "PATIO B", "price": "from €553 / 15 Days from €855 / Month", "link": "https://book.templlo.com/lisboa/double-bedroom-with-balcony-patio-b/3ca645" },
-      { "key": "patio_c", "name": "PATIO C", "price": "from €465 / 15 Days from €722 / Month", "link": "https://book.templlo.com/lisboa/room-c-patio-apartment-with-bright-patio/b5c30c" },
-      { "key": "patio_d", "name": "PATIO D", "price": "from €465 / 15 Days from €722 / Month", "link": "https://book.templlo.com/lisboa/room-d-patio-apartment-with-bright-patio/034aca" }
+      { "key": "patio_a", "name": "PATIO A", "price": "from €553 / 15 Days\nfrom €855 / Month", "link": "https://book.templlo.com/lisboa/room-a-in-cozy-apartment-patio/748933" },
+      { "key": "patio_b", "name": "PATIO B", "price": "from €553 / 15 Days\nfrom €855 / Month", "link": "https://book.templlo.com/lisboa/double-bedroom-with-balcony-patio-b/3ca645" },
+      { "key": "patio_c", "name": "PATIO C", "price": "from €465 / 15 Days\nfrom €722 / Month", "link": "https://book.templlo.com/lisboa/room-c-patio-apartment-with-bright-patio/b5c30c" },
+      { "key": "patio_d", "name": "PATIO D", "price": "from €465 / 15 Days\nfrom €722 / Month", "link": "https://book.templlo.com/lisboa/room-d-patio-apartment-with-bright-patio/034aca" }
     ]
   },
   "santos": {
@@ -128,19 +128,19 @@
     "amenities": ["Spacious Living Area", "Modern Kitchen", "High-speed Internet", "Secure Entry", " Weekly change of linens and towels", "Twice weekly cleaning of common areas ","Central office support during work hours in Alcantara area"],
     "coordinates": [38.70765573893287, -9.15951458006177],
     "rooms": [
-      { "key": "santos_a", "name": "SANTOS A", "price": "from €528 / 15 Days from €817 / Month", "link": "https://book.templlo.com/lisboa/room-a--river-view--sunny-central-lisbon/6f0284" },
-      { "key": "santos_b", "name": "SANTOS B", "price": "from €528 / 15 Days from €817 / Month", "link": "https://book.templlo.com/lisboa/room-b-river-view-sunny-central-lisbon/571bc3" },
-      { "key": "santos_c", "name": "SANTOS C", "price": "from €528 / 15 Days from €817 / Month", "link": "https://book.templlo.com/lisboa/room-c-river-view-sunny-central-lisbon/8077d8" },
-      { "key": "santos_d", "name": "SANTOS D", "price": "from €528 / 15 Days from €817 / Month", "link": "https://book.templlo.com/lisboa/room-d-river-view-sunny-central-lisbon/130b78" },
-      { "key": "santos_e", "name": "SANTOS E", "price": "from €464 / 15 Days from €722 / Month", "link": "https://book.templlo.com/lisboa/santos-room-e---riverview%252C-central-lisbon/7c6992" },
-      { "key": "santos_f", "name": "SANTOS F", "price": "from €464 / 15 Days from €722 / Month", "link": "https://book.templlo.com/lisboa/room-f--river-view-sunny-central-lisbon/5d214c" },
-      { "key": "santos_h1", "name": "SANTOS H1", "price": "from €401 / 15 Days from €556 / Month", "link": "https://book.templlo.com/lisboa/room-h1--central-lisbon/6983a3" },
-      { "key": "santos_h2", "name": "SANTOS H2", "price": "from €401 / 15 Days from €556 / Month", "link": "https://book.templlo.com/lisboa/room-h2--central-lisbon/684862" }
+      { "key": "santos_a", "name": "SANTOS A", "price": "from €528 / 15 Days\nfrom €817 / Month", "link": "https://book.templlo.com/lisboa/room-a--river-view--sunny-central-lisbon/6f0284" },
+      { "key": "santos_b", "name": "SANTOS B", "price": "from €528 / 15 Days\nfrom €817 / Month", "link": "https://book.templlo.com/lisboa/room-b-river-view-sunny-central-lisbon/571bc3" },
+      { "key": "santos_c", "name": "SANTOS C", "price": "from €528 / 15 Days\nfrom €817 / Month", "link": "https://book.templlo.com/lisboa/room-c-river-view-sunny-central-lisbon/8077d8" },
+      { "key": "santos_d", "name": "SANTOS D", "price": "from €528 / 15 Days\nfrom €817 / Month", "link": "https://book.templlo.com/lisboa/room-d-river-view-sunny-central-lisbon/130b78" },
+      { "key": "santos_e", "name": "SANTOS E", "price": "from €464 / 15 Days\nfrom €722 / Month", "link": "https://book.templlo.com/lisboa/santos-room-e---riverview%252C-central-lisbon/7c6992" },
+      { "key": "santos_f", "name": "SANTOS F", "price": "from €464 / 15 Days\nfrom €722 / Month", "link": "https://book.templlo.com/lisboa/room-f--river-view-sunny-central-lisbon/5d214c" },
+      { "key": "santos_h1", "name": "SANTOS H1", "price": "from €401 / 15 Days\nfrom €556 / Month", "link": "https://book.templlo.com/lisboa/room-h1--central-lisbon/6983a3" },
+      { "key": "santos_h2", "name": "SANTOS H2", "price": "from €401 / 15 Days\nfrom €556 / Month", "link": "https://book.templlo.com/lisboa/room-h2--central-lisbon/684862" }
     ]
   },
   "loft": {
     "name": "LOFT",
-    "subtitle": "Tiny Central & Cosy Loft",
+    "subtitle": "Tiny Central &amp; Cosy Loft",
     "heroImage": "renamed_images/LOFT/loft_a_small_bedroom_with_a_bed_and_a_desk.webp",
     "carouselImages": [
       "renamed_images/LOFT/loft_a_small_bedroom_with_a_bed_and_a_desk.webp",
@@ -154,7 +154,7 @@
     "amenities": ["Private Studio", "Fast Wi-Fi", "Desk and Chair"," Weekly change of linens and towels", "Twice weekly cleaning of common areas ","Central office support during work hours in Alcantara area"],
     "coordinates": [38.717922382466064, -9.133941759865937],
     "rooms": [
-      { "key": "loft", "name": "LOFT", "price": "from €755 / 15 Days from €1152 / Month", "link": "https://book.templlo.com/lisboa/tiny-central-%26-cosy-loft-in-multi-cultural-area/41139b" }
+      { "key": "loft", "name": "LOFT", "price": "from €755 / 15 Days\nfrom €1152 / Month", "link": "https://book.templlo.com/lisboa/tiny-central-%26-cosy-loft-in-multi-cultural-area/41139b" }
     ]
   },
   "torrao": {
@@ -173,7 +173,7 @@
     "amenities": ["Full Apartment", "Fast Wi-Fi", "Lake View"],
     "coordinates": [38.72396692533869, -9.133889984288666],
     "rooms": [
-      { "key": "torrao", "name": "TORRÃO", "price": "from €661 / 15 Days from €1009 / Month", "link": "https://book.templlo.com/lisboa/vista-do-alentejo-rooftop-at-house-near-the-lake/0a7130" }
+      { "key": "torrao", "name": "TORRÃO", "price": "from €661 / 15 Days\nfrom €1009 / Month", "link": "https://book.templlo.com/lisboa/vista-do-alentejo-rooftop-at-house-near-the-lake/0a7130" }
     ]
   }
 }
