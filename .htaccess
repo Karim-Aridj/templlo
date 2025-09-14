@@ -1,0 +1,21 @@
+RewriteEngine On
+RewriteBase /
+
+# Don’t rewrite existing files or directories
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !\.(css|js|png|jpg|jpeg|gif|ico|svg|webp|woff|woff2|ttf|eot|json|map)$ [NC]
+
+# Redirect all other routes to index.html
+RewriteRule ^.*$ /index.html [L]
+
+# Optional: Caching for static assets
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+</IfModule>
