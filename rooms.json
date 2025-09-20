@@ -9,11 +9,10 @@
     "shared_desk_office": false,
     "amenities": ["Oven", "Microwave", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Refrigerator", "Stove", "Internet", "Hair Dryer", "Free wifi", "Fire extinguisher"],
     "images": [
-      "renamed_images/ARRIAGA/arriaga_a_hallway_with_a_black_and_white_rug.webp",
-      "renamed_images/ARRIAGA/arriaga_a_long_hallway_with_a_wooden_floor_and_white_walls.webp",
-      "renamed_images/ARRIAGA/arriaga_a_bathroom_with_a_sink_and_a_mirror.webp",
-      "renamed_images/ARRIAGA/arriaga_a_bathroom_with_a_toilet_sink_and_shower.webp",
-      "renamed_images/ARRIAGA/arriaga_a_hallway_with_a_black_and_white_rug_1.webp"
+      "renamed_images/ARRIAGA/ROOM_A_ARRIAGA/room_a_arriaga_a_bed_and_window.webp",
+      "renamed_images/ARRIAGA//ROOM_A_ARRIAGA/room_a_arriaga_a_bed_in_a_room_with_a_table.webp",
+      "renamed_images/ARRIAGA//ROOM_A_ARRIAGA/room_a_arriaga_a_bed_in_a_room_with_a_table_and_window.webp",
+      "renamed_images/ARRIAGA//ROOM_A_ARRIAGA/room_a_arriaga_with_double_bed.webp"
     ]
   },
   "arriaga_b": {
@@ -26,9 +25,9 @@
     "shared_desk_office": false,
     "amenities": ["Oven", "Microwave", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Refrigerator", "Stove", "Internet", "Hair Dryer", "Free wifi", "Fire extinguisher"],
     "images": [
-      "renamed_images/ARRIAGA/ROOM B ARRIAGA/room_b_arriaga_a_bed_in_a_room_with_a_couch_and_a_table.webp",
-      "renamed_images/ARRIAGA/ROOM B ARRIAGA/room_b_arriaga_a_living_room_with_a_couch_and_a_coffee_table.webp",
-      "renamed_images/ARRIAGA/ROOM B ARRIAGA/room_b_arriaga_a_living_room_with_a_couch_chair_and_a_coffee_tabl.webp"
+      "renamed_images/ARRIAGA/ROOM_B_ARRIAGA/room_b_arriaga_a_bed_in_a_room_with_a_couch_and_a_table.webp",
+      "renamed_images/ARRIAGA/ROOM_B_ARRIAGA/room_b_arriaga_a_living_room_with_a_couch_and_a_coffee_table.webp",
+      "renamed_images/ARRIAGA/ROOM_B_ARRIAGA/room_b_arriaga_a_living_room_with_a_couch_chair_and_a_coffee_tabl.webp"
     ]
   },
   "arriaga_c": {
@@ -41,11 +40,11 @@
     "shared_desk_office": false,
     "amenities": ["Oven", "Microwave", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Refrigerator", "Stove", "Internet", "Hair Dryer", "Free wifi", "Fire extinguisher"],
     "images": [
-      "renamed_images/ARRIAGA/ROOM C ARRIAGA/room_c_arriaga_a_bedroom_with_a_bed_and_a_rug.webp",
-      "renamed_images/ARRIAGA/ROOM C ARRIAGA/room_c_arriaga_a_bedroom_with_a_bed_and_a_window.webp",
-      "renamed_images/ARRIAGA/ROOM C ARRIAGA/room_c_arriaga_a_bed_with_a_white_comforter_and_a_window.webp",
-      "renamed_images/ARRIAGA/ROOM C ARRIAGA/room_c_arriaga_a_bed_with_a_white_comforter.webp",
-      "renamed_images/ARRIAGA/ROOM C ARRIAGA/room_c_arriaga_a_bed_with_towels_on_it_in_a_room.webp"
+      "renamed_images/ARRIAGA/ROOM_C_ARRIAGA/room_c_arriaga_a_bedroom_with_a_bed_and_a_rug.webp",
+      "renamed_images/ARRIAGA/ROOM_C_ARRIAGA/room_c_arriaga_a_bedroom_with_a_bed_and_a_window.webp",
+      "renamed_images/ARRIAGA/ROOM_C_ARRIAGA/room_c_arriaga_a_bed_with_a_white_comforter_and_a_window.webp",
+      "renamed_images/ARRIAGA/ROOM_C_ARRIAGA/room_c_arriaga_a_bed_with_a_white_comforter.webp",
+      "renamed_images/ARRIAGA/ROOM_C_ARRIAGA/room_c_arriaga_a_bed_with_towels_on_it_in_a_room.webp"
     ]
   },
   "arriaga_d": {
@@ -58,10 +57,10 @@
     "shared_desk_office": false,
     "amenities": ["Oven", "Microwave", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Refrigerator", "Stove", "Internet", "Hair Dryer", "Free wifi", "Fire extinguisher"],
     "images": [
-      "renamed_images/ARRIAGA/ROOM D ARRIAGA/room_d_arriaga_a_bed_in_a_room_with_a_window.webp",
-      "renamed_images/ARRIAGA/ROOM D ARRIAGA/room_d_arriaga_a_bedroom_with_a_bed_and_a_desk.webp",
-      "renamed_images/ARRIAGA/ROOM D ARRIAGA/room_d_arriaga_a_hammol_hanging_in_a_bedroom_with_a_view_of_a_har.webp",
-      "renamed_images/ARRIAGA/ROOM D ARRIAGA/room_d_arriaga_a_hammol_hanging_in_a_room_with_a_chair.webp"
+      "renamed_images/ARRIAGA/ROOM_D_ARRIAGA/room_d_arriaga_a_bed_in_a_room_with_a_window.webp",
+      "renamed_images/ARRIAGA/ROOM_D_ARRIAGA/room_d_arriaga_a_bedroom_with_a_bed_and_a_desk.webp",
+      "renamed_images/ARRIAGA/ROOM_D_ARRIAGA/room_d_arriaga_a_hammol_hanging_in_a_bedroom_with_a_view_of_a_har.webp",
+      "renamed_images/ARRIAGA/ROOM_D_ARRIAGA/room_d_arriaga_a_hammol_hanging_in_a_room_with_a_chair.webp"
     ]
   },
   "arriaga_e": {
@@ -74,9 +73,9 @@
     "shared_desk_office": false,
     "amenities": ["Oven", "Microwave", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Refrigerator", "Stove", "Internet", "Hair Dryer", "Free wifi", "Fire extinguisher"],
     "images": [
-      "renamed_images/ARRIAGA/ROOM E ARRIAGA/room_e_arriaga_a_bedroom_with_a_bed_desk_and_chair.webp",
-      "renamed_images/ARRIAGA/ROOM E ARRIAGA/room_e_arriaga_a_bed_sitting_in_a_bedroom_next_to_a_desk.webp",
-      "renamed_images/ARRIAGA/ROOM E ARRIAGA/room_e_arriaga_a_small_bedroom_with_a_bed_and_a_chair.webp"
+      "renamed_images/ARRIAGA/ROOM_E_ARRIAGA/room_e_arriaga_a_bedroom_with_a_bed_desk_and_chair.webp",
+      "renamed_images/ARRIAGA/ROOM_E_ARRIAGA/room_e_arriaga_a_bed_sitting_in_a_bedroom_next_to_a_desk.webp",
+      "renamed_images/ARRIAGA/ROOM_E_ARRIAGA/room_e_arriaga_a_small_bedroom_with_a_bed_and_a_chair.webp"
     ]
   },
   "arriaga_f": {
@@ -89,9 +88,9 @@
     "shared_desk_office": false,
     "amenities": ["Oven", "Microwave", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Refrigerator", "Stove", "Internet", "Hair Dryer", "Free wifi", "Fire extinguisher"],
     "images": [
-      "renamed_images/ARRIAGA/ROOM F ARRIAGA/room_f_arriaga_a_bedroom_with_a_bed_and_a_dresser.webp",
-      "renamed_images/ARRIAGA/ROOM F ARRIAGA/room_f_arriaga_a_small_bedroom_with_a_bed_and_a_plant.webp",
-      "renamed_images/ARRIAGA/ROOM F ARRIAGA/room_f_arriaga_a_small_room_with_a_bed_and_a_window.webp"
+      "renamed_images/ARRIAGA/ROOM_F_ARRIAGA/room_f_arriaga_a_bedroom_with_a_bed_and_a_dresser.webp",
+      "renamed_images/ARRIAGA/ROOM_F_ARRIAGA/room_f_arriaga_a_small_bedroom_with_a_bed_and_a_plant.webp",
+      "renamed_images/ARRIAGA/ROOM_F_ARRIAGA/room_f_arriaga_a_small_room_with_a_bed_and_a_window.webp"
     ]
   },
   "arriaga_g": {
@@ -104,9 +103,9 @@
     "shared_desk_office": false,
     "amenities": ["Oven", "Microwave", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Refrigerator", "Stove", "Internet", "Hair Dryer", "Free wifi", "Fire extinguisher"],
     "images": [
-      "renamed_images/ARRIAGA/ROOM G ARRIAGA/room_g_arriaga_a_small_bedroom_with_a_bed_and_a_window.webp",
-      "renamed_images/ARRIAGA/ROOM G ARRIAGA/room_g_arriaga_a_small_room_with_a_bed_and_a_desk.webp",
-      "renamed_images/ARRIAGA/ROOM G ARRIAGA/room_g_arriaga_a_small_room_with_a_desk_and_a_window.webp"
+      "renamed_images/ARRIAGA/ROOM_G_ARRIAGA/room_g_arriaga_a_small_bedroom_with_a_bed_and_a_window.webp",
+      "renamed_images/ARRIAGA/ROOM_G_ARRIAGA/room_g_arriaga_a_small_room_with_a_bed_and_a_desk.webp",
+      "renamed_images/ARRIAGA/ROOM_G_ARRIAGA/room_g_arriaga_a_small_room_with_a_desk_and_a_window.webp"
     ]
   },
   "patio_a": {

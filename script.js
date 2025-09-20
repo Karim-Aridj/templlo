@@ -1,33 +1,82 @@
-// script.js
+// script.js - COMPLETE VERSION WITH ALL FUNCTIONS + CLEAN URL ROUTING
 
-// Load apartments data
+// ===== GLOBAL VARIABLES =====
 let apartmentData = {};
-fetch('apartments.json')
-  .then(res => res.json())
-  .then(data => {
-    apartmentData = data;
-    renderApartmentsList();
-    const aptFromHash = window.location.hash.slice(1);
-    if (aptFromHash && apartmentData[aptFromHash]) {
-      showRoomPage(aptFromHash);
+let roomDetails = {};
+
+// ===== ROUTING FUNCTIONS (CHANGED FROM HASH TO CLEAN URLs) =====
+function showHomePage() {
+  history.replaceState(null, '', '/');
+  
+  const homePage = document.getElementById('home-page');
+  const roomDetailsPage = document.getElementById('room-details-page');
+  const homeNavbar = document.getElementById('home-navbar');
+  const detailNavbar = document.getElementById('detail-navbar');
+  
+  if (homePage) homePage.classList.remove('hidden');
+  if (roomDetailsPage) roomDetailsPage.classList.add('hidden');
+  if (homeNavbar) homeNavbar.classList.remove('hidden');
+  if (detailNavbar) detailNavbar.classList.add('hidden');
+  
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  
+  if (window.roomMapInstance) {
+    window.roomMapInstance.remove();
+    window.roomMapInstance = null;
+  }
+}
+
+function showRoomPage(key) {
+  const apt = apartmentData[key];
+  if (!apt) return;
+
+  history.pushState({ apartment: key }, '', `/${key}`);
+
+  const homePage = document.getElementById('home-page');
+  const roomDetailsPage = document.getElementById('room-details-page');
+  const homeNavbar = document.getElementById('home-navbar');
+  const detailNavbar = document.getElementById('detail-navbar');
+
+  if (homePage) homePage.classList.add('hidden');
+  if (roomDetailsPage) roomDetailsPage.classList.remove('hidden');
+  if (homeNavbar) homeNavbar.classList.add('hidden');
+  if (detailNavbar) detailNavbar.classList.remove('hidden');
+  
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+
+  // Render apartment details
+  renderRoomDetails(key);
+}
+
+// Expose globally for inline onclick
+window.showHomePage = showHomePage;
+window.showRoomPage = showRoomPage;
+
+// ===== ROUTING INITIALIZATION (CHANGED FROM HASH TO CLEAN URLs) =====
+function initializeRouting() {
+  const path = window.location.pathname.slice(1); // Remove leading slash
+  
+  if (path && apartmentData[path]) {
+    showRoomPage(path);
+  } else {
+    showHomePage();
+  }
+  
+  // Handle browser back/forward
+  window.addEventListener('popstate', (e) => {
+    const path = window.location.pathname.slice(1);
+    if (path && apartmentData[path]) {
+      showRoomPage(path);
     } else {
       showHomePage();
     }
-  })
-  .catch(err => console.error('Error loading apartments.json:', err));
+  });
+}
 
-// Load room details data
-let roomDetails = {};
-fetch('rooms.json')
-  .then(res => res.json())
-  .then(data => roomDetails = data)
-  .catch(err => console.error('Error loading rooms.json:', err));
-
-// Function to properly set hero background with error handling
+// ===== HERO BACKGROUND HELPER =====
 function setHeroBackground(element, imageUrl) {
     if (!element || !imageUrl) return;
     
-    // Create image to preload and verify it exists
     const img = new Image();
     
     img.onload = function() {
@@ -39,7 +88,6 @@ function setHeroBackground(element, imageUrl) {
     
     img.onerror = function() {
         console.error('Failed to load hero image:', imageUrl);
-        // Fallback to default background
         element.style.backgroundColor = '#f5f5f5';
         element.style.backgroundImage = 'none';
     };
@@ -47,14 +95,31 @@ function setHeroBackground(element, imageUrl) {
     img.src = imageUrl;
 }
 
-// Render list of apartments on the home page
+// ===== DATA LOADING =====
+fetch('apartments.json')
+  .then(res => res.json())
+  .then(data => {
+    apartmentData = data;
+    renderApartmentsList();
+    initializeRouting(); // CHANGED: Use clean URL routing instead of hash
+  })
+  .catch(err => console.error('Error loading apartments.json:', err));
+
+fetch('rooms.json')
+  .then(res => res.json())
+  .then(data => {
+    roomDetails = data;
+    console.log('Rooms data loaded:', Object.keys(roomDetails).length, 'rooms');
+  })
+  .catch(err => console.error('Error loading rooms.json:', err));
+
+// ===== RENDER APARTMENTS LIST =====
 function renderApartmentsList() {
   const list = document.getElementById('apartment-list');
   if (!list) return;
   
   list.innerHTML = Object.entries(apartmentData).map(
     ([key, apt]) => {
-      // Add carousel HTML if carouselImages exist
       let carouselHTML = '';
       if (apt.carouselImages && apt.carouselImages.length > 0) {
         carouselHTML = `
@@ -63,8 +128,8 @@ function renderApartmentsList() {
               `<img src="${img}" class="carousel-image ${i === 0 ? 'active' : ''}" alt="${apt.name}">`
             ).join('')}
             ${apt.carouselImages.length > 1 ? `
-              <button class="carousel-btn carousel-prev" data-key="${key}">&#8249;</button>
-              <button class="carousel-btn carousel-next" data-key="${key}">&#8250;</button>
+              <button class="carousel-btn carousel-prev" data-key="${key}">‹</button>
+              <button class="carousel-btn carousel-next" data-key="${key}">›</button>
               <div class="carousel-dots">
                 ${apt.carouselImages.map((_, i) => 
                   `<span class="carousel-dot ${i === 0 ? 'active' : ''}" data-key="${key}" data-index="${i}"></span>`
@@ -90,95 +155,45 @@ function renderApartmentsList() {
     el.addEventListener('click', () => showRoomPage(el.dataset.key));
   });
 
-  // Add carousel navigation handlers
-  document.querySelectorAll('.carousel-btn').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.stopPropagation(); // Prevent apartment card click
-      const key = btn.dataset.key;
-      const carousel = document.querySelector(`.apartment-carousel[data-key="${key}"]`);
-      if (!carousel) return;
-      
-      const images = carousel.querySelectorAll('.carousel-image');
-      
-      let currentIndex = Array.from(images).findIndex(img => img.classList.contains('active'));
-      let newIndex;
-      
-      if (btn.classList.contains('carousel-prev')) {
-        newIndex = (currentIndex - 1 + images.length) % images.length;
-      } else {
-        newIndex = (currentIndex + 1) % images.length;
-      }
-      
-      images[currentIndex].classList.remove('active');
-      images[newIndex].classList.add('active');
-    });
-  });
-
-  // Add dot navigation handlers
-  document.querySelectorAll('.carousel-dot').forEach(dot => {
-    dot.addEventListener('click', (e) => {
-      e.stopPropagation(); // Prevent apartment card click
-      const key = dot.dataset.key;
-      const index = parseInt(dot.dataset.index);
-      const carousel = document.querySelector(`.apartment-carousel[data-key="${key}"]`);
-      if (!carousel) return;
-      
-      const images = carousel.querySelectorAll('.carousel-image');
-      const dots = carousel.querySelectorAll('.carousel-dot');
-      
-      images.forEach(img => img.classList.remove('active'));
-      dots.forEach(d => d.classList.remove('active'));
-      images[index].classList.add('active');
-      dots[index].classList.add('active');
-    });
-  });
+  // Carousel handlers
+  initializeCarouselHandlers();
 }
 
-// Updated showRoomPage function with proper hero image handling
-function showRoomPage(id) {
-  history.replaceState(null, '', `#${id}`);
-  const apt = apartmentData[id];
-  if (!apt) return;
+// ===== RENDER ROOM DETAILS =====
+function renderRoomDetails(apartmentKey) {
+  const apartment = apartmentData[apartmentKey];
+  if (!apartment) return;
 
-  const homePage = document.getElementById('home-page');
-  const roomDetailsPage = document.getElementById('room-details-page');
-  const homeNavbar = document.getElementById('home-navbar');
-  const detailNavbar = document.getElementById('detail-navbar');
-
-  if (homePage) homePage.classList.add('hidden');
-  if (roomDetailsPage) roomDetailsPage.classList.remove('hidden');
-  if (homeNavbar) homeNavbar.classList.add('hidden');
-  if (detailNavbar) detailNavbar.classList.remove('hidden');
-  
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-
-  const breadcrumbEl = document.getElementById('breadcrumb-room-name');
-  if (breadcrumbEl) breadcrumbEl.textContent = apt.name;
-  
-  // Use the new setHeroBackground function for proper image loading
+  // Set hero image
   const heroElement = document.getElementById('room-hero');
-  if (heroElement && apt.heroImage) {
-      setHeroBackground(heroElement, apt.heroImage);
+  if (heroElement && apartment.heroImage) {
+    setHeroBackground(heroElement, apartment.heroImage);
   }
   
-  const titleEl = document.getElementById('room-details-title');
-  const subtitleEl = document.getElementById('room-details-subtitle');
-  const descriptionEl = document.getElementById('room-details-description');
-  
-  if (titleEl) titleEl.textContent = apt.name;
-  if (subtitleEl) subtitleEl.textContent = apt.subtitle;
-  if (descriptionEl) descriptionEl.textContent = apt.description;
+  // Set text content
+  document.getElementById('breadcrumb-room-name').textContent = apartment.name;
+  document.getElementById('room-details-title').textContent = apartment.name;
+  document.getElementById('room-details-subtitle').textContent = apartment.subtitle;
+  document.getElementById('room-details-description').textContent = apartment.description;
 
-  const amenitiesEl = document.getElementById('amenities-list');
-  if (amenitiesEl) {
-    amenitiesEl.innerHTML = apt.amenities.map(a => `<li><i class="fa-solid fa-check"></i> ${a}</li>`).join('');
+  // Render amenities
+  const amenitiesList = document.getElementById('amenities-list');
+  if (amenitiesList && apartment.amenities) {
+    amenitiesList.innerHTML = apartment.amenities.map(amenity => 
+      `<li><i class="fa-solid fa-check"></i> ${amenity}</li>`
+    ).join('');
   }
 
-  renderRooms(apt.rooms);
-  initRoomMap(apt.coordinates);
+  // Render rooms
+  renderRooms(apartment.rooms);
+  
+  // Initialize map
+  if (apartment.coordinates) {
+    initRoomMap(apartment.coordinates);
+  }
 }
 
-// Render rooms list and attach click handlers
+// ===== RENDER ROOMS =====
 function renderRooms(rooms) {
   const container = document.getElementById('room-list-container');
   if (!container || !rooms) return;
@@ -195,13 +210,18 @@ function renderRooms(rooms) {
     </div>
   `).join('');
 
+  // Room title click handlers (opens modal)
   document.querySelectorAll('.room-title').forEach(el => {
     el.addEventListener('click', () => {
-      const room = rooms.find(r => r.key === el.dataset.key);
-      if (room) openRoomModal(room);
+      const roomKey = el.dataset.key;
+      const room = rooms.find(r => r.key === roomKey);
+      if (room && roomDetails[roomKey]) {
+        openRoomModal(room, roomDetails[roomKey]);
+      }
     });
   });
   
+  // Book now handlers
   document.querySelectorAll('.btn-custom').forEach(btn => {
     btn.addEventListener('click', () => {
       const room = rooms.find(r => r.key === btn.dataset.key);
@@ -210,7 +230,53 @@ function renderRooms(rooms) {
   });
 }
 
-// Initialize or update the detail page map with enhanced mobile support
+// ===== CAROUSEL HANDLERS =====
+function initializeCarouselHandlers() {
+  document.querySelectorAll('.carousel-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const key = btn.dataset.key;
+      const carousel = document.querySelector(`[data-key="${key}"]`);
+      if (!carousel) return;
+      
+      const images = carousel.querySelectorAll('.carousel-image');
+      const dots = carousel.querySelectorAll('.carousel-dot');
+      let currentIndex = Array.from(images).findIndex(img => img.classList.contains('active'));
+      let newIndex;
+      
+      if (btn.classList.contains('carousel-prev')) {
+        newIndex = (currentIndex - 1 + images.length) % images.length;
+      } else {
+        newIndex = (currentIndex + 1) % images.length;
+      }
+      
+      images[currentIndex].classList.remove('active');
+      if (dots[currentIndex]) dots[currentIndex].classList.remove('active');
+      images[newIndex].classList.add('active');
+      if (dots[newIndex]) dots[newIndex].classList.add('active');
+    });
+  });
+
+  document.querySelectorAll('.carousel-dot').forEach(dot => {
+    dot.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const key = dot.dataset.key;
+      const index = parseInt(dot.dataset.index);
+      const carousel = document.querySelector(`[data-key="${key}"]`);
+      if (!carousel) return;
+      
+      const images = carousel.querySelectorAll('.carousel-image');
+      const dots = carousel.querySelectorAll('.carousel-dot');
+      
+      images.forEach(img => img.classList.remove('active'));
+      dots.forEach(d => d.classList.remove('active'));
+      images[index].classList.add('active');
+      dots[index].classList.add('active');
+    });
+  });
+}
+
+// ===== MAP INITIALIZATION =====
 function initRoomMap(coords) {
   if (!coords || !Array.isArray(coords) || coords.length !== 2) return;
   
@@ -232,7 +298,6 @@ function initRoomMap(coords) {
     L.marker(coords).addTo(window.roomMapInstance);
     window.roomMapInstance.invalidateSize();
     
-    // Additional mobile fix - force map refresh after a delay
     setTimeout(() => {
       if (window.roomMapInstance) {
         window.roomMapInstance.invalidateSize();
@@ -241,43 +306,19 @@ function initRoomMap(coords) {
   }, 100);
 }
 
-// Return to the home view
-function showHomePage() {
-  history.replaceState(null, '', window.location.pathname);
-  
-  const homePage = document.getElementById('home-page');
-  const roomDetailsPage = document.getElementById('room-details-page');
-  const homeNavbar = document.getElementById('home-navbar');
-  const detailNavbar = document.getElementById('detail-navbar');
-  
-  if (homePage) homePage.classList.remove('hidden');
-  if (roomDetailsPage) roomDetailsPage.classList.add('hidden');
-  if (homeNavbar) homeNavbar.classList.remove('hidden');
-  if (detailNavbar) detailNavbar.classList.add('hidden');
-  
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-  
-  if (window.roomMapInstance) {
-    window.roomMapInstance.remove();
-    window.roomMapInstance = null;
-  }
-}
-
-// Enhanced modal function with dual layout support (Mobile Card-like + Desktop)
-function openRoomModal(room) {
-  const d = roomDetails[room.key] || {};
-  
+// ===== MODAL FUNCTIONALITY =====
+function openRoomModal(room, roomData) {
   const icons = {
-    Oven: 'fa-solid fa-temperature-high',
-    Microwave: 'fa-solid fa-microchip',
-    Toaster: 'fa-solid fa-bread-slice',
+    'Oven': 'fa-solid fa-temperature-high',
+    'Microwave': 'fa-solid fa-microchip',
+    'Toaster': 'fa-solid fa-bread-slice',
     'Coffee Maker': 'fa-solid fa-coffee',
     'Dishes & Utensils': 'fa-solid fa-utensils',
-    Kitchen: 'fa-solid fa-kitchen-set',
+    'Kitchen': 'fa-solid fa-kitchen-set',
     'Pantry Items': 'fa-solid fa-box-open',
-    Refrigerator: 'fa-solid fa-snowflake',
-    Stove: 'fa-solid fa-fire-burner',
-    Internet: 'fa-solid fa-wifi',
+    'Refrigerator': 'fa-solid fa-snowflake',
+    'Stove': 'fa-solid fa-fire-burner',
+    'Internet': 'fa-solid fa-wifi',
     'Linens Provided': 'fa-solid fa-bed',
     'Towels Provided': 'fa-solid fa-hand-sparkles',
     'Hair Dryer': 'fa-solid fa-wind',
@@ -285,46 +326,43 @@ function openRoomModal(room) {
     'Fire extinguisher': 'fa-solid fa-fire-extinguisher'
   };
 
-  // ========== MOBILE LAYOUT POPULATION ==========
-  
-  // Mobile Title
+  // Mobile title
   const titleEl = document.getElementById('modal-room-title');
-  if (titleEl) titleEl.textContent = d.room_name || room.name;
+  if (titleEl) titleEl.textContent = roomData.room_name || room.name;
   
-  // Mobile Room Details
+  // Mobile room details
   const bedInfo = document.getElementById('modal-bed-info');
-  const viewInfo = document.getElementById('modal-view-info');
-  
   if (bedInfo) {
     const label = bedInfo.querySelector('.label');
     const value = bedInfo.querySelector('.value');
     if (label) label.textContent = 'Bed Type';
-    if (value) value.textContent = d.bed || '—';
+    if (value) value.textContent = roomData.bed || '—';
   }
   
+  const viewInfo = document.getElementById('modal-view-info');
   if (viewInfo) {
     const label = viewInfo.querySelector('.label');
     const value = viewInfo.querySelector('.value');
     if (label) label.textContent = 'View';
-    if (value) value.textContent = d.view || '—';
+    if (value) value.textContent = roomData.view || '—';
   }
 
-  // Mobile Plus Info
+  // Plus info
   const plusEl = document.getElementById('modal-plus-info');
   if (plusEl) {
-    if (d.plus) {
+    if (roomData.plus) {
       plusEl.style.display = 'block';
       const spanEl = plusEl.querySelector('span');
-      if (spanEl) spanEl.textContent = `Special: ${d.plus}`;
+      if (spanEl) spanEl.textContent = `Special: ${roomData.plus}`;
     } else {
       plusEl.style.display = 'none';
     }
   }
   
-  // Mobile Amenities
+  // Amenities from rooms.json
   const amenitiesContainer = document.getElementById('modal-amenities');
   if (amenitiesContainer) {
-    amenitiesContainer.innerHTML = (d.amenities || []).map(a => `
+    amenitiesContainer.innerHTML = (roomData.amenities || []).map(a => `
       <div>
         <i class="${icons[a] || 'fa-solid fa-check'}"></i>
         <span>${a}</span>
@@ -332,18 +370,18 @@ function openRoomModal(room) {
     `).join('');
   }
 
-  // Mobile Images
+  // Images from rooms.json
   const mainImg = document.getElementById('modal-main-img');
   const thumbs = document.getElementById('gallery-thumbs');
   
   if (thumbs) thumbs.innerHTML = '';
   
-  if (d.images && d.images.length) {
-    d.images.forEach((src, i) => {
+  if (roomData.images && roomData.images.length) {
+    roomData.images.forEach((src, i) => {
       if (thumbs) {
         const img = document.createElement('img');
         img.src = src;
-        img.alt = d.room_name || room.name;
+        img.alt = roomData.room_name || room.name;
         
         img.onerror = function() {
           this.src = 'https://via.placeholder.com/400x300?text=Image+Not+Found';
@@ -363,30 +401,14 @@ function openRoomModal(room) {
           if (mainImg) mainImg.src = src;
           thumbs.querySelectorAll('img').forEach(el => el.classList.remove('selected'));
           img.classList.add('selected');
-          
-          // Sync with desktop images if they exist
-          const thumbsDesktop = document.getElementById('gallery-thumbs-desktop');
-          const mainImgDesktop = document.getElementById('modal-main-img-desktop');
-          if (thumbsDesktop) {
-            thumbsDesktop.querySelectorAll('img').forEach((el, idx) => {
-              el.classList.remove('selected', 'opacity-100', 'border-2', 'border-amber-800');
-              el.classList.add('opacity-70');
-              if (idx === i) {
-                el.classList.add('selected', 'opacity-100', 'border-2', 'border-amber-800');
-              }
-            });
-          }
-          if (mainImgDesktop) mainImgDesktop.src = src;
         });
         
         thumbs.appendChild(img);
       }
     });
-  } else {
-    if (mainImg) mainImg.src = 'https://via.placeholder.com/400x300?text=No+Image';
   }
 
-  // Mobile Price and Link
+  // Price and link
   const priceEl = document.getElementById('modal-room-price');
   const linkEl = document.getElementById('modal-room-link');
   if (priceEl) priceEl.textContent = room.price;
@@ -394,104 +416,8 @@ function openRoomModal(room) {
     linkEl.href = room.link;
     linkEl.textContent = 'Book Now';
   }
-  // ========== DESKTOP LAYOUT POPULATION ==========
-  
-  // Desktop Title
-  const titleDesktop = document.getElementById('modal-room-title-desktop');
-  if (titleDesktop) titleDesktop.textContent = d.room_name || room.name;
-  
-  // Desktop Room Details
-  const bedDesktop = document.getElementById('modal-bed-info-desktop');
-  const viewDesktop = document.getElementById('modal-view-info-desktop');
-  if (bedDesktop) bedDesktop.innerHTML = `<span class="block text-gray-600">Bed Type</span><span class="font-semibold">${d.bed || '—'}</span>`;
-  if (viewDesktop) viewDesktop.innerHTML = `<span class="block text-gray-600">View</span><span class="font-semibold">${d.view || '—'}</span>`;
 
-  // Desktop Plus Info
-  const plusDesktop = document.getElementById('modal-plus-info-desktop');
-  if (plusDesktop) {
-    if (d.plus) {
-      plusDesktop.style.display = 'block';
-      const span = plusDesktop.querySelector('span');
-      if (span) span.textContent = `Special: ${d.plus}`;
-    } else {
-      plusDesktop.style.display = 'none';
-    }
-  }
-  
-  // Desktop Amenities
-  const amenitiesDesktop = document.getElementById('modal-amenities-desktop');
-  if (amenitiesDesktop) {
-    amenitiesDesktop.innerHTML = (d.amenities || []).map(a => `
-      <div class="flex items-center py-1 text-sm">
-        <i class="${icons[a] || 'fa-solid fa-check'} mr-2 text-amber-800"></i>
-        <span>${a}</span>
-      </div>
-    `).join('');
-  }
-
-  // Desktop Images
-  const mainImgDesktop = document.getElementById('modal-main-img-desktop');
-  const thumbsDesktop = document.getElementById('gallery-thumbs-desktop');
-  
-  if (thumbsDesktop) thumbsDesktop.innerHTML = '';
-  
-  if (d.images && d.images.length) {
-    d.images.forEach((src, i) => {
-      if (thumbsDesktop) {
-        const imgDesktop = document.createElement('img');
-        imgDesktop.src = src;
-        imgDesktop.alt = d.room_name || room.name;
-        imgDesktop.className = 'w-16 h-12 object-cover rounded cursor-pointer opacity-70 hover:opacity-100 transition';
-        
-        imgDesktop.onerror = function() {
-          this.src = 'https://via.placeholder.com/400x300?text=Image+Not+Found';
-        };
-        
-        if (i === 0) {
-          imgDesktop.classList.add('selected', 'opacity-100', 'border-2', 'border-amber-800');
-          if (mainImgDesktop) {
-            mainImgDesktop.src = src;
-            mainImgDesktop.onerror = function() {
-              this.src = 'https://via.placeholder.com/400x300?text=Image+Not+Found';
-            };
-          }
-        }
-        
-        imgDesktop.addEventListener('click', () => {
-          if (mainImgDesktop) mainImgDesktop.src = src;
-          thumbsDesktop.querySelectorAll('img').forEach(el => {
-            el.classList.remove('selected', 'opacity-100', 'border-2', 'border-amber-800');
-            el.classList.add('opacity-70');
-          });
-          imgDesktop.classList.add('selected', 'opacity-100', 'border-2', 'border-amber-800');
-          
-          // Sync with mobile images if they exist
-          if (mainImg) mainImg.src = src;
-          if (thumbs) {
-            thumbs.querySelectorAll('img').forEach((el, idx) => {
-              el.classList.remove('selected');
-              if (idx === i) el.classList.add('selected');
-            });
-          }
-        });
-        
-        thumbsDesktop.appendChild(imgDesktop);
-      }
-    });
-  } else {
-    if (mainImgDesktop) mainImgDesktop.src = 'https://via.placeholder.com/400x300?text=No+Image';
-  }
-
-  // Desktop Price and Link
-  const priceDesktop = document.getElementById('modal-room-price-desktop');
-  const linkDesktop = document.getElementById('modal-room-link-desktop');
-  if (priceDesktop) priceDesktop.textContent = room.price;
-  if (linkDesktop) {
-    linkDesktop.href = room.link;
-    linkDesktop.textContent = 'Book Now';
-  }
-
-  // Show Modal
+  // Show modal
   const modal = document.getElementById('room-modal');
   if (modal) {
     modal.classList.remove('hidden');
@@ -500,18 +426,16 @@ function openRoomModal(room) {
   }
 }
 
-// Enhanced modal close function
 function closeModal() {
   const modal = document.getElementById('room-modal');
   if (modal) {
     modal.classList.add('hidden');
     modal.classList.remove('flex');
   }
-  // Restore body scroll
   document.body.style.overflow = 'auto';
 }
 
-// Set up UI interactions after DOM loads
+// ===== SET UP UI INTERACTIONS AFTER DOM LOADS =====
 document.addEventListener('DOMContentLoaded', () => {
   // Enhanced modal close handlers
   const modal = document.getElementById('room-modal');
@@ -649,7 +573,7 @@ if (chatToggle) {
   });
 }
 
-// Initialize carousels for hardcoded apartment cards
+// ===== INITIALIZE HARDCODED CAROUSELS (YOUR ORIGINAL FUNCTION) =====
 function initializeHardcodedCarousels() {
   // Carousel navigation
   document.querySelectorAll('.carousel-btn').forEach(btn => {
@@ -699,6 +623,8 @@ function initializeHardcodedCarousels() {
     });
   });
 }
+
+// ===== REPOSITION MAP ON MOBILE (YOUR ORIGINAL FUNCTION) =====
 function repositionMapOnMobile() {
     const map = document.getElementById('room-map');
     const roomCardsContainer = document.getElementById('room-list-container');
