@@ -4,11 +4,9 @@
     "subtitle": "Elegant Apartments in Alcântara",
     "heroImage": "renamed_images/ARRIAGA/arriaga_with_port_view.webp",
     "carouselImages": [
-      "renamed_images/ARRIAGA/arriaga_a_hallway_with_a_black_and_white_rug.webp",
+      "renamed_images/ARRIAGA/arriaga_a_premium_apartment_in_alcantara.webp",
       "renamed_images/ARRIAGA/arriaga_a_long_hallway_with_a_wooden_floor_and_white_walls.webp",
-      "renamed_images/ARRIAGA/arriaga_a_bathroom_with_a_sink_and_a_mirror.webp",
-      "renamed_images/ARRIAGA/arriaga_a_bathroom_with_a_toilet_sink_and_shower.webp",
-      "renamed_images/ARRIAGA/arriaga_a_hallway_with_a_black_and_white_rug_1.webp",
+      "renamed_images/ARRIAGA/arriaga_a_full_equipped_kitchen_and_sea_view.webp",
       "renamed_images/ARRIAGA/arriaga_a_bathroom_with_a_sink_and_mirror_in_it.webp"
     ],
     "description": "Get ready to be charmed by the elegance, style, and incredible view of the iconic Port of Lisbon. Located in the historic Alcântara neighborhood, our apartments are perfectly situated to offer both a peaceful retreat and easy access to the city's vibrant life. Known for its waterfront and converted warehouses, Alcântara is a hub for art, design, and nightlife.",
@@ -32,8 +30,6 @@
       "renamed_images/MARIA/maria_a_woman_sitting_on_a_chair_reading_a_book.webp",
       "renamed_images/MARIA/maria_a_kitchen_with_a_table_and_chairs_in_it.webp",
       "renamed_images/MARIA/maria_a_room_with_a_wooden_table_and_chairs.webp",
-      "renamed_images/MARIA/maria_a_bathroom_with_a_sink_and_mirror.webp",
-      "renamed_images/MARIA/maria_a_kitchen_with_a_white_refrigerator_and_a_table.webp",
       "renamed_images/MARIA/maria_a_small_bedroom_with_a_bed_and_a_desk.webp"
     ],
     "description": "Nestled in the heart of Lisbon, this charming apartment offers the perfect blend of comfort and bohemian style. The area is renowned for its classic Portuguese architecture, quaint cafes, and local shops. It's a perfect spot for travelers who want to immerse themselves in the authentic Lisbon lifestyle.",
@@ -55,7 +51,7 @@
       "renamed_images/OLYMPO/olympo_a_living_room_with_a_view_of_the_ocean.webp",
       "renamed_images/OLYMPO/olympo_a_wooden_table_on_a_roof.webp",
       "renamed_images/OLYMPO/olympo_a_kitchen_with_a_refrigerator_and_a_sink.webp",
-      "renamed_images/OLYMPO/olympo_a_bathroom_with_a_toilet_and_a_sink.webp"
+      "renamed_images/OLYMPO/olympo_a_view_of_a_city_from_a_rooftop.webp"
     ],
     "description": "Where sun meets skyline: this private Lisbon rooftop paradise offers breathtaking views and an exclusive stay. Located in the Lapa district, known for its embassies and elegant homes, you will enjoy a tranquil and sophisticated environment while still being a short distance from the city's main attractions.",
     "amenities": ["Rooftop Terrace", "Stunning Views", "Full Kitchen", "Private Bathrooms", " Weekly change of linens and towels", "Twice weekly cleaning of common areas ","Central office support during work hours in Alcantara area"],
@@ -119,10 +115,10 @@
     "carouselImages": [
       "renamed_images/SANTOS/santos_a_living_room_with_a_couch_and_a_table.webp",
       "renamed_images/SANTOS/santos_a_kitchen_with_blue_tile_and_white_cabinets.webp",
-      "renamed_images/SANTOS/santos_a_living_room_with_a_couch_and_wooden_pals.webp",
+      "renamed_images/SANTOS/santos_a_livingroom_with_sofa.webp",
       "renamed_images/SANTOS/santos_a_bathroom_with_a_sink_and_a_toilet_in_it.webp",
       "renamed_images/SANTOS/santos_a_hallway_with_a_wall_made_out_of_wooden_planks.webp",
-      "renamed_images/SANTOS/santos_a_wooden_table_with_a_bowl_of_wine_on_it.webp"
+      "renamed_images/SANTOS/santos_a_dinningroom_with_chairs.webp.webp"
     ],
     "description": "Where curious souls unite! A backpacker's oasis for connecting and exploring. Located in the hip and historic Santos-o-Velho district, this apartment is a true urban retreat. Known for its art galleries, design shops, and riverside location, Santos offers a perfect blend of modern style and traditional charm.",
     "amenities": ["Spacious Living Area", "Modern Kitchen", "High-speed Internet", "Secure Entry", " Weekly change of linens and towels", "Twice weekly cleaning of common areas ","Central office support during work hours in Alcantara area"],
