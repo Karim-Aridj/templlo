@@ -148,7 +148,7 @@
     ],
     "description": "Experience ultimate comfort in our private double bed and extra bed studio.",
     "amenities": ["Private Studio", "Fast Wi-Fi", "Desk and Chair"," Weekly change of linens and towels", "Twice weekly cleaning of common areas ","Central office support during work hours in Alcantara area"],
-    "coordinates": [38.717922382466064, -9.133941759865937],
+    "coordinates": [38.717641770991676, -9.133950315865512],
     "rooms": [
       { "key": "loft", "name": "LOFT", "price": "from €755 / 15 Days\nfrom €1152 / Month", "link": "https://book.templlo.com/lisboa/tiny-central-%26-cosy-loft-in-multi-cultural-area/41139b" }
     ]
@@ -158,7 +158,7 @@
     "subtitle": "Rooftop Views Near the Lake",
     "heroImage": "renamed_images/TORRAO/torrao_a_patio_with_a_table_and_chairs_on_it.webp",
     "carouselImages": [
-      "renamed_images/TORRAO/torrao_a_patio_with_a_table_and_chairs_on_it.webp",
+      "renamed_images/",
       "renamed_images/TORRAO/torrao_a_living_room_with_a_couch_and_a_television.webp",
       "renamed_images/TORRAO/torrao_a_kitchen_with_a_stove_and_a_sink.webp",
       "renamed_images/TORRAO/torrao_a_bedroom_with_a_bed_and_a_sink.webp",
@@ -167,7 +167,7 @@
     ],
     "description": "Experience the tranquility of Torrão with this full apartment booking. Perfect for a peaceful getaway.",
     "amenities": ["Full Apartment", "Fast Wi-Fi", "Lake View"],
-    "coordinates": [38.72396692533869, -9.133889984288666],
+    "coordinates": [38.29455269982846, -8.224957874134121],
     "rooms": [
       { "key": "torrao", "name": "TORRÃO", "price": "from €661 / 15 Days\nfrom €1009 / Month", "link": "https://book.templlo.com/lisboa/vista-do-alentejo-rooftop-at-house-near-the-lake/0a7130" }
     ]
