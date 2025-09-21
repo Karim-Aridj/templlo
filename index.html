@@ -377,7 +377,6 @@
 
 </head>
 <body class="text-gray-800">
-
     <!-- Main Container for the entire page -->
     <div class="relative w-full">
 
@@ -484,6 +483,67 @@
                 </div>
             </div>
         </section>
+<!-- Winter Promotion Banner Section -->
+<section class="winter-banner-section">
+    <div class="winter-banner-css" onclick="scrollToApartments()">
+        <!-- Real Unicode Snowflakes -->
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❄</div>
+        
+        <div class="winter-banner-content">
+            <div class="winter-header">
+                <h2>🌨️ Special winter reservations November - April with exclusive perks! ❄️</h2>
+            </div>
+            
+            <div class="winter-perks-row">
+                <div class="winter-perk">
+                    <span class="perk-emoji">❄️</span>
+                    <div class="perk-text">
+                        <strong>Early Bird Discounts</strong>
+                        <small>Monthly stay discounts available</small>
+                    </div>
+                </div>
+                <div class="winter-perk">
+                    <span class="perk-emoji">🔥</span>
+                    <div class="perk-text">
+                        <strong>Cozy & Warm</strong>
+                        <small>Portable heaters in every room</small>
+                    </div>
+                </div>
+                <div class="winter-perk">
+                    <span class="perk-emoji">🧼</span>
+                    <div class="perk-text">
+                        <strong>Extra Clean</strong>
+                        <small>Common areas cleaned twice weekly</small>
+                    </div>
+                </div>
+                <div class="winter-perk">
+                    <span class="perk-emoji">🛏️</span>
+                    <div class="perk-text">
+                        <strong>Fresh Linens</strong>
+                        <small>Linen & towel changes every 15 days</small>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="winter-cta">
+                <button class="winter-cta-btn" onclick="scrollToApartments()">
+                    Check Available Apartments
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 
         <!-- Section: Winter Apartments in Lisbon -->
 <section class="py-16 bg-white" id="winter-rooms">
@@ -1257,6 +1317,60 @@
     </a>
   </div>
 </div>
+
+<!-- 🚨 ADD WINTER MODAL HERE - RIGHT BEFORE </body> -->
+    <div id="winterModal" class="winter-modal hidden">
+        <div class="winter-modal-content">
+            <button class="close-modal" onclick="closeWinterModal()">×</button>
+            
+            <div class="winter-header">
+                <h1>🌨️ Winter Stays Now Open</h1>
+                <h2>Book Early & Save! ❄️</h2>
+                <p class="winter-period">November 2024 - February 2025</p>
+            </div>
+
+            <div class="winter-perks">
+                <h3>✨ Special Winter Perks:</h3>
+                <div class="perks-grid">
+                    <div class="perk-item">
+                        <span class="perk-icon">❄️</span>
+                        <div>
+                            <strong>Early Bird Discounts</strong>
+                            <p>Monthly stay discounts available</p>
+                        </div>
+                    </div>
+                    <div class="perk-item">
+                        <span class="perk-icon">🔥</span>
+                        <div>
+                            <strong>Cozy & Warm</strong>
+                            <p>Portable heaters in every room</p>
+                        </div>
+                    </div>
+                    <div class="perk-item">
+                        <span class="perk-icon">🧼</span>
+                        <div>
+                            <strong>Extra Clean</strong>
+                            <p>Common areas cleaned twice weekly</p>
+                        </div>
+                    </div>
+                    <div class="perk-item">
+                        <span class="perk-icon">🛏️</span>
+                        <div>
+                            <strong>Fresh Linens</strong>
+                            <p>Linen & towel changes every 15 days</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="winter-cta">
+                <p><strong>Spots fill up quickly during winter season!</strong></p>
+                <button onclick="window.open('https://book.templlo.com', '_blank')" class="btn-book-winter">
+                    Check Winter Availability Now
+                </button>
+            </div>
+        </div>
+    </div>
 <!-- Review Schema -->
   <script type="application/ld+json">
   [

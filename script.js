@@ -307,18 +307,29 @@ function initRoomMap(coords) {
 }
 
 // ===== MODAL FUNCTIONALITY =====
-function openRoomModal(room, roomData) {
+function closeModal() {
+  const modal = document.getElementById('room-modal');
+  if (modal) {
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+  }
+  document.body.style.overflow = 'auto';
+}
+
+function openRoomModal(room) {
+  const d = roomDetails[room.key] || {};
+  
   const icons = {
-    'Oven': 'fa-solid fa-temperature-high',
-    'Microwave': 'fa-solid fa-microchip',
-    'Toaster': 'fa-solid fa-bread-slice',
+    Oven: 'fa-solid fa-temperature-high',
+    Microwave: 'fa-solid fa-microchip',
+    Toaster: 'fa-solid fa-bread-slice',
     'Coffee Maker': 'fa-solid fa-coffee',
     'Dishes & Utensils': 'fa-solid fa-utensils',
-    'Kitchen': 'fa-solid fa-kitchen-set',
+    Kitchen: 'fa-solid fa-kitchen-set',
     'Pantry Items': 'fa-solid fa-box-open',
-    'Refrigerator': 'fa-solid fa-snowflake',
-    'Stove': 'fa-solid fa-fire-burner',
-    'Internet': 'fa-solid fa-wifi',
+    Refrigerator: 'fa-solid fa-snowflake',
+    Stove: 'fa-solid fa-fire-burner',
+    Internet: 'fa-solid fa-wifi',
     'Linens Provided': 'fa-solid fa-bed',
     'Towels Provided': 'fa-solid fa-hand-sparkles',
     'Hair Dryer': 'fa-solid fa-wind',
@@ -326,43 +337,46 @@ function openRoomModal(room, roomData) {
     'Fire extinguisher': 'fa-solid fa-fire-extinguisher'
   };
 
-  // Mobile title
-  const titleEl = document.getElementById('modal-room-title');
-  if (titleEl) titleEl.textContent = roomData.room_name || room.name;
+  // ========== MOBILE LAYOUT POPULATION ==========
   
-  // Mobile room details
+  // Mobile Title
+  const titleEl = document.getElementById('modal-room-title');
+  if (titleEl) titleEl.textContent = d.room_name || room.name;
+  
+  // Mobile Room Details
   const bedInfo = document.getElementById('modal-bed-info');
+  const viewInfo = document.getElementById('modal-view-info');
+  
   if (bedInfo) {
     const label = bedInfo.querySelector('.label');
     const value = bedInfo.querySelector('.value');
     if (label) label.textContent = 'Bed Type';
-    if (value) value.textContent = roomData.bed || '—';
+    if (value) value.textContent = d.bed || '—';
   }
   
-  const viewInfo = document.getElementById('modal-view-info');
   if (viewInfo) {
     const label = viewInfo.querySelector('.label');
     const value = viewInfo.querySelector('.value');
     if (label) label.textContent = 'View';
-    if (value) value.textContent = roomData.view || '—';
+    if (value) value.textContent = d.view || '—';
   }
 
-  // Plus info
+  // Mobile Plus Info
   const plusEl = document.getElementById('modal-plus-info');
   if (plusEl) {
-    if (roomData.plus) {
+    if (d.plus) {
       plusEl.style.display = 'block';
       const spanEl = plusEl.querySelector('span');
-      if (spanEl) spanEl.textContent = `Special: ${roomData.plus}`;
+      if (spanEl) spanEl.textContent = `Special: ${d.plus}`;
     } else {
       plusEl.style.display = 'none';
     }
   }
   
-  // Amenities from rooms.json
+  // Mobile Amenities
   const amenitiesContainer = document.getElementById('modal-amenities');
   if (amenitiesContainer) {
-    amenitiesContainer.innerHTML = (roomData.amenities || []).map(a => `
+    amenitiesContainer.innerHTML = (d.amenities || []).map(a => `
       <div>
         <i class="${icons[a] || 'fa-solid fa-check'}"></i>
         <span>${a}</span>
@@ -370,18 +384,18 @@ function openRoomModal(room, roomData) {
     `).join('');
   }
 
-  // Images from rooms.json
+  // Mobile Images
   const mainImg = document.getElementById('modal-main-img');
   const thumbs = document.getElementById('gallery-thumbs');
   
   if (thumbs) thumbs.innerHTML = '';
   
-  if (roomData.images && roomData.images.length) {
-    roomData.images.forEach((src, i) => {
+  if (d.images && d.images.length) {
+    d.images.forEach((src, i) => {
       if (thumbs) {
         const img = document.createElement('img');
         img.src = src;
-        img.alt = roomData.room_name || room.name;
+        img.alt = d.room_name || room.name;
         
         img.onerror = function() {
           this.src = 'https://via.placeholder.com/400x300?text=Image+Not+Found';
@@ -401,14 +415,30 @@ function openRoomModal(room, roomData) {
           if (mainImg) mainImg.src = src;
           thumbs.querySelectorAll('img').forEach(el => el.classList.remove('selected'));
           img.classList.add('selected');
+          
+          // Sync with desktop images if they exist
+          const thumbsDesktop = document.getElementById('gallery-thumbs-desktop');
+          const mainImgDesktop = document.getElementById('modal-main-img-desktop');
+          if (thumbsDesktop) {
+            thumbsDesktop.querySelectorAll('img').forEach((el, idx) => {
+              el.classList.remove('selected', 'opacity-100', 'border-2', 'border-amber-800');
+              el.classList.add('opacity-70');
+              if (idx === i) {
+                el.classList.add('selected', 'opacity-100', 'border-2', 'border-amber-800');
+              }
+            });
+          }
+          if (mainImgDesktop) mainImgDesktop.src = src;
         });
         
         thumbs.appendChild(img);
       }
     });
+  } else {
+    if (mainImg) mainImg.src = 'https://via.placeholder.com/400x300?text=No+Image';
   }
 
-  // Price and link
+  // Mobile Price and Link
   const priceEl = document.getElementById('modal-room-price');
   const linkEl = document.getElementById('modal-room-link');
   if (priceEl) priceEl.textContent = room.price;
@@ -416,23 +446,114 @@ function openRoomModal(room, roomData) {
     linkEl.href = room.link;
     linkEl.textContent = 'Book Now';
   }
+  // ========== DESKTOP LAYOUT POPULATION ==========
+  
+  // Desktop Title
+  const titleDesktop = document.getElementById('modal-room-title-desktop');
+  if (titleDesktop) titleDesktop.textContent = d.room_name || room.name;
+  
+  // Desktop Room Details
+  const bedDesktop = document.getElementById('modal-bed-info-desktop');
+  const viewDesktop = document.getElementById('modal-view-info-desktop');
+  if (bedDesktop) bedDesktop.innerHTML = `<span class="block text-gray-600">Bed Type</span><span class="font-semibold">${d.bed || '—'}</span>`;
+  if (viewDesktop) viewDesktop.innerHTML = `<span class="block text-gray-600">View</span><span class="font-semibold">${d.view || '—'}</span>`;
 
-  // Show modal
+  // Desktop Plus Info
+  const plusDesktop = document.getElementById('modal-plus-info-desktop');
+  if (plusDesktop) {
+    if (d.plus) {
+      plusDesktop.style.display = 'block';
+      const span = plusDesktop.querySelector('span');
+      if (span) span.textContent = `Special: ${d.plus}`;
+    } else {
+      plusDesktop.style.display = 'none';
+    }
+  }
+  
+  // Desktop Amenities
+  const amenitiesDesktop = document.getElementById('modal-amenities-desktop');
+  if (amenitiesDesktop) {
+    amenitiesDesktop.innerHTML = (d.amenities || []).map(a => `
+      <div class="flex items-center py-1 text-sm">
+        <i class="${icons[a] || 'fa-solid fa-check'} mr-2 text-amber-800"></i>
+        <span>${a}</span>
+      </div>
+    `).join('');
+  }
+
+  // Desktop Images
+  const mainImgDesktop = document.getElementById('modal-main-img-desktop');
+  const thumbsDesktop = document.getElementById('gallery-thumbs-desktop');
+  
+  if (thumbsDesktop) thumbsDesktop.innerHTML = '';
+  
+  if (d.images && d.images.length) {
+    d.images.forEach((src, i) => {
+      if (thumbsDesktop) {
+        const imgDesktop = document.createElement('img');
+        imgDesktop.src = src;
+        imgDesktop.alt = d.room_name || room.name;
+        imgDesktop.className = 'w-16 h-12 object-cover rounded cursor-pointer opacity-70 hover:opacity-100 transition';
+        
+        imgDesktop.onerror = function() {
+          this.src = 'https://via.placeholder.com/400x300?text=Image+Not+Found';
+        };
+        
+        if (i === 0) {
+          imgDesktop.classList.add('selected', 'opacity-100', 'border-2', 'border-amber-800');
+          if (mainImgDesktop) {
+            mainImgDesktop.src = src;
+            mainImgDesktop.onerror = function() {
+              this.src = 'https://via.placeholder.com/400x300?text=Image+Not+Found';
+            };
+          }
+        }
+        
+        imgDesktop.addEventListener('click', () => {
+          if (mainImgDesktop) mainImgDesktop.src = src;
+          thumbsDesktop.querySelectorAll('img').forEach(el => {
+            el.classList.remove('selected', 'opacity-100', 'border-2', 'border-amber-800');
+            el.classList.add('opacity-70');
+          });
+          imgDesktop.classList.add('selected', 'opacity-100', 'border-2', 'border-amber-800');
+          
+          // Sync with mobile images if they exist
+          if (mainImg) mainImg.src = src;
+          if (thumbs) {
+            thumbs.querySelectorAll('img').forEach((el, idx) => {
+              el.classList.remove('selected');
+              if (idx === i) el.classList.add('selected');
+            });
+          }
+        });
+        
+        thumbsDesktop.appendChild(imgDesktop);
+      }
+    });
+  } else {
+    if (mainImgDesktop) mainImgDesktop.src = 'https://via.placeholder.com/400x300?text=No+Image';
+  }
+
+  // Desktop Price and Link
+  const priceDesktop = document.getElementById('modal-room-price-desktop');
+  const linkDesktop = document.getElementById('modal-room-link-desktop');
+  if (priceDesktop) priceDesktop.textContent = room.price;
+  if (linkDesktop) {
+    linkDesktop.href = room.link;
+    linkDesktop.textContent = 'Book Now';
+  }
+
+  // Show Modal and force repaint to fix desktop render bug
   const modal = document.getElementById('room-modal');
   if (modal) {
     modal.classList.remove('hidden');
     modal.classList.add('flex');
+
+    // Force repaint/reflow for correct rendering on desktop
+    void modal.offsetHeight;
+
     document.body.style.overflow = 'hidden';
   }
-}
-
-function closeModal() {
-  const modal = document.getElementById('room-modal');
-  if (modal) {
-    modal.classList.add('hidden');
-    modal.classList.remove('flex');
-  }
-  document.body.style.overflow = 'auto';
 }
 
 // ===== SET UP UI INTERACTIONS AFTER DOM LOADS =====
@@ -640,3 +761,45 @@ function repositionMapOnMobile() {
 // Call on page load and window resize
 window.addEventListener('load', repositionMapOnMobile);
 window.addEventListener('resize', repositionMapOnMobile);
+
+
+// 🚨 ADD THIS WINTER SCROLL FUNCTION TO YOUR SCRIPT.JS
+
+// SCROLL TO APARTMENTS FUNCTION
+function scrollToApartments() {
+    // Find apartments section
+    const apartmentsSection = document.querySelector('#apartments') || 
+                            document.querySelector('.apartments-grid') ||
+                            document.querySelector('[class*="apartment"]') ||
+                            document.querySelector('main');
+    
+    if (apartmentsSection) {
+        apartmentsSection.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+        });
+    } else {
+        // Fallback - scroll to section after banner
+        const banner = document.querySelector('.winter-banner-section');
+        if (banner) {
+            const nextSection = banner.nextElementSibling;
+            if (nextSection) {
+                nextSection.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+    }
+    
+    // Track banner click for analytics
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'winter_banner_clicked', {
+            'event_category': 'promotion',
+            'event_label': 'winter_2024'
+        });
+    }
+}
+
+// Make function globally available
+window.scrollToApartments = scrollToApartments;
