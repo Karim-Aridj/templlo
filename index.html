@@ -199,181 +199,286 @@
     ]
   }
   </script>
+<!--Organization schema-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Templlo",
+  "description": "Premium accommodations in Lisbon offering unique experiences for digital nomads and travelers",
+  "url": "https://templlo.com",
+  "logo": "https://templlo.com/logo.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Customer Service",
+    "email": "info@templlo.com"
+  },
+  "sameAs": [
+    "https://soundcloud.com/barbo_official"
+  ]
+}
+</script>
 
-  <!-- LodgingBusiness with OfferCatalog and Room-level schemas -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "LodgingBusiness",
-        "name": "Templlo",
-        "description": "Premium accommodation rentals in Lisbon offering comfortable apartments and rooms for travelers seeking authentic experiences.",
-        "url": "https://templlo.com",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "R. Pres. Arriaga 29",
-          "addressLocality": "Lisboa",
-          "postalCode": "1200-771",
-          "addressCountry": "PT"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 38.715,
-          "longitude": -9.15
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.33",
-          "reviewCount": "9893"
-        },
-        "amenityFeature": [
-          { "@type": "LocationFeatureSpecification", "name": "Free WiFi" },
-          { "@type": "LocationFeatureSpecification", "name": "Kitchen Access" },
-          { "@type": "LocationFeatureSpecification", "name": "Linens Provided" },
-          { "@type": "LocationFeatureSpecification", "name": "24/7 Support" }
-        ],
-        "priceRange": "€€",
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Accommodation Offers",
-          "itemListElement": [
-            {
-              "@type": "Offer",
-              "itemOffered": { "@type": ["Accommodation","Product"], "name": "ARRIAGA", "description": "Elegant Apartments in Alcântara" },
-              "priceSpecification": { "@type": "UnitPriceSpecification", "minPrice": 528, "maxPrice": 970, "priceCurrency": "EUR", "unitCode": "MON" }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": { "@type": ["Accommodation","Product"], "name": "MARIA", "description": "Bohemian Lisbon Vibe" },
-              "priceSpecification": { "@type": "UnitPriceSpecification", "minPrice": 566, "maxPrice": 931, "priceCurrency": "EUR", "unitCode": "MON" }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": { "@type": ["Accommodation","Product"], "name": "OLYMPO", "description": "Private Lisbon Rooftop Paradise" },
-              "priceSpecification": { "@type": "UnitPriceSpecification", "minPrice": 541, "maxPrice": 970, "priceCurrency": "EUR", "unitCode": "MON" }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": { "@type": ["Accommodation","Product"], "name": "PALMIRA", "description": "Heart of Lisbon" },
-              "priceSpecification": { "@type": "UnitPriceSpecification", "minPrice": 384, "maxPrice": 875, "priceCurrency": "EUR", "unitCode": "MON" }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": { "@type": ["Accommodation","Product"], "name": "PATIO", "description": "Cozy space, bright patio" },
-              "priceSpecification": { "@type": "UnitPriceSpecification", "minPrice": 465, "maxPrice": 855, "priceCurrency": "EUR", "unitCode": "MON" }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": { "@type": ["Accommodation","Product"], "name": "SANTOS", "description": "Where curious souls unite" },
-              "priceSpecification": { "@type": "UnitPriceSpecification", "minPrice": 464, "maxPrice": 817, "priceCurrency": "EUR", "unitCode": "MON" }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": { "@type": ["Accommodation","Product"], "name": "LOFT", "description": "Tiny Central & Cosy Loft" },
-              "priceSpecification": { "@type": "UnitPriceSpecification", "minPrice": 755, "maxPrice": 1152, "priceCurrency": "EUR", "unitCode": "MON" }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": { "@type": ["Accommodation","Product"], "name": "TORRÃO", "description": "Rooftop Views Near the Lake" },
-              "priceSpecification": { "@type": "UnitPriceSpecification", "minPrice": 661, "maxPrice": 1009, "priceCurrency": "EUR", "unitCode": "MON" }
-            }
-          ]
-        }
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Templlo Accommodation Offers",
+  "description": "Premium accommodations in Lisbon",
+  "itemListElement": [
+    {
+      "@type": "Product",
+      "name": "ARRIAGA - Elegant Apartments in Alcântara",
+      "description": "Get ready to be charmed by the elegance, style, and incredible view of the iconic Port of Lisbon.",
+      "image": "https://templlo.com/renamed_images/ARRIAGA/arriaga_with_port_view.webp",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "EUR",
+        "price": "435",
+        "priceValidUntil": "2025-12-31",
+        "availability": "https://schema.org/InStock",
+        "url": "https://templlo.com/arriaga"
       },
-      {
-        "@type": ["Accommodation","Product"],
-        "name": "ARRIAGA",
-        "description": "Get ready to be charmed by the elegance, style, and incredible view of the iconic Port of Lisbon. Located in the historic Alcântara neighborhood.",
-        "image": [
-          "https://templlo.com/renamed_images/ARRIAGA/arriaga_with_port_view.webp",
-          "https://templlo.com/renamed_images/ARRIAGA/arriaga_a_hallway_with_a_black_and_white_rug.webp"
-        ],
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "R. Pres. Arriaga 29",
-          "addressLocality": "Lisboa",
-          "postalCode": "1200-771",
-          "addressCountry": "PT"
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.33",
+        "reviewCount": "9893"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.33"
         },
-        "geo": { "@type": "GeoCoordinates", "latitude": 38.70431580212892, "longitude": -9.165665021345829 },
-        "amenityFeature": [
-          { "@type": "LocationFeatureSpecification", "name": "River View" },
-          { "@type": "LocationFeatureSpecification", "name": "Fast Wi-Fi" },
-          { "@type": "LocationFeatureSpecification", "name": "Modern Kitchen" },
-          { "@type": "LocationFeatureSpecification", "name": "Work Desk" },
-          { "@type": "LocationFeatureSpecification", "name": "Shared Bathrooms" }
-        ],
-        "numberOfRooms": 7,
-        "offers": [
-          {
-            "@type": "Offer",
-            "name": "ARRIAGA A",
-            "description": "Queen bed room with street view",
-            "priceSpecification": { "@type": "UnitPriceSpecification", "price": 817, "priceCurrency": "EUR", "unitCode": "MON" },
-            "availability": "http://schema.org/InStock",
-            "url": "https://book.templlo.com/lisboa/room-a-arriaga-embassy-with-marina-view/94cb73",
-            "businessFunction": "http://schema.org/LeaseOut"
-          },
-          {
-            "@type": "Offer",
-            "name": "ARRIAGA B",
-            "description": "Queen bed room with street view",
-            "priceSpecification": { "@type": "UnitPriceSpecification", "price": 970, "priceCurrency": "EUR", "unitCode": "MON" },
-            "availability": "http://schema.org/InStock",
-            "url": "https://book.templlo.com/lisboa/room-b-arriaga-embassy-tejo-marina-view/b41854",
-            "businessFunction": "http://schema.org/LeaseOut"
-          },
-          {
-            "@type": "Offer",
-            "name": "ARRIAGA C",
-            "description": "Queen bed room with interior view",
-            "priceSpecification": { "@type": "UnitPriceSpecification", "price": 817, "priceCurrency": "EUR", "unitCode": "MON" },
-            "availability": "http://schema.org/InStock",
-            "url": "https://book.templlo.com/lisboa/room-c-arriaga-embassy-tejo-marina-view/65ac5f",
-            "businessFunction": "http://schema.org/LeaseOut"
-          },
-          {
-            "@type": "Offer",
-            "name": "ARRIAGA D",
-            "description": "Queen bed room with ocean port view and hammock",
-            "priceSpecification": { "@type": "UnitPriceSpecification", "price": 970, "priceCurrency": "EUR", "unitCode": "MON" },
-            "availability": "http://schema.org/InStock",
-            "url": "https://book.templlo.com/lisboa/room-d-arriaga-embassy-tejo-marina-view/5f3d44",
-            "businessFunction": "http://schema.org/LeaseOut"
-          },
-          {
-            "@type": "Offer",
-            "name": "ARRIAGA E",
-            "description": "Queen bed room with interior view",
-            "priceSpecification": { "@type": "UnitPriceSpecification", "price": 817, "priceCurrency": "EUR", "unitCode": "MON" },
-            "availability": "http://schema.org/InStock",
-            "url": "https://book.templlo.com/lisboa/room-e-arriaga-embassy-tejo-marina-view/2b0cf8",
-            "businessFunction": "http://schema.org/LeaseOut"
-          },
-          {
-            "@type": "Offer",
-            "name": "ARRIAGA F",
-            "description": "Single bed room with interior view",
-            "priceSpecification": { "@type": "UnitPriceSpecification", "price": 662, "priceCurrency": "EUR", "unitCode": "MON" },
-            "availability": "http://schema.org/InStock",
-            "url": "https://book.templlo.com/lisboa/room-f-arriaga-embassy-tejo-marina-view/3a7ee5",
-            "businessFunction": "http://schema.org/LeaseOut"
-          },
-          {
-            "@type": "Offer",
-            "name": "ARRIAGA G",
-            "description": "Single bed room with interior view",
-            "priceSpecification": { "@type": "UnitPriceSpecification", "price": 662, "priceCurrency": "EUR", "unitCode": "MON" },
-            "availability": "http://schema.org/InStock",
-            "url": "https://book.templlo.com/lisboa/room-g-arriaga-embassy-tejo-marina-view/643044",
-            "businessFunction": "http://schema.org/LeaseOut"
-          }
-        ]
+        "author": {
+          "@type": "Person",
+          "name": "Guest Review"
+        },
+        "reviewBody": "Everything was super clean, the communication was easy and check in was flexible. The location is good to walk to the old town."
       }
-    ]
-  }
-  </script>
+    },
+    {
+      "@type": "Product",
+      "name": "LOFT - Tiny Central & Cosy Loft",
+      "description": "Experience ultimate comfort in our private double bed and extra bed studio.",
+      "image": "https://templlo.com/renamed_images/LOFT/loft_a_small_bedroom_with_a_bed_and_a_desk.webp",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "EUR",
+        "price": "755",
+        "priceValidUntil": "2025-12-31",
+        "availability": "https://schema.org/InStock",
+        "url": "https://templlo.com/loft"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.33",
+        "reviewCount": "9893"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.33"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Guest Review"
+        },
+        "reviewBody": "The apartment was just as described in the details. The room was clean and big enough."
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "MARIA - Bohemian Lisbon Vibe",
+      "description": "Nestled in the heart of Lisbon, this charming apartment offers the perfect blend of comfort and bohemian style.",
+      "image": "https://templlo.com/renamed_images/MARIA/maria_rooms.webp",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "EUR",
+        "price": "566",
+        "priceValidUntil": "2025-12-31",
+        "availability": "https://schema.org/InStock",
+        "url": "https://templlo.com/maria"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.33",
+        "reviewCount": "9893"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.33"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Guest Review"
+        },
+        "reviewBody": "The apartment is pretty and feels very homy and nice. It's in nice hood with supermarkets and restaurants nearby."
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "OLYMPO - Private Lisbon Rooftop Paradise",
+      "description": "Where sun meets skyline: this private Lisbon rooftop paradise offers breathtaking views and an exclusive stay.",
+      "image": "https://templlo.com/renamed_images/OLYMPO/terrace_view_olympo.webp",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "EUR",
+        "price": "541",
+        "priceValidUntil": "2025-12-31",
+        "availability": "https://schema.org/InStock",
+        "url": "https://templlo.com/olympo"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.33",
+        "reviewCount": "9893"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.33"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Guest Review"
+        },
+        "reviewBody": "The stay in this place was really exceptional. First of all, the terrace and rooftop – a fairy tale!"
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "PALMIRA - Heart of Lisbon",
+      "description": "In the heart of Lisbon, be close to the main venues of the historical center and public transportation.",
+      "image": "https://templlo.com/renamed_images/PALMIRA/palmira_common_area.webp",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "EUR",
+        "price": "384",
+        "priceValidUntil": "2025-12-31",
+        "availability": "https://schema.org/InStock",
+        "url": "https://templlo.com/palmira"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.33",
+        "reviewCount": "9893"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.33"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Guest Review"
+        },
+        "reviewBody": "my stay was pretty good, staff very helpful, thanks for all Tin!"
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "PATIO - Cozy space, bright patio",
+      "description": "Cozy space and bright patio in the center of Lisbon, close to all amenities and public transportation.",
+      "image": "https://templlo.com/renamed_images/PATIO/patio_a_woman_sitting_at_a_table_with_a_cup_of_coffee.webp",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "EUR",
+        "price": "465",
+        "priceValidUntil": "2025-12-31",
+        "availability": "https://schema.org/InStock",
+        "url": "https://templlo.com/patio"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.33",
+        "reviewCount": "9893"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.33"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Guest Review"
+        },
+        "reviewBody": "I had a good time at the apartment. Everything was super clean, the communication was easy and check in was flexible."
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "SANTOS - Where curious souls unite",
+      "description": "Where curious souls unite! A backpacker's oasis for connecting and exploring.",
+      "image": "https://templlo.com/renamed_images/SANTOS/santos_view.webp",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "EUR",
+        "price": "401",
+        "priceValidUntil": "2025-12-31",
+        "availability": "https://schema.org/InStock",
+        "url": "https://templlo.com/santos"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.33",
+        "reviewCount": "9893"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.33"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Guest Review"
+        },
+        "reviewBody": "The location is great, easy public transportation possibilities to all places. The place is surrounded by many restaurants, shops and close to all kind of activities."
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "TORRÃO - Rooftop Views Near the Lake",
+      "description": "Experience the tranquility of Torrão with this full apartment booking. Perfect for a peaceful getaway.",
+      "image": "https://templlo.com/renamed_images/TORRAO/torrao_a_patio_with_a_table_and_chairs_on_it.webp",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "EUR",
+        "price": "661",
+        "priceValidUntil": "2025-12-31",
+        "availability": "https://schema.org/InStock",
+        "url": "https://templlo.com/torrao"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.33",
+        "reviewCount": "9893"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.33"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Guest Review"
+        },
+        "reviewBody": "Experience the tranquility with this full apartment booking. Perfect for a peaceful getaway."
+      }
+    }
+  ]
+}
+</script>
+
+  
 
 </head>
 <body class="text-gray-800">
