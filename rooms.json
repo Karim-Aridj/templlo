@@ -9,10 +9,10 @@
     "shared_desk_office": false,
     "amenities": ["Oven", "Microwave", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Refrigerator", "Stove", "Internet", "Hair Dryer", "Free wifi", "Fire extinguisher"],
     "images": [
-      "renamed_images/ARRIAGA/ROOM_A_ARRIAGA/room_a_arriaga_a_bed_and_window.webp",
-      "renamed_images/ARRIAGA//ROOM_A_ARRIAGA/room_a_arriaga_a_bed_in_a_room_with_a_table.webp",
-      "renamed_images/ARRIAGA//ROOM_A_ARRIAGA/room_a_arriaga_a_bed_in_a_room_with_a_table_and_window.webp",
-      "renamed_images/ARRIAGA//ROOM_A_ARRIAGA/room_a_arriaga_with_double_bed.webp"
+      "media_files/ARRIAGA/ROOM_A_ARRIAGA/room_a_arriaga_a_bed_and_window.webp",
+      "media_files/ARRIAGA//ROOM_A_ARRIAGA/room_a_arriaga_a_bed_in_a_room_with_a_table.webp",
+      "media_files/ARRIAGA//ROOM_A_ARRIAGA/room_a_arriaga_a_bed_in_a_room_with_a_table_and_window.webp",
+      "media_files/ARRIAGA//ROOM_A_ARRIAGA/room_a_arriaga_with_double_bed.webp"
     ]
   },
   "arriaga_b": {
@@ -25,9 +25,9 @@
     "shared_desk_office": false,
     "amenities": ["Oven", "Microwave", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Refrigerator", "Stove", "Internet", "Hair Dryer", "Free wifi", "Fire extinguisher"],
     "images": [
-      "renamed_images/ARRIAGA/ROOM_B_ARRIAGA/room_b_arriaga_a_bed_in_a_room_with_a_couch_and_a_table.webp",
-      "renamed_images/ARRIAGA/ROOM_B_ARRIAGA/room_b_arriaga_a_living_room_with_a_couch_and_a_coffee_table.webp",
-      "renamed_images/ARRIAGA/ROOM_B_ARRIAGA/room_b_arriaga_a_living_room_with_a_couch_chair_and_a_coffee_tabl.webp"
+      "media_files/ARRIAGA/ROOM_B_ARRIAGA/room_b_arriaga_a_bed_in_a_room_with_a_couch_and_a_table.webp",
+      "media_files/ARRIAGA/ROOM_B_ARRIAGA/room_b_arriaga_a_living_room_with_a_couch_and_a_coffee_table.webp",
+      "media_files/ARRIAGA/ROOM_B_ARRIAGA/room_b_arriaga_a_living_room_with_a_couch_chair_and_a_coffee_tabl.webp"
     ]
   },
   "arriaga_c": {
@@ -40,11 +40,11 @@
     "shared_desk_office": false,
     "amenities": ["Oven", "Microwave", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Refrigerator", "Stove", "Internet", "Hair Dryer", "Free wifi", "Fire extinguisher"],
     "images": [
-      "renamed_images/ARRIAGA/ROOM_C_ARRIAGA/room_c_arriaga_a_bedroom_with_a_bed_and_a_rug.webp",
-      "renamed_images/ARRIAGA/ROOM_C_ARRIAGA/room_c_arriaga_a_bedroom_with_a_bed_and_a_window.webp",
-      "renamed_images/ARRIAGA/ROOM_C_ARRIAGA/room_c_arriaga_a_bed_with_a_white_comforter_and_a_window.webp",
-      "renamed_images/ARRIAGA/ROOM_C_ARRIAGA/room_c_arriaga_a_bed_with_a_white_comforter.webp",
-      "renamed_images/ARRIAGA/ROOM_C_ARRIAGA/room_c_arriaga_a_bed_with_towels_on_it_in_a_room.webp"
+      "media_files/ARRIAGA/ROOM_C_ARRIAGA/room_c_arriaga_a_bedroom_with_a_bed_and_a_rug.webp",
+      "media_files/ARRIAGA/ROOM_C_ARRIAGA/room_c_arriaga_a_bedroom_with_a_bed_and_a_window.webp",
+      "media_files/ARRIAGA/ROOM_C_ARRIAGA/room_c_arriaga_a_bed_with_a_white_comforter_and_a_window.webp",
+      "media_files/ARRIAGA/ROOM_C_ARRIAGA/room_c_arriaga_a_bed_with_a_white_comforter.webp",
+      "media_files/ARRIAGA/ROOM_C_ARRIAGA/room_c_arriaga_a_bed_with_towels_on_it_in_a_room.webp"
     ]
   },
   "arriaga_d": {
@@ -57,10 +57,10 @@
     "shared_desk_office": false,
     "amenities": ["Oven", "Microwave", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Refrigerator", "Stove", "Internet", "Hair Dryer", "Free wifi", "Fire extinguisher"],
     "images": [
-      "renamed_images/ARRIAGA/ROOM_D_ARRIAGA/room_d_arriaga_a_bed_in_a_room_with_a_window.webp",
-      "renamed_images/ARRIAGA/ROOM_D_ARRIAGA/room_d_arriaga_a_bed_in_a_room_with_a_window_sea_view.webp",
-      "renamed_images/ARRIAGA/ROOM_D_ARRIAGA/room_d_arriaga_a_hammol_hanging_in_a_bedroom_with_a_view_of_a_har.webp",
-      "renamed_images/ARRIAGA/ROOM_D_ARRIAGA/room_d_arriaga_a_hammol_hanging_in_a_room_with_a_chair.webp"
+      "media_files/ARRIAGA/ROOM_D_ARRIAGA/room_d_arriaga_a_bed_in_a_room_with_a_window.webp",
+      "media_files/ARRIAGA/ROOM_D_ARRIAGA/room_d_arriaga_a_bed_in_a_room_with_a_window_sea_view.webp",
+      "media_files/ARRIAGA/ROOM_D_ARRIAGA/room_d_arriaga_a_hammol_hanging_in_a_bedroom_with_a_view_of_a_har.webp",
+      "media_files/ARRIAGA/ROOM_D_ARRIAGA/room_d_arriaga_a_hammol_hanging_in_a_room_with_a_chair.webp"
     ]
   },
   "arriaga_e": {
@@ -73,9 +73,9 @@
     "shared_desk_office": false,
     "amenities": ["Oven", "Microwave", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Refrigerator", "Stove", "Internet", "Hair Dryer", "Free wifi", "Fire extinguisher"],
     "images": [
-      "renamed_images/ARRIAGA/ROOM_E_ARRIAGA/room_e_arriaga_a_bedroom_with_a_bed_desk_and_chair.webp",
-      "renamed_images/ARRIAGA/ROOM_E_ARRIAGA/room_e_arriaga_a_bed_sitting_in_a_bedroom_next_to_a_desk.webp",
-      "renamed_images/ARRIAGA/ROOM_E_ARRIAGA/room_e_arriaga_a_small_bedroom_with_a_bed_and_a_chair.webp"
+      "media_files/ARRIAGA/ROOM_E_ARRIAGA/room_e_arriaga_a_bedroom_with_a_bed_desk_and_chair.webp",
+      "media_files/ARRIAGA/ROOM_E_ARRIAGA/room_e_arriaga_a_bed_sitting_in_a_bedroom_next_to_a_desk.webp",
+      "media_files/ARRIAGA/ROOM_E_ARRIAGA/room_e_arriaga_a_small_bedroom_with_a_bed_and_a_chair.webp"
     ]
   },
   "arriaga_f": {
@@ -88,9 +88,9 @@
     "shared_desk_office": false,
     "amenities": ["Oven", "Microwave", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Refrigerator", "Stove", "Internet", "Hair Dryer", "Free wifi", "Fire extinguisher"],
     "images": [
-      "renamed_images/ARRIAGA/ROOM_F_ARRIAGA/room_f_arriaga_a_bedroom_with_a_bed_and_a_dresser.webp",
-      "renamed_images/ARRIAGA/ROOM_F_ARRIAGA/room_f_arriaga_a_small_bedroom_with_a_bed_and_a_plant.webp",
-      "renamed_images/ARRIAGA/ROOM_F_ARRIAGA/room_f_arriaga_a_small_room_with_a_bed_and_a_window.webp"
+      "media_files/ARRIAGA/ROOM_F_ARRIAGA/room_f_arriaga_a_bedroom_with_a_bed_and_a_dresser.webp",
+      "media_files/ARRIAGA/ROOM_F_ARRIAGA/room_f_arriaga_a_small_bedroom_with_a_bed_and_a_plant.webp",
+      "media_files/ARRIAGA/ROOM_F_ARRIAGA/room_f_arriaga_a_small_room_with_a_bed_and_a_window.webp"
     ]
   },
   "arriaga_g": {
@@ -103,9 +103,9 @@
     "shared_desk_office": false,
     "amenities": ["Oven", "Microwave", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Refrigerator", "Stove", "Internet", "Hair Dryer", "Free wifi", "Fire extinguisher"],
     "images": [
-      "renamed_images/ARRIAGA/ROOM_G_ARRIAGA/room_g_arriaga_a_small_bedroom_with_a_bed_and_a_window.webp",
-      "renamed_images/ARRIAGA/ROOM_G_ARRIAGA/room_g_arriaga_a_small_room_with_a_bed_and_a_desk.webp",
-      "renamed_images/ARRIAGA/ROOM_G_ARRIAGA/room_g_arriaga_a_small_room_with_a_desk_and_a_window.webp"
+      "media_files/ARRIAGA/ROOM_G_ARRIAGA/room_g_arriaga_a_small_bedroom_with_a_bed_and_a_window.webp",
+      "media_files/ARRIAGA/ROOM_G_ARRIAGA/room_g_arriaga_a_small_room_with_a_bed_and_a_desk.webp",
+      "media_files/ARRIAGA/ROOM_G_ARRIAGA/room_g_arriaga_a_small_room_with_a_desk_and_a_window.webp"
     ]
   },
   "patio_a": {
@@ -118,9 +118,9 @@
     "shared_desk_office": false,
     "amenities": ["Oven", "Microwave", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Refrigerator", "Stove", "Internet", "Hair Dryer", "Free wifi", "Fire extinguisher"],
     "images": [
-      "renamed_images/PATIO/ROOM_A_PATIO/room_a_patio_a_bed_in_a_small_room_with_a_window.webp",
-      "renamed_images/PATIO/ROOM_A_PATIO/room_a_patio_a_bed_with_a_towel_on_it_in_a_room.webp",
-      "renamed_images/PATIO/ROOM_A_PATIO/room_a_patio_a_small_bedroom_with_a_bed_and_a_table.webp"
+      "media_files/PATIO/ROOM_A_PATIO/room_a_patio_a_bed_in_a_small_room_with_a_window.webp",
+      "media_files/PATIO/ROOM_A_PATIO/room_a_patio_a_bed_with_a_towel_on_it_in_a_room.webp",
+      "media_files/PATIO/ROOM_A_PATIO/room_a_patio_a_small_bedroom_with_a_bed_and_a_table.webp"
     ]
   },
   "patio_b": {
@@ -133,9 +133,9 @@
     "shared_desk_office": false,
     "amenities": ["Oven", "Microwave", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Refrigerator", "Stove", "Internet", "Hair Dryer", "Free wifi", "Fire extinguisher"],
     "images": [
-      "renamed_images/PATIO/ROOM_A_PATIO/room_b_patio_a_bedroom_with_two_beds_and_a_desk.webp",
-      "renamed_images/PATIO/ROOM_A_PATIO/room_b_patio_a_bed_sitting_in_a_bedroom_next_to_a_window.webp",
-      "renamed_images/PATIO/ROOM_A_PATIO/room_b_patio_a_bed_with_a_blanket_and_a_desk_with_a_lamp.webp"
+      "media_files/PATIO/ROOM_A_PATIO/room_b_patio_a_bedroom_with_two_beds_and_a_desk.webp",
+      "media_files/PATIO/ROOM_A_PATIO/room_b_patio_a_bed_sitting_in_a_bedroom_next_to_a_window.webp",
+      "media_files/PATIO/ROOM_A_PATIO/room_b_patio_a_bed_with_a_blanket_and_a_desk_with_a_lamp.webp"
     ]
   },
   "patio_c": {
@@ -148,9 +148,9 @@
     "shared_desk_office": false,
     "amenities": ["Oven", "Microwave", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Refrigerator", "Stove", "Internet", "Hair Dryer", "Free wifi", "Fire extinguisher"],
     "images": [
-      "renamed_images/PATIO/ROOM_C_PATIO/room_c_patio_a_bed_sitting_in_a_bedroom_next_to_a_door.webp",
-      "renamed_images/PATIO/ROOM_C_PATIO/room_c_patio_a_small_room_with_a_bed_and_a_desk.webp",
-      "renamed_images/PATIO/ROOM_C_PATIO/room_c_patio_a_small_room_with_a_bed_and_a_mirror.webp"
+      "media_files/PATIO/ROOM_C_PATIO/room_c_patio_a_bed_sitting_in_a_bedroom_next_to_a_door.webp",
+      "media_files/PATIO/ROOM_C_PATIO/room_c_patio_a_small_room_with_a_bed_and_a_desk.webp",
+      "media_files/PATIO/ROOM_C_PATIO/room_c_patio_a_small_room_with_a_bed_and_a_mirror.webp"
     ]
   },
   "patio_d": {
@@ -163,9 +163,9 @@
     "shared_desk_office": false,
     "amenities": ["Oven", "Microwave", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Refrigerator", "Stove", "Internet", "Hair Dryer", "Free wifi", "Fire extinguisher"],
     "images": [
-      "renamed_images/PATIO/ROOM_D_PATIO/room_d_patio_a_bed_in_a_bedroom_with_a_mirror_and_a_sink.webp",
-      "renamed_images/PATIO/ROOM_D_PATIO/room_d_patio_a_bed_with_a_pillow_and_a_ladder.webp",
-      "renamed_images/PATIO/ROOM_D_PATIO/room_d_patio_a_small_room_with_a_bed_and_a_desk.webp"
+      "media_files/PATIO/ROOM_D_PATIO/room_d_patio_a_bed_in_a_bedroom_with_a_mirror_and_a_sink.webp",
+      "media_files/PATIO/ROOM_D_PATIO/room_d_patio_a_bed_with_a_pillow_and_a_ladder.webp",
+      "media_files/PATIO/ROOM_D_PATIO/room_d_patio_a_small_room_with_a_bed_and_a_desk.webp"
     ]
   },
   "santos_a": {
@@ -178,11 +178,11 @@
     "shared_desk_office": false,
     "amenities": ["Oven", "Microwave", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Refrigerator", "Stove", "Internet", "Hair Dryer", "Free wifi", "Fire extinguisher"],
     "images": [
-      "renamed_images/SANTOS/ROOM_A_SANTOS/room_a_santos_a_bed_in_a_room_with_a_window.webp",
-      "renamed_images/SANTOS/ROOM_A_SANTOS/room_a_santos_a_bed_in_a_small_room_with_a_small_window.webp",
-      "renamed_images/SANTOS/ROOM_A_SANTOS/room_a_santos_a_bedroom_with_a_bed_and_a_desk.webp",
-      "renamed_images/SANTOS/ROOM_A_SANTOS/room_a_santos_a_room_with_a_bed_and_a_desk.webp",
-      "renamed_images/SANTOS/ROOM_A_SANTOS/room_a_santos_a_window_with_a_view_of_the_ocean.webp"
+      "media_files/SANTOS/ROOM_A_SANTOS/room_a_santos_a_bed_in_a_room_with_a_window.webp",
+      "media_files/SANTOS/ROOM_A_SANTOS/room_a_santos_a_bed_in_a_small_room_with_a_small_window.webp",
+      "media_files/SANTOS/ROOM_A_SANTOS/room_a_santos_a_bedroom_with_a_bed_and_a_desk.webp",
+      "media_files/SANTOS/ROOM_A_SANTOS/room_a_santos_a_room_with_a_bed_and_a_desk.webp",
+      "media_files/SANTOS/ROOM_A_SANTOS/room_a_santos_a_window_with_a_view_of_the_ocean.webp"
     ]
   },
   "santos_b": {
@@ -195,13 +195,13 @@
     "shared_desk_office": false,
     "amenities": ["Oven", "Microwave", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Refrigerator", "Stove", "Internet", "Hair Dryer", "Free wifi", "Fire extinguisher"],
     "images": [
-      "renamed_images/SANTOS/ROOM_B_SANTOS/room_b_santob_bed_in_a_room_with_a_window_and_desk.webp",
-      "renamed_images/SANTOS/ROOM_B_SANTOS/",
-      "renamed_images/SANTOS/ROOM_B_SANTOS/room_b_santos_a_bed_in_a_room_with_a_white_wall_1.webp",
-      "renamed_images/SANTOS/ROOM_B_SANTOS/room_b_santos_a_bed_door.webp",
-      "renamed_images/SANTOS/ROOM_B_SANTOS/room_b_santos_a_bed_in_a_room_with_a_desk.webp",
-      "renamed_images/SANTOS/ROOM_B_SANTOS/room_b_santos_a_bed_in_a_room_with_a_window.webp",
-      "renamed_images/SANTOS/ROOM_B_SANTOS/room_b_santos_a_bed_in_a_room_with_towels.webp"
+      "media_files/SANTOS/ROOM_B_SANTOS/room_b_santob_bed_in_a_room_with_a_window_and_desk.webp",
+      "media_files/SANTOS/ROOM_B_SANTOS/",
+      "media_files/SANTOS/ROOM_B_SANTOS/room_b_santos_a_bed_in_a_room_with_a_white_wall_1.webp",
+      "media_files/SANTOS/ROOM_B_SANTOS/room_b_santos_a_bed_door.webp",
+      "media_files/SANTOS/ROOM_B_SANTOS/room_b_santos_a_bed_in_a_room_with_a_desk.webp",
+      "media_files/SANTOS/ROOM_B_SANTOS/room_b_santos_a_bed_in_a_room_with_a_window.webp",
+      "media_files/SANTOS/ROOM_B_SANTOS/room_b_santos_a_bed_in_a_room_with_towels.webp"
     ]
   },
   "santos_c": {
@@ -214,11 +214,11 @@
     "shared_desk_office": false,
     "amenities": ["Oven", "Microwave", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Refrigerator", "Stove", "Internet", "Hair Dryer", "Free wifi", "Fire extinguisher"],
     "images": [
-      "renamed_images/SANTOS/ROOM_C_SANTOS/room_c_santos_b_bed_in_a_room_with_a__desk.webp",
-      "renamed_images/SANTOS/ROOM_C_SANTOS/room_c-santos_bed_in_a_room_with_a_window.webp",
-      "renamed_images/SANTOS/ROOM_C_SANTOS/room_c_santos_bed_in_a_room_with_a_window_and_desk.webp",
-      "renamed_images/SANTOS/ROOM_C_SANTOS/room_c_santos_bed_in_a_room_with_a_window_and_towels.webp",
-      "renamed_images/SANTOS/ROOM_C_SANTOS/room_c_santos_bed_in_a_room_with_hangers.webp"
+      "media_files/SANTOS/ROOM_C_SANTOS/room_c_santos_b_bed_in_a_room_with_a__desk.webp",
+      "media_files/SANTOS/ROOM_C_SANTOS/room_c-santos_bed_in_a_room_with_a_window.webp",
+      "media_files/SANTOS/ROOM_C_SANTOS/room_c_santos_bed_in_a_room_with_a_window_and_desk.webp",
+      "media_files/SANTOS/ROOM_C_SANTOS/room_c_santos_bed_in_a_room_with_a_window_and_towels.webp",
+      "media_files/SANTOS/ROOM_C_SANTOS/room_c_santos_bed_in_a_room_with_hangers.webp"
     ]
   },
   "santos_d": {
@@ -231,11 +231,11 @@
     "shared_desk_office": false,
     "amenities": ["Oven", "Microwave", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Refrigerator", "Stove", "Internet", "Hair Dryer", "Free wifi", "Fire extinguisher"],
     "images": [
-      "renamed_images/SANTOS/ROOM_D_SANTOS/room_d_santos_a_bed_sitting_in_a_room_with_a_lamp.webp",
-      "renamed_images/SANTOS/ROOM_D_SANTOS/room_d_santos_a_room_with_a_bed_and_a_table.webp",
-      "renamed_images/SANTOS/ROOM_D_SANTOS/room_d_santos_a_room_with_a_bed_desk_and_chair.webp",
-      "renamed_images/SANTOS/ROOM_D_SANTOS/room_d_santos_a_small_room_with_a_bed_and_a_lamp.webp",
-      "renamed_images/SANTOS/ROOM_D_SANTOS/room_d_santos_a_small_room_with_a_window.webp"
+      "media_files/SANTOS/ROOM_D_SANTOS/room_d_santos_a_bed_sitting_in_a_room_with_a_lamp.webp",
+      "media_files/SANTOS/ROOM_D_SANTOS/room_d_santos_a_room_with_a_bed_and_a_table.webp",
+      "media_files/SANTOS/ROOM_D_SANTOS/room_d_santos_a_room_with_a_bed_desk_and_chair.webp",
+      "media_files/SANTOS/ROOM_D_SANTOS/room_d_santos_a_small_room_with_a_bed_and_a_lamp.webp",
+      "media_files/SANTOS/ROOM_D_SANTOS/room_d_santos_a_small_room_with_a_window.webp"
     ]
   },
   "santos_e": {
@@ -248,10 +248,10 @@
     "shared_desk_office": false,
     "amenities": ["Oven", "Microwave", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Refrigerator", "Stove", "Internet", "Hair Dryer", "Free wifi", "Fire extinguisher"],
     "images": [
-      "renamed_images/SANTOS/ROOM_E_SANTOS/room_e_santos_a_bed_sitting_in_a_room_with_a_lamp.webp",
-      "renamed_images/SANTOS/ROOM_E_SANTOS/room_e_santos_a_room_with_a_bed_and_a_table.webp",
-      "renamed_images/SANTOS/ROOM_E_SANTOS/room_e_santos_a_room_with_a_bed_desk_and_chair.webp",
-      "renamed_images/SANTOS/ROOM_E_SATOS/room_e_santos_a_small_room_with_a_bed_and_a_lamp.webp"
+      "media_files/SANTOS/ROOM_E_SANTOS/room_e_santos_a_bed_sitting_in_a_room_with_a_lamp.webp",
+      "media_files/SANTOS/ROOM_E_SANTOS/room_e_santos_a_room_with_a_bed_and_a_table.webp",
+      "media_files/SANTOS/ROOM_E_SANTOS/room_e_santos_a_room_with_a_bed_desk_and_chair.webp",
+      "media_files/SANTOS/ROOM_E_SATOS/room_e_santos_a_small_room_with_a_bed_and_a_lamp.webp"
 
     ]
   },
@@ -265,11 +265,11 @@
     "shared_desk_office": false,
     "amenities": ["Oven", "Microwave", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Refrigerator", "Stove", "Internet", "Hair Dryer", "Free wifi", "Fire extinguisher"],
     "images": [
-      "renamed_images/SANTOS/ROOM_F_SANTOS/room_f_santos_a_bed_in_a_room_with_a_desk.webp",
-      "renamed_images/SANTOS/ROOM_F_SANTOS/room_f_santos_a_bed_in_a_room_with_a_window.webp",
-      "renamed_images/SANTOS/ROOM_F_SANTOS/room_f_santos_a_bed_in_a_room_with_a_window_and_a_desk.webp",
-      "renamed_images/SANTOS/ROOM_F_SANTOS/room_f_santos_a_bed_in_a_room_with_a_window_and_a_lamp.webp",
-      "renamed_images/SANTOS/ROOM_F_SANTOS/room_f_santos_a_bed_in_a_room_with_towels.webp"
+      "media_files/SANTOS/ROOM_F_SANTOS/room_f_santos_a_bed_in_a_room_with_a_desk.webp",
+      "media_files/SANTOS/ROOM_F_SANTOS/room_f_santos_a_bed_in_a_room_with_a_window.webp",
+      "media_files/SANTOS/ROOM_F_SANTOS/room_f_santos_a_bed_in_a_room_with_a_window_and_a_desk.webp",
+      "media_files/SANTOS/ROOM_F_SANTOS/room_f_santos_a_bed_in_a_room_with_a_window_and_a_lamp.webp",
+      "media_files/SANTOS/ROOM_F_SANTOS/room_f_santos_a_bed_in_a_room_with_towels.webp"
     ]
   },
   "santos_h1": {
@@ -282,10 +282,10 @@
     "shared_desk_office": false,
     "amenities": ["Oven", "Microwave", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Refrigerator", "Stove", "Internet", "Hair Dryer", "Free wifi", "Fire extinguisher"],
     "images": [
-      "renamed_images/SANTOS/ROOM_H1_SANTOS/room_h1_santos_a_bed_in_a_room.webp",
-      "renamed_images/SANTOS/ROOM_H1_SANTOS/room_h1_santos_a_bed_in_a_room_with_a_desk.webp",
-      "renamed_images/SANTOS/ROOM_H1_SANTO/room_h1_santos_a_bed_in_a_room_with_a_desk_and_chair.webp",
-      "renamed_images/SANTOS/ROOM_H1_SANTO/room_h1_santos_a_bed_in_a_room_with_a_desk_and_chair_and_towel.webp"
+      "media_files/SANTOS/ROOM_H1_SANTOS/room_h1_santos_a_bed_in_a_room.webp",
+      "media_files/SANTOS/ROOM_H1_SANTOS/room_h1_santos_a_bed_in_a_room_with_a_desk.webp",
+      "media_files/SANTOS/ROOM_H1_SANTO/room_h1_santos_a_bed_in_a_room_with_a_desk_and_chair.webp",
+      "media_files/SANTOS/ROOM_H1_SANTO/room_h1_santos_a_bed_in_a_room_with_a_desk_and_chair_and_towel.webp"
     ]
   },
   "santos_h2": {
@@ -298,10 +298,10 @@
     "shared_desk_office": false,
     "amenities": ["Oven", "Microwave", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Refrigerator", "Stove", "Internet", "Hair Dryer", "Free wifi", "Fire extinguisher"],
     "images": [
-      "renamed_images/SANTOS/ROOM_H2_SANTOS/room_h2_santos_a_bed_in_a_room_with_a_desk_and_chair.webp",
-      "renamed_images/SANTOS/ROOM_H2_SANTOS/room_h2_santos_a_small_room_with_a_bed_and_a_desk.webp",
-      "renamed_images/SANTOS/ROOM_H2_SANTOS/room_h2_santos_a_small_room_with_a_bed_and_a_small_window.webp",
-      "renamed_images/SANTOS/ROOM_H2_SANTOS/room_h2_santos_a_small_room_with_a_bed_and_a_window.webp"
+      "media_files/SANTOS/ROOM_H2_SANTOS/room_h2_santos_a_bed_in_a_room_with_a_desk_and_chair.webp",
+      "media_files/SANTOS/ROOM_H2_SANTOS/room_h2_santos_a_small_room_with_a_bed_and_a_desk.webp",
+      "media_files/SANTOS/ROOM_H2_SANTOS/room_h2_santos_a_small_room_with_a_bed_and_a_small_window.webp",
+      "media_files/SANTOS/ROOM_H2_SANTOS/room_h2_santos_a_small_room_with_a_bed_and_a_window.webp"
     ]
   },
   "olympo_a": {
@@ -314,10 +314,10 @@
     "shared_desk_office": true,
     "amenities": ["Oven", "Microwave", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Refrigerator", "Stove", "Internet", "Hair Dryer", "Free wifi", "Fire extinguisher"],
     "images": [
-      "renamed_images/OLYMPO/ROOM_A_OLYMPO/room_a_olympo_a_bed_in_a_room_with_a_lamp_above_it.webp",
-      "renamed_images/OLYMPO/ROOM_A_OLYMPO/room_a_olympo_a_bed_in_a_room_with_window.webp",
-      "renamed_images/OLYMPO/ROOM_A_OLYMPO/room_a_olympo_view.webp",
-      "renamed_images/OLYMPO/ROOM_A_OLYMPO/room_b_olympo_a_bed_in_a_room_with_a_desk.webp"
+      "media_files/OLYMPO/ROOM_A_OLYMPO/room_a_olympo_a_bed_in_a_room_with_a_lamp_above_it.webp",
+      "media_files/OLYMPO/ROOM_A_OLYMPO/room_a_olympo_a_bed_in_a_room_with_window.webp",
+      "media_files/OLYMPO/ROOM_A_OLYMPO/room_a_olympo_view.webp",
+      "media_files/OLYMPO/ROOM_A_OLYMPO/room_b_olympo_a_bed_in_a_room_with_a_desk.webp"
     ]
   },
   "olympo_b": {
@@ -330,10 +330,10 @@
     "shared_desk_office": true,
     "amenities": ["Oven", "Microwave", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Refrigerator", "Stove", "Internet", "Hair Dryer", "Free wifi", "Fire extinguisher"],
     "images": [
-      "renamed_images/OLYMPO/ROOM_B_OLYMPO/room_b_olympo_a_bed_in_a_room_with_a_lamp_above_it.webp",
-      "renamed_images/OLYMPO/ROOM_B_OLYMPO/room_b_olympo_a_bed_with_a_fan_on_the_wall.webp",
-      "renamed_images/OLYMPO/ROOM_B_OLYMPO/room_b_olympo_a_room_with_a_bed_and_a_table.webp",
-      "renamed_images/OLYMPO/ROOM_B_OLYMPO/room_b_olympo_a_view_from_a_window_of_a_city.webp"
+      "media_files/OLYMPO/ROOM_B_OLYMPO/room_b_olympo_a_bed_in_a_room_with_a_lamp_above_it.webp",
+      "media_files/OLYMPO/ROOM_B_OLYMPO/room_b_olympo_a_bed_with_a_fan_on_the_wall.webp",
+      "media_files/OLYMPO/ROOM_B_OLYMPO/room_b_olympo_a_room_with_a_bed_and_a_table.webp",
+      "media_files/OLYMPO/ROOM_B_OLYMPO/room_b_olympo_a_view_from_a_window_of_a_city.webp"
     ]
   },
   "olympo_c": {
@@ -346,12 +346,12 @@
     "shared_desk_office": true,
     "amenities": ["Oven", "Microwave", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Refrigerator", "Stove", "Internet", "Hair Dryer", "Free wifi", "Fire extinguisher"],
     "images": [
-      "renamed_images/OLYMPO/ROOM_C_OLYMPO/room_c_olympo_a_bed_and_lamp.room_b_olympo_a_bed_in_a_room_with_a_desk.webp",
-      "renamed_images/OLYMPO/ROOM_C_OLYMPO/room_c_olympo_a_bed_and_towels.room_b_olympo_a_bed_in_a_room_with_a_desk.webp",
-      "renamed_images/OLYMPO/ROOM_C_OLYMPO/room_c_olympo_a_bed_in_a_mirror.room_b_olympo_a_bed_in_a_room_with_a_desk.webp",
-      "renamed_images/OLYMPO/ROOM_C_OLYMPO/room_c_olympo_a_bed_stairs.room_b_olympo_a_bed_in_a_room_with_a_desk.webp",
-      "renamed_images/OLYMPO/ROOM_C_OLYMPO/room_c_olympo_a_bed_window.room_b_olympo_a_bed_in_a_room_with_a_desk.webp",
-      "renamed_images/OLYMPO/ROOM_C_OLYMPO/room_c_olympo_a_bed_window_and_towels.room_b_olympo_a_bed_in_a_room_with_a_desk.webp"
+      "media_files/OLYMPO/ROOM_C_OLYMPO/room_c_olympo_a_bed_and_lamp.room_b_olympo_a_bed_in_a_room_with_a_desk.webp",
+      "media_files/OLYMPO/ROOM_C_OLYMPO/room_c_olympo_a_bed_and_towels.room_b_olympo_a_bed_in_a_room_with_a_desk.webp",
+      "media_files/OLYMPO/ROOM_C_OLYMPO/room_c_olympo_a_bed_in_a_mirror.room_b_olympo_a_bed_in_a_room_with_a_desk.webp",
+      "media_files/OLYMPO/ROOM_C_OLYMPO/room_c_olympo_a_bed_stairs.room_b_olympo_a_bed_in_a_room_with_a_desk.webp",
+      "media_files/OLYMPO/ROOM_C_OLYMPO/room_c_olympo_a_bed_window.room_b_olympo_a_bed_in_a_room_with_a_desk.webp",
+      "media_files/OLYMPO/ROOM_C_OLYMPO/room_c_olympo_a_bed_window_and_towels.room_b_olympo_a_bed_in_a_room_with_a_desk.webp"
     ]
   },
   "olympo_d": {
@@ -364,12 +364,12 @@
     "shared_desk_office": true,
     "amenities": ["Oven", "Microwave", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Refrigerator", "Stove", "Internet", "Hair Dryer", "Free wifi", "Fire extinguisher"],
     "images": [
-      "renamed_images/OLYMPO/ROOM_D_OLYMPO/room_d_olympo_a_balcony.webp",
-      "renamed_images/OLYMPO/ROOM_D_OLYMPO/room_d_olympo_a_bed_and_balcony.webp",
-      "renamed_images/OLYMPO/ROOM_D_OLYMPO/room_d_olympo_a_bed_and_towels.webp",
-      "renamed_images/OLYMPO/ROOM_D_OLYMPO/room_d_olympo_a_door_and_mirror.webp",
-      "renamed_images/OLYMPO/ROOM_D_OLYMPO/room_d_olympo_a_high_bed.webp",
-      "renamed_images/OLYMPO/ROOM_D_OLYMPO/room_d_olympo_door.webp"
+      "media_files/OLYMPO/ROOM_D_OLYMPO/room_d_olympo_a_balcony.webp",
+      "media_files/OLYMPO/ROOM_D_OLYMPO/room_d_olympo_a_bed_and_balcony.webp",
+      "media_files/OLYMPO/ROOM_D_OLYMPO/room_d_olympo_a_bed_and_towels.webp",
+      "media_files/OLYMPO/ROOM_D_OLYMPO/room_d_olympo_a_door_and_mirror.webp",
+      "media_files/OLYMPO/ROOM_D_OLYMPO/room_d_olympo_a_high_bed.webp",
+      "media_files/OLYMPO/ROOM_D_OLYMPO/room_d_olympo_door.webp"
     ]
   },
   "palmira_a": {
@@ -382,13 +382,13 @@
     "shared_desk_office": false,
     "amenities": ["Oven", "Microwave", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Refrigerator", "Stove", "Internet", "Hair Dryer", "Free wifi", "Fire extinguisher"],
     "images": [
-      "renamed_images/PALMIRA/ROOM_A_PALMIRA/room_a_palmira_a_bed_with_a_floral_print_on_it.webp",
-      "renamed_images/PALMIRA/ROOM_A_PALMIRA/room_a_palmira_a_bed_with_a_green_and_pink_floral_comforter_1.webp",
-      "renamed_images/PALMIRA/ROOM_A_PALMIRA/room_a_palmira_a_bed_with_a_green_and_pink_floral_comforter.webp",
-      "renamed_images/PALMIRA/ROOM_A_PALMIRA/room_a_palmira_a_bed_with_a_green_and_pink_floral_print_on_it.webp",
-      "renamed_images/PALMIRA/ROOM_A_PALMIRA/room_a_palmira_a_room_with_a_bed_and_a_window.webp",
-      "renamed_images/PALMIRA/ROOM_A_PALMIRA/room_a_palmira_a_room_with_a_window_and_a_lamp.webp",
-      "renamed_images/PALMIRA/ROOM_A_PALMIRA/room_a_palmira_a_small_window_with_a_view_of_a_city.webp"
+      "media_files/PALMIRA/ROOM_A_PALMIRA/room_a_palmira_a_bed_with_a_floral_print_on_it.webp",
+      "media_files/PALMIRA/ROOM_A_PALMIRA/room_a_palmira_a_bed_with_a_green_and_pink_floral_comforter_1.webp",
+      "media_files/PALMIRA/ROOM_A_PALMIRA/room_a_palmira_a_bed_with_a_green_and_pink_floral_comforter.webp",
+      "media_files/PALMIRA/ROOM_A_PALMIRA/room_a_palmira_a_bed_with_a_green_and_pink_floral_print_on_it.webp",
+      "media_files/PALMIRA/ROOM_A_PALMIRA/room_a_palmira_a_room_with_a_bed_and_a_window.webp",
+      "media_files/PALMIRA/ROOM_A_PALMIRA/room_a_palmira_a_room_with_a_window_and_a_lamp.webp",
+      "media_files/PALMIRA/ROOM_A_PALMIRA/room_a_palmira_a_small_window_with_a_view_of_a_city.webp"
     ]
   },
   "palmira_b": {
@@ -401,12 +401,12 @@
     "shared_desk_office": false,
     "amenities": ["Oven", "Microwave", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Refrigerator", "Stove", "Internet", "Hair Dryer", "Free wifi", "Fire extinguisher"],
     "images": [
-      "renamed_images/PALMIRA/ROOM_B_PALMIRA/room_b_palmira_a_bed_in_a_room_with_a_wooden_floor.webp",
-      "renamed_images/PALMIRA/ROOM_B_PALMIRA/room_b_palmira_a_bed_sitting_in_a_bedroom_next_to_a_window.webp",
-      "renamed_images/PALMIRA/ROOM_B_PALMIRA/room_b_palmira_a_bed_with_a_green_blanket_and_pillows.webp",
-      "renamed_images/PALMIRA/ROOM_B_PALMIRA/room_b_palmira_a_bed_with_towels_on_it_in_a_room.webp",
-      "renamed_images/PALMIRA/ROOM_B_PALMIRA/room_b_palmira_a_plant_in_a_pot_on_the_floor.webp",
-      "renamed_images/PALMIRA/ROOM_B_PALMIRA/room_b_palmira_two_towels_on_a_table_in_front_of_a_window.webp"
+      "media_files/PALMIRA/ROOM_B_PALMIRA/room_b_palmira_a_bed_in_a_room_with_a_wooden_floor.webp",
+      "media_files/PALMIRA/ROOM_B_PALMIRA/room_b_palmira_a_bed_sitting_in_a_bedroom_next_to_a_window.webp",
+      "media_files/PALMIRA/ROOM_B_PALMIRA/room_b_palmira_a_bed_with_a_green_blanket_and_pillows.webp",
+      "media_files/PALMIRA/ROOM_B_PALMIRA/room_b_palmira_a_bed_with_towels_on_it_in_a_room.webp",
+      "media_files/PALMIRA/ROOM_B_PALMIRA/room_b_palmira_a_plant_in_a_pot_on_the_floor.webp",
+      "media_files/PALMIRA/ROOM_B_PALMIRA/room_b_palmira_two_towels_on_a_table_in_front_of_a_window.webp"
     ]
   },
   "palmira_c": {
@@ -419,11 +419,11 @@
     "shared_desk_office": false,
     "amenities": ["Oven", "Microwave", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Refrigerator", "Stove", "Internet", "Hair Dryer", "Free wifi", "Fire extinguisher"],
     "images": [
-      "renamed_images/PALMIRA/ROOM_C_PALMIRA/room_c_palmira_a_bedroom_with_a_bed_desk_and_chair.webp",
-      "renamed_images/PALMIRA/ROOM_C_PALMIRA/room_c_palmira_a_bed_with_a_green_and_white_comforter_1.webp",
-      "renamed_images/PALMIRA/ROOM_C_PALMIRA/room_c_palmira_a_bed_with_a_green_and_white_comforter_2.webp",
-      "renamed_images/PALMIRA/ROOM_C_PALMIRA/room_c_palmira_a_bed_with_a_green_and_white_comforter.webp",
-      "renamed_images/PALMIRA/ROOM_C_PALMIRA/room_c_palmira_a_bed_with_a_green_blanket_and_a_window.webp"
+      "media_files/PALMIRA/ROOM_C_PALMIRA/room_c_palmira_a_bedroom_with_a_bed_desk_and_chair.webp",
+      "media_files/PALMIRA/ROOM_C_PALMIRA/room_c_palmira_a_bed_with_a_green_and_white_comforter_1.webp",
+      "media_files/PALMIRA/ROOM_C_PALMIRA/room_c_palmira_a_bed_with_a_green_and_white_comforter_2.webp",
+      "media_files/PALMIRA/ROOM_C_PALMIRA/room_c_palmira_a_bed_with_a_green_and_white_comforter.webp",
+      "media_files/PALMIRA/ROOM_C_PALMIRA/room_c_palmira_a_bed_with_a_green_blanket_and_a_window.webp"
     ]
   },
   "palmira_d": {
@@ -436,13 +436,13 @@
     "shared_desk_office": false,
     "amenities": ["Oven", "Microwave", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Refrigerator", "Stove", "Internet", "Hair Dryer", "Free wifi", "Fire extinguisher"],
     "images": [
-      "renamed_images/PALMIRA/ROOM_D_PALMIRA/room_d_palmira_a_bedroom_with_a_bed_and_a_window.webp",
-      "renamed_images/PALMIRA/ROOM_D_PALMIRA/room_d_palmira_a_bed_sitting_in_a_room_with_a_window.webp",
-      "renamed_images/PALMIRA/ROOM_D_PALMIRA/room_d_palmira_a_bed_with_a_green_blanket_and_a_white_wall.webp",
-      "renamed_images/PALMIRA/ROOM_D_PALMIRA/room_d_palmira_a_bed_with_a_green_blanket_on_it.webp",
-      "renamed_images/PALMIRA/ROOM_D_PALMIRA/room_d_palmira_a_bed_with_pillows_and_a_window_in_the_corner.webp",
-      "renamed_images/PALMIRA/ROOM_D_PALMIRA/room_d_palmira_a_bed_with_pillows_on_it_in_a_room.webp",
-      "renamed_images/PALMIRA/ROOM_D_PALMIRA/room_d_palmira_a_plant_on_a_table_in_a_room.webp"
+      "media_files/PALMIRA/ROOM_D_PALMIRA/room_d_palmira_a_bedroom_with_a_bed_and_a_window.webp",
+      "media_files/PALMIRA/ROOM_D_PALMIRA/room_d_palmira_a_bed_sitting_in_a_room_with_a_window.webp",
+      "media_files/PALMIRA/ROOM_D_PALMIRA/room_d_palmira_a_bed_with_a_green_blanket_and_a_white_wall.webp",
+      "media_files/PALMIRA/ROOM_D_PALMIRA/room_d_palmira_a_bed_with_a_green_blanket_on_it.webp",
+      "media_files/PALMIRA/ROOM_D_PALMIRA/room_d_palmira_a_bed_with_pillows_and_a_window_in_the_corner.webp",
+      "media_files/PALMIRA/ROOM_D_PALMIRA/room_d_palmira_a_bed_with_pillows_on_it_in_a_room.webp",
+      "media_files/PALMIRA/ROOM_D_PALMIRA/room_d_palmira_a_plant_on_a_table_in_a_room.webp"
     ]
   },
   "palmira_e": {
@@ -455,11 +455,11 @@
     "shared_desk_office": false,
     "amenities": ["Oven", "Microwave", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Refrigerator", "Stove", "Internet", "Hair Dryer", "Free wifi", "Fire extinguisher"],
     "images": [
-      "renamed_images/PALMIRA/ROOM_E_PALMIRA/room_e_palmira_a_bedroom_with_a_bed_and_a_desk_1.webp",
-      "renamed_images/PALMIRA/ROOM_E_PALMIRA/room_e_palmira_a_bedroom_with_a_bed_and_a_desk.webp",
-      "renamed_images/PALMIRA/ROOM_E_PALMIRA/room_e_palmira_a_small_bedroom_with_a_bed_and_desk.webp",
-      "renamed_images/PALMIRA/ROOM_E_PALMIRA/room_e_palmira_a_small_room_with_a_bed_and_a_door.webp",
-      "renamed_images/PALMIRA/ROOM_E_PALMIRA/room_e_palmira_a_small_room_with_a_small_window_and_a_small_table.webp"
+      "media_files/PALMIRA/ROOM_E_PALMIRA/room_e_palmira_a_bedroom_with_a_bed_and_a_desk_1.webp",
+      "media_files/PALMIRA/ROOM_E_PALMIRA/room_e_palmira_a_bedroom_with_a_bed_and_a_desk.webp",
+      "media_files/PALMIRA/ROOM_E_PALMIRA/room_e_palmira_a_small_bedroom_with_a_bed_and_desk.webp",
+      "media_files/PALMIRA/ROOM_E_PALMIRA/room_e_palmira_a_small_room_with_a_bed_and_a_door.webp",
+      "media_files/PALMIRA/ROOM_E_PALMIRA/room_e_palmira_a_small_room_with_a_small_window_and_a_small_table.webp"
     ]
   },
   "maria_a": {
@@ -472,10 +472,10 @@
     "shared_desk_office": true,
     "amenities": ["Oven", "Microwave", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Refrigerator", "Stove", "Internet", "Hair Dryer", "Free wifi", "Fire extinguisher"],
     "images": [
-      "renamed_images/MARIA/ROOM_A_MARIA/room_a_maria_a_bed_and_a_white_wall.webp",
-      "renamed_images/MARIA/ROOM_A_MARIA/room_a_maria_a_bed_with_a_floral_comforter.webp",
-      "renamed_images/MARIA/ROOM_A_MARIA/room_a_maria_a_bed_with_a_floral_comforter_and_a_white_wall.webp",
-      "renamed_images/MARIA/ROOM_A_MARIA/room_a_maria_a_woman_laying_in_a_ham_hamer.webp"
+      "media_files/MARIA/ROOM_A_MARIA/room_a_maria_a_bed_and_a_white_wall.webp",
+      "media_files/MARIA/ROOM_A_MARIA/room_a_maria_a_bed_with_a_floral_comforter.webp",
+      "media_files/MARIA/ROOM_A_MARIA/room_a_maria_a_bed_with_a_floral_comforter_and_a_white_wall.webp",
+      "media_files/MARIA/ROOM_A_MARIA/room_a_maria_a_woman_laying_in_a_ham_hamer.webp"
     ]
   },
   "maria_b": {
@@ -488,10 +488,10 @@
     "shared_desk_office": true,
     "amenities": ["Oven", "Microwave", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Refrigerator", "Stove", "Internet", "Hair Dryer", "Free wifi", "Fire extinguisher"],
     "images": [
-      "renamed_images/MARIA/ROOM_B_MARIA/room_b_maria_a_bedroom_with_a_ham_h.webp",
-      "renamed_images/MARIA/ROOM_B_MARIA/room_b_maria_a_bedroom_with_a_ham_h_1.webp",
-      "renamed_images/MARIA/ROOM_B_MARIA/room_b_maria_a_bedroom_with_a_ham_h3.webp",
-      "renamed_images/MARIA/ROOM_B_MARIA/room_b_maria_a_bed_with_a_ham_on_it.webp"
+      "media_files/MARIA/ROOM_B_MARIA/room_b_maria_a_bedroom_with_a_ham_h.webp",
+      "media_files/MARIA/ROOM_B_MARIA/room_b_maria_a_bedroom_with_a_ham_h_1.webp",
+      "media_files/MARIA/ROOM_B_MARIA/room_b_maria_a_bedroom_with_a_ham_h3.webp",
+      "media_files/MARIA/ROOM_B_MARIA/room_b_maria_a_bed_with_a_ham_on_it.webp"
     ]
   },
   "maria_c": {
@@ -504,10 +504,10 @@
     "shared_desk_office": true,
     "amenities": ["Oven", "Microwave", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Refrigerator", "Stove", "Internet", "Hair Dryer", "Free wifi", "Fire extinguisher"],
     "images": [
-      "renamed_images/MARIA/maria_a_woman_in_a_bathroom.webp",
-      "renamed_images/MARIA/maria_a_woman_in_a_kitchen.webp",
-      "renamed_images/MARIA/maria_a_woman_standing_in_a_kitchen_with_a_microwave.webp",
-      "renamed_images/MARIA/maria_a_kitchen_with_a_stove_and_a_microwave.webp"
+      "media_files/MARIA/maria_a_woman_in_a_bathroom.webp",
+      "media_files/MARIA/maria_a_woman_in_a_kitchen.webp",
+      "media_files/MARIA/maria_a_woman_standing_in_a_kitchen_with_a_microwave.webp",
+      "media_files/MARIA/maria_a_kitchen_with_a_stove_and_a_microwave.webp"
     ]
   },
   "loft": {
@@ -520,17 +520,17 @@
     "shared_desk_office": false,
     "amenities": ["Oven", "Microwave", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Refrigerator", "Stove", "Internet", "Hair Dryer", "Free wifi", "Fire extinguisher"],
     "images": [
-      "renamed_images/LOFT/loft_a_bathroom_with_a_sink_and_a_shower.webp",
-      "renamed_images/LOFT/loft_a_bed_with_a_green_and_pink_comforter.webp",
-      "renamed_images/LOFT/loft_a_bed_with_a_pillow_and_a_shelf.webp",
-      "renamed_images/LOFT/loft_a_bed_with_a_tropical_print_comforter.webp",
-      "renamed_images/LOFT/loft_a_kitchen_with_a_microwave_and_a_microwave_on_the_.webp",
-      "renamed_images/LOFT/loft_a_living_room_with_a_tv_and_a_couch.webp",
-      "renamed_images/LOFT/loft_a_narrow_street_with_a_bunch_of_flowers.webp",
-      "renamed_images/LOFT/loft_a_room_with_a_table_and_chairs_and_a_laptop.webp",
-      "renamed_images/LOFT/loft_a_small_bedroom_with_a_bed_and_a_desk.webp",
-      "renamed_images/LOFT/loft_a_wooden_staircase_1.webp",
-      "renamed_images/LOFT/loft_a_wooden_staircase.webp"
+      "media_files/LOFT/loft_a_bathroom_with_a_sink_and_a_shower.webp",
+      "media_files/LOFT/loft_a_bed_with_a_green_and_pink_comforter.webp",
+      "media_files/LOFT/loft_a_bed_with_a_pillow_and_a_shelf.webp",
+      "media_files/LOFT/loft_a_bed_with_a_tropical_print_comforter.webp",
+      "media_files/LOFT/loft_a_kitchen_with_a_microwave_and_a_microwave_on_the_.webp",
+      "media_files/LOFT/loft_a_living_room_with_a_tv_and_a_couch.webp",
+      "media_files/LOFT/loft_a_narrow_street_with_a_bunch_of_flowers.webp",
+      "media_files/LOFT/loft_a_room_with_a_table_and_chairs_and_a_laptop.webp",
+      "media_files/LOFT/loft_a_small_bedroom_with_a_bed_and_a_desk.webp",
+      "media_files/LOFT/loft_a_wooden_staircase_1.webp",
+      "media_files/LOFT/loft_a_wooden_staircase.webp"
     ]
   },
   "torrao": {
@@ -543,30 +543,30 @@
     "shared_desk_office": false,
     "amenities": ["Oven", "Microwave", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Refrigerator", "Stove", "Internet", "Hair Dryer", "Free wifi", "Fire extinguisher"],
     "images": [
-      "renamed_images/TORRAO/torrao_a_balcony_with_two_chairs_and_a_bottle_of_wine.webp",
-      "renamed_images/TORRAO/torrao_a_bathroom_with_a_toilet_and_a_sink.webp",
-      "renamed_images/TORRAO/torrao_a_bathroom_with_a_toilet_sink_and_shower.webp",
-      "renamed_images/TORRAO/torrao_a_bedroom_with_a_bed_and_a_sink.webp",
-      "renamed_images/TORRAO/torrao_a_bed_with_a_green_blanket_and_pillows.webp",
-      "renamed_images/TORRAO/torrao_a_bed_with_a_white_comforter.webp",
-      "renamed_images/TORRAO/torrao_a_book_on_a_table.webp",
-      "renamed_images/TORRAO/torrao_a_bottle_of_water_and_a_pot_of_sus.webp",
-      "renamed_images/TORRAO/torrao_a_clear_blue_sky.webp",
-      "renamed_images/TORRAO/torrao_a_couch_sitting_in_a_living_room_next_to_a_window.webp",
-      "renamed_images/TORRAO/torrao_a_kitchen_with_a_sink_and_a_couch.webp",
-      "renamed_images/TORRAO/torrao_a_kitchen_with_a_sink_and_a_counter.webp",
-      "renamed_images/TORRAO/torrao_a_kitchen_with_a_stove_and_a_sink.webp",
-      "renamed_images/TORRAO/torrao_a_kitchen_with_a_table_and_a_staircase.webp",
-      "renamed_images/TORRAO/torrao_a_living_room_with_a_couch_and_a_television.webp",
-      "renamed_images/TORRAO/torrao_a_patio_with_a_table_and_chairs_on_it.webp",
-      "renamed_images/TORRAO/torrao_a_patio_with_a_table_and_chairs.webp",
-      "renamed_images/TORRAO/torrao_a_room_with_a_ladder_and_a_table.webp",
-      "renamed_images/TORRAO/torrao_a_small_kitchen_with_a_table_and_chairs.webp",
-      "renamed_images/TORRAO/torrao_a_staircase_with_a_light_coming_through_it.webp",
-      "renamed_images/TORRAO/torrao_a_table_and_chairs_on_a_balcony_with_a_view.webp",
-      "renamed_images/TORRAO/torrao_a_television_mounted_above_a_wooden_cabinet.webp",
-      "renamed_images/TORRAO/torrao_a_tv_mounted_on_the_wall_above_a_wooden_cabinet.webp",
-      "renamed_images/TORRAO/torrao_a_wooden_table_with_a_book_and_a_bowl_of_nuts.webp"
+      "media_files/TORRAO/torrao_a_balcony_with_two_chairs_and_a_bottle_of_wine.webp",
+      "media_files/TORRAO/torrao_a_bathroom_with_a_toilet_and_a_sink.webp",
+      "media_files/TORRAO/torrao_a_bathroom_with_a_toilet_sink_and_shower.webp",
+      "media_files/TORRAO/torrao_a_bedroom_with_a_bed_and_a_sink.webp",
+      "media_files/TORRAO/torrao_a_bed_with_a_green_blanket_and_pillows.webp",
+      "media_files/TORRAO/torrao_a_bed_with_a_white_comforter.webp",
+      "media_files/TORRAO/torrao_a_book_on_a_table.webp",
+      "media_files/TORRAO/torrao_a_bottle_of_water_and_a_pot_of_sus.webp",
+      "media_files/TORRAO/torrao_a_clear_blue_sky.webp",
+      "media_files/TORRAO/torrao_a_couch_sitting_in_a_living_room_next_to_a_window.webp",
+      "media_files/TORRAO/torrao_a_kitchen_with_a_sink_and_a_couch.webp",
+      "media_files/TORRAO/torrao_a_kitchen_with_a_sink_and_a_counter.webp",
+      "media_files/TORRAO/torrao_a_kitchen_with_a_stove_and_a_sink.webp",
+      "media_files/TORRAO/torrao_a_kitchen_with_a_table_and_a_staircase.webp",
+      "media_files/TORRAO/torrao_a_living_room_with_a_couch_and_a_television.webp",
+      "media_files/TORRAO/torrao_a_patio_with_a_table_and_chairs_on_it.webp",
+      "media_files/TORRAO/torrao_a_patio_with_a_table_and_chairs.webp",
+      "media_files/TORRAO/torrao_a_room_with_a_ladder_and_a_table.webp",
+      "media_files/TORRAO/torrao_a_small_kitchen_with_a_table_and_chairs.webp",
+      "media_files/TORRAO/torrao_a_staircase_with_a_light_coming_through_it.webp",
+      "media_files/TORRAO/torrao_a_table_and_chairs_on_a_balcony_with_a_view.webp",
+      "media_files/TORRAO/torrao_a_television_mounted_above_a_wooden_cabinet.webp",
+      "media_files/TORRAO/torrao_a_tv_mounted_on_the_wall_above_a_wooden_cabinet.webp",
+      "media_files/TORRAO/torrao_a_wooden_table_with_a_book_and_a_bowl_of_nuts.webp"
     ]
   }
 }
