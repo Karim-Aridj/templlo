@@ -24,7 +24,16 @@ function showHomePage() {
     window.roomMapInstance.remove();
     window.roomMapInstance = null;
   }
+  
+  // Push virtual pageview event to GTM
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: 'virtualPageview',
+    pagePath: window.location.pathname,
+    pageTitle: document.title || 'Home'
+  });
 }
+
 
 function showRoomPage(key) {
   const apt = apartmentData[key];
@@ -46,7 +55,16 @@ function showRoomPage(key) {
 
   // Render apartment details
   renderRoomDetails(key);
+
+  // Push virtual pageview event to GTM
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: 'virtualPageview',
+    pagePath: window.location.pathname,
+    pageTitle: apt.name || document.title
+  });
 }
+
 
 // Expose globally for inline onclick
 window.showHomePage = showHomePage;
