@@ -1,7 +1,7 @@
 <?php
 // meta-capi.php
 // Replace with your real Pixel ID and secure, server-only access token.
-$pixel_id = '809554794870202';
+$pixel_id = '';
 $access_token = 'YOUR_LONG_LIVED_ACCESS_TOKEN';
 
 // Read JSON from POST
