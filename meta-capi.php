@@ -1,5 +1,8 @@
 <?php
 // public_html/meta-capi.php
+ini_set('display_errors','1');
+ini_set('display_startup_errors','1');
+error_reporting(E_ALL);
 require __DIR__ . '/../config/meta-capi-config.php'; // uses META_PIXEL_ID, META_CAPI_TOKEN, META_INTERNAL_SECRET
 
 if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') {
