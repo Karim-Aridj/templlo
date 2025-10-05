@@ -1,35 +1,47 @@
+# .htaccess at public_html
+
 <IfModule mod_rewrite.c>
-    RewriteEngine On
-    
-    # Force HTTPS (optional but recommended)
-    # RewriteCond %{HTTPS} off
-    # RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-    
-    # Handle Angular and other front-end framework routing
-    RewriteBase /
-    
-    # Don't rewrite files or directories that exist
-    RewriteCond %{REQUEST_FILENAME} -f [OR]
-    RewriteCond %{REQUEST_FILENAME} -d
-    RewriteRule ^ - [L]
-    
-    # Handle client-side routing for SPA
-    RewriteRule ^ index.html [L]
-    
-    # Security headers (optional)
-    <IfModule mod_headers.c>
-        Header always set X-Frame-Options "SAMEORIGIN"
-        Header always set X-Content-Type-Options "nosniff"
-    </IfModule>
-    
-    # Cache static assets (optional)
-    <IfModule mod_expires.c>
-        ExpiresActive On
-        ExpiresByType image/webp "access plus 1 month"
-        ExpiresByType image/jpg "access plus 1 month"
-        ExpiresByType image/jpeg "access plus 1 month"
-        ExpiresByType image/png "access plus 1 month"
-        ExpiresByType text/css "access plus 1 month"
-        ExpiresByType application/javascript "access plus 1 month"
-    </IfModule>
+  RewriteEngine On
+
+  # Protect the CAPI endpoint (add this BEFORE any SPA fallback)
+  # 1) Return 405 if method is not POST
+  RewriteCond %{REQUEST_URI} ^/meta-capi\.php$ [NC]
+  RewriteCond %{REQUEST_METHOD} !=POST
+  RewriteRule ^ - [R=405,L]
+
+  # 2) Ensure the endpoint is NOT rewritten to index.html
+  RewriteRule ^meta-capi\.php$ - [L]
+
+  # Force HTTPS (optional)
+  # RewriteCond %{HTTPS} off
+  # RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # SPA framework base
+  RewriteBase /
+
+  # Do not rewrite existing files or directories
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # SPA fallback to index.html
+  RewriteRule ^ index.html [L]
 </IfModule>
+
+# Security headers (optional)
+<IfModule mod_headers.c>
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set X-Content-Type-Options "nosniff"
+</IfModule>
+
+# Cache static assets (optional)
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/webp "access plus 1 month"
+  ExpiresByType image/jpg  "access plus 1 month"
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/png  "access plus 1 month"
+  ExpiresByType text/css   "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+</IfModule>
+
