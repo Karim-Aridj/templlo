@@ -133,9 +133,9 @@
     "shared_desk_office": false,
     "amenities": ["Oven", "Microwave", "Coffee Maker", "Dishes & Utensils", "Kitchen", "Refrigerator", "Stove", "Internet", "Hair Dryer", "Free wifi", "Fire extinguisher"],
     "images": [
-      "media_files/PATIO/ROOM_A_PATIO/room_b_patio_a_bedroom_with_two_beds_and_a_desk.webp",
-      "media_files/PATIO/ROOM_A_PATIO/room_b_patio_a_bed_sitting_in_a_bedroom_next_to_a_window.webp",
-      "media_files/PATIO/ROOM_A_PATIO/room_b_patio_a_bed_with_a_blanket_and_a_desk_with_a_lamp.webp"
+      "media_files/PATIO/ROOM_B_PATIO/room_b_patio_a_bedroom_with_two_beds_and_a_desk.webp",
+      "media_files/PATIO/ROOM_B_PATIO/room_b_patio_a_bed_sitting_in_a_bedroom_next_to_a_window.webp",
+      "media_files/PATIO/ROOM_B_PATIO/room_b_patio_a_bed_with_a_blanket_and_a_desk_with_a_lamp.webp"
     ]
   },
   "patio_c": {
