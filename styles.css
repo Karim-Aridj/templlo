@@ -863,3 +863,24 @@ body {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
+.uplisting-booking-section {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.uplisting-widget {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .uplisting-booking-section {
+    padding: 1rem 0.5rem;
+  }
+  .uplisting-widget {
+    max-width: 100%;
+  }
+}
