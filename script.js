@@ -32,6 +32,7 @@ function showHomePage() {
     pagePath: window.location.pathname,
     pageTitle: document.title || 'Home'
   });
+  updateCanonical('https://templlo.com/');
 }
 
 
@@ -63,6 +64,7 @@ function showRoomPage(key) {
     pagePath: window.location.pathname,
     pageTitle: apt.name || document.title
   });
+  updateCanonical('https://templlo.com/' + key);
 }
 
 
@@ -89,6 +91,16 @@ function initializeRouting() {
       showHomePage();
     }
   });
+}
+// handle cannonical since its an SPA
+function updateCanonical(url) {
+  let canonical = document.querySelector('link[rel="canonical"]');
+  if (!canonical) {
+    canonical = document.createElement('link');
+    canonical.setAttribute('rel', 'canonical');
+    document.head.appendChild(canonical);
+  }
+  canonical.setAttribute('href', url);
 }
 
 // ===== HERO BACKGROUND HELPER =====
